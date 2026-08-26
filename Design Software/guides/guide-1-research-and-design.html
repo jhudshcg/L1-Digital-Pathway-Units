@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide 1: Research, Mood Board & Wireframing | L1 Design Software</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+    .guide-container { max-width: 860px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--border); }
+    .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.35rem; color: #0369a1; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 2px solid #e0f2fe; padding-bottom: 0.3rem; }
+    h3 { font-size: 1.1rem; color: #0f172a; margin-top: 1rem; margin-bottom: 0.4rem; }
+    p, li { margin-bottom: 0.75rem; color: #334155; font-size: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .callout { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.25rem; border-radius: 6px; margin: 1.25rem 0; }
+    .callout.tip { background: #eff6ff; border-left-color: #2563eb; }
+    .callout.warning { background: #fffbeb; border-left-color: #f59e0b; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 0.6rem 0.8rem; text-align: left; }
+    th { background: #f1f5f9; color: #0f172a; }
+    .step-box { background: #f8fafc; border: 1px solid var(--border); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    .step-number { font-weight: bold; color: var(--primary); font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .nav-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-weight: 600; }
+    .nav-footer a { color: var(--primary); text-decoration: none; }
+    .nav-footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="guide-container">
+    <span class="badge">STEP-BY-STEP GUIDE 1 OF 4</span>
+    <h1>Research, Mood Board & Wireframing</h1>
+    <p>Learn how to gather menu items, understand image copyright, and create your initial visual design before writing code.</p>
+
+    <h2>1. Researching Your 10 Menu Items (AC 1.1, 1.2, 1.4)</h2>
+    <p>Your canteen ordering system requires a balanced, realistic menu of at least <strong>10 items</strong>.</p>
+    
+    <div class="step-box">
+      <div class="step-number">Menu Requirements Checklist:</div>
+      <ul>
+        <li><strong>4 Mains</strong> (e.g. burgers, wraps, pizza slices, jacket potatoes, salad bowls)</li>
+        <li><strong>3 Snacks / Desserts</strong> (e.g. crisps, brownies, fruit pots, flapjacks)</li>
+        <li><strong>3 Drinks</strong> (e.g. smoothies, milkshakes, sparkling water, tea/coffee)</li>
+        <li><strong>At least 3 Healthy Items</strong> (tagged with <code>healthpromo: true</code>)</li>
+        <li><strong>Allergy Information</strong> for each item (check for gluten, dairy, nuts, eggs, etc.)</li>
+      </ul>
+    </div>
+
+    <h2>2. Understanding Image Copyright & Sourcing (AC 1.3)</h2>
+    <p>When creating digital designs, you must respect intellectual property and copyright laws. You cannot simply copy images from Google Search without permission.</p>
+    
+    <div class="callout tip">
+      <strong>Safe Royalty-Free Image Sources:</strong>
+      <ul>
+        <li><strong>Unsplash</strong> (<a href="https://unsplash.com" target="_blank">unsplash.com</a>) &mdash; High quality, free to use.</li>
+        <li><strong>Pexels</strong> (<a href="https://pexels.com" target="_blank">pexels.com</a>) &mdash; Free stock food photography.</li>
+        <li><strong>Pixabay</strong> (<a href="https://pixabay.com" target="_blank">pixabay.com</a>) &mdash; Free food graphics and photos.</li>
+      </ul>
+      <p style="margin-top: 0.5rem;"><em>Evidence Requirement:</em> Keep a record of the URL and photographer/website name for every image in your Project Booklet table.</p>
+    </div>
+
+    <h2>3. Creating Your Mood Board (AC 1.1, 1.5)</h2>
+    <p>A <strong>mood board</strong> is a visual collage that establishes the tone, colour scheme, and vibe of your canteen app.</p>
+    
+    <div class="step-box">
+      <div class="step-number">Steps to Build Your Mood Board:</div>
+      <ol>
+        <li>Choose a central theme (e.g. <em>50s American Diner, Neon Punk Bites, Fresh Garden Cafe, Retro School Tuckshop</em>).</li>
+        <li>Select <strong>3–4 main theme colours</strong> (e.g. Primary Red, Warm Yellow, Off-White, Charcoal).</li>
+        <li>Collect 4–6 inspiration images of logos, food packaging, and typography that match your vibe.</li>
+        <li>Arrange them on a digital canvas using <strong>provector.app</strong> or a graphics tool.</li>
+        <li>Export your mood board image (PNG/JPG) and paste it into <strong>Section 2</strong> of your Project Booklet.</li>
+      </ol>
+    </div>
+
+    <h2>4. Wireframing Your User Interface (AC 1.2, 2.1)</h2>
+    <p>A <strong>wireframe</strong> is a simplified visual blueprint showing where elements will sit on the screen before you style them.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>UI Area</th>
+          <th>What to Include in Your Wireframe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Header</strong></td>
+          <td>App Title, Subtitle/Tagline, Theme Logo</td>
+        </tr>
+        <tr>
+          <td><strong>Filter Bar</strong></td>
+          <td>Category Dropdown (All, Mains, Snacks, Drinks) & Student Voucher Checkbox</td>
+        </tr>
+        <tr>
+          <td><strong>Menu Area</strong></td>
+          <td>Grid or list of food cards (Image, Title, Price, Description, Allergen badge, '+ Add' button)</td>
+        </tr>
+        <tr>
+          <td><strong>Tray / Basket</strong></td>
+          <td>List of added items, Subtotal, Discount row, Total to pay, Feedback alert banner, Clear & Order buttons</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout warning">
+      <strong>Next Step:</strong> Open <em>provector.app</em>, draw your wireframe boxes, and take a screenshot to insert into your Project Booklet!
+    </div>
+
+    <div class="nav-footer">
+      <span>Next: Guide 2 &mdash; Customising Styles</span>
+      <a href="guide-2-customising-styles.html">Read Guide 2 &rarr;</a>
+    </div>
+  </div>
+
+</body>
+</html>
