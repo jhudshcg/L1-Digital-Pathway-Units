@@ -88,7 +88,7 @@ if (orderAllergies.includes(____)) {
 if (orderTotal ____ 5.50) {
   alert('Your order exceeds the £5.50 student voucher limit.');
 }
-```
+
 // snippet bank
 // totalling numbers in an array
 // student will need to copy, paste and modify the code to total the order item prices (not weight) in the order array.

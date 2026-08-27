@@ -6,95 +6,249 @@
   <title>Guide 4: Testing & Git Version Control | L1 Design Software</title>
   <style>
     :root {
-      --primary: #0284c7;
-      --bg: #f8fafc;
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --accent: #0284c7;
+      --bg: #ecfdf5;
       --card-bg: #ffffff;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
-    .guide-container { max-width: 860px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--border); }
-    .badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem; }
-    h1 { font-size: 2rem; color: #0f172a; margin-bottom: 0.5rem; }
-    h2 { font-size: 1.35rem; color: #0369a1; margin-top: 1.75rem; margin-bottom: 0.75rem; border-bottom: 2px solid #e0f2fe; padding-bottom: 0.3rem; }
-    h3 { font-size: 1.1rem; color: #0f172a; margin-top: 1.25rem; margin-bottom: 0.4rem; }
-    p, li { margin-bottom: 0.75rem; color: #334155; font-size: 1rem; }
-    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
-    code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.95em; color: #0284c7; }
-    pre { background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 8px; overflow-x: auto; font-family: Consolas, monospace; font-size: 0.9rem; margin-bottom: 1rem; }
-    .callout { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem 1.25rem; border-radius: 6px; margin: 1.25rem 0; }
-    .callout.tip { background: #eff6ff; border-left-color: #2563eb; }
-    .callout.warning { background: #fffbeb; border-left-color: #f59e0b; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
-    th, td { border: 1px solid var(--border); padding: 0.6rem 0.8rem; text-align: left; }
-    th { background: #f1f5f9; color: #0f172a; }
-    .step-box { background: #f8fafc; border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px; margin-bottom: 1.25rem; }
-    .step-number { font-weight: bold; color: var(--primary); font-size: 1.1rem; margin-bottom: 0.25rem; }
-    .nav-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-weight: 600; }
-    .nav-footer a { color: var(--primary); text-decoration: none; }
-    .nav-footer a:hover { text-decoration: underline; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .guide-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #10b981;
+      color: #ffffff;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: #047857;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #0f172a;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      margin-bottom: 0.75rem;
+      color: #334155;
+      font-size: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+      color: #047857;
+      font-weight: 600;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 0.92rem;
+      margin: 0.75rem 0 1.25rem 0;
+      border-left: 4px solid var(--primary);
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 5px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+    }
+    .callout.tip {
+      background: #eff6ff;
+      border-left-color: #2563eb;
+    }
+    .callout.warning {
+      background: #fffbeb;
+      border-left-color: #f59e0b;
+    }
+    .callout.success {
+      background: #ecfdf5;
+      border-left-color: #10b981;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .step-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .step-number {
+      font-weight: bold;
+      color: #047857;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .nav-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+    }
+    .nav-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-footer a:hover {
+      background: var(--primary-dark);
+    }
+    .nav-footer a.secondary {
+      background: #64748b;
+    }
+    .nav-footer a.secondary:hover {
+      background: #475569;
+    }
   </style>
 </head>
 <body>
 
   <div class="guide-container">
-    <span class="badge">STEP-BY-STEP GUIDE 4 OF 4</span>
+    <div class="header-badge">🚀 Guide 4 of 4</div>
     <h1>Testing & VS Code Git Version Control</h1>
-    <p>Test your canteen system, fix any issues, and save your progress using Git in VS Code.</p>
+    <p class="subtitle">Systematically test your ordering app, fix bugs, and record your milestones using Git in VS Code.</p>
 
-    <h2>1. System Testing Checklist (AC 2.3)</h2>
-    <p>Before submitting, you must systematically test every feature of your app in the browser and record the results in your Project Booklet.</p>
+    <h2>🧪 1. System Testing Checklist (AC 2.3)</h2>
+    <p>Before submitting, you must test every interactive feature in the browser and record the outcomes in <strong>Task 11</strong> of your Project Booklet.</p>
 
     <table>
       <thead>
         <tr>
-          <th>Test Test</th>
+          <th>Test #</th>
+          <th>Feature</th>
           <th>Action to Perform</th>
           <th>Expected Outcome</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>1. Menu Filter</strong></td>
-          <td>Select 'Drinks' from dropdown</td>
+          <td><strong>1</strong></td>
+          <td><strong>Menu Filter</strong></td>
+          <td>Select 'Drinks' from the dropdown menu</td>
           <td>Only drink items appear on the screen</td>
         </tr>
         <tr>
-          <td><strong>2. Subtotal Adding</strong></td>
-          <td>Add a £3.50 item and a £1.50 item</td>
+          <td><strong>2</strong></td>
+          <td><strong>Subtotal Sum</strong></td>
+          <td>Add a £3.50 item and a £1.50 item to tray</td>
           <td>Subtotal displays exactly £5.00</td>
         </tr>
         <tr>
-          <td><strong>3. Voucher Warning</strong></td>
-          <td>Check the £5.50 voucher box with a £6.00 order</td>
-          <td>Yellow warning alert displays saying order exceeds budget</td>
+          <td><strong>3</strong></td>
+          <td><strong>Voucher Check</strong></td>
+          <td>Tick the £5.50 voucher box with a £6.00 order</td>
+          <td>Yellow warning alert displays that order exceeds limit</td>
         </tr>
         <tr>
-          <td><strong>4. Allergen Warning</strong></td>
+          <td><strong>4</strong></td>
+          <td><strong>Allergen Warning</strong></td>
           <td>Add an item containing nuts</td>
-          <td>Alert displays warning about nuts in the order</td>
+          <td>Alert banner displays warning about nuts in the order</td>
         </tr>
         <tr>
-          <td><strong>5. Healthy Promo</strong></td>
+          <td><strong>5</strong></td>
+          <td><strong>Healthy Promo</strong></td>
           <td>Add 2 healthy items to tray</td>
-          <td>Green discount row appears with 10% off subtotal</td>
+          <td>Green discount row appears applying 10% off subtotal</td>
         </tr>
         <tr>
-          <td><strong>6. Remove / Clear</strong></td>
-          <td>Click the &times; remove button and Clear Tray</td>
+          <td><strong>6</strong></td>
+          <td><strong>Clear Tray</strong></td>
+          <td>Click the &times; button or 'Clear Tray'</td>
           <td>Items are removed and totals reset back to £0.00</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>2. Using Git in VS Code (AC 1.6, 1.7)</h2>
-    <p>Git allows you to save snapshots ("commits") of your project milestones. You do not need to use the command line &mdash; you will use the VS Code Source Control panel.</p>
+    <h2>💾 2. Using Git in VS Code (AC 1.7)</h2>
+    <p><strong>Git</strong> creates saved checkpoints (called <em>commits</em>) of your project as you work. You do not need to type command line codes &mdash; you will use the visual Source Control button inside VS Code.</p>
 
     <div class="step-box">
       <div class="step-number">Step 1: One-Time Git Identity Setup (Terminal)</div>
-      <p>If you have not set up your name in Git before, open the terminal in VS Code and type:</p>
+      <p>If you have not configured Git before on your college computer, open the VS Code Terminal and run:</p>
       <pre>git config --global user.name "Your Full Name"
 git config --global user.email "your.student.email@college.ac.uk"</pre>
     </div>
@@ -103,33 +257,37 @@ git config --global user.email "your.student.email@college.ac.uk"</pre>
       <div class="step-number">Step 2: Committing Your Work via the VS Code GUI</div>
       <ol>
         <li>Click the <strong>Source Control icon</strong> in the left sidebar of VS Code (or press <code>Ctrl + Shift + G</code>).</li>
-        <li>Review your changed files under <strong>Changes</strong>.</li>
+        <li>Look at your changed files under <strong>Changes</strong>.</li>
         <li>Click the <strong>+ (Plus icon)</strong> next to Changes to "Stage All Changes".</li>
-        <li>In the message box at the top, type a <strong>meaningful commit message</strong> explaining what you just completed (see examples below).</li>
-        <li>Click the blue <strong>Commit</strong> button.</li>
+        <li>In the message box at the top, type a <strong>clear commit message</strong> describing what you just completed.</li>
+        <li>Click the blue <strong>Commit</strong> button (or press <code>Ctrl + Enter</code>).</li>
       </ol>
     </div>
 
     <div class="callout tip">
       <strong>Good Commit Message Examples:</strong>
       <ul>
-        <li><code>"feat: added 10 researched menu items and image links"</code></li>
-        <li><code>"style: applied retro diner theme and Google Fonts"</code></li>
+        <li><code>"feat: added 10 researched food items and local images"</code></li>
+        <li><code>"style: applied 50s diner theme and Google Fonts"</code></li>
         <li><code>"feat: completed subtotal calculation and £5.50 voucher check"</code></li>
         <li><code>"fix: corrected allergen warning text for dairy products"</code></li>
       </ul>
     </div>
 
-    <h2>3. Collecting Your Project Booklet Evidence</h2>
-    <p>Before submitting, make sure you take clear screenshots of:</p>
+    <h2>📋 3. Final Booklet Checklist</h2>
+    <p>Before handing in your project booklet, double check that you have completed:</p>
     <ul>
-      <li>Your finished Canteen UI running in the browser.</li>
-      <li>Your Git commit history list in VS Code.</li>
-      <li>Your completed JavaScript code in <code>app.js</code>.</li>
+      <li>✅ <strong>Task 1 & 2:</strong> Target audience and context of use questions</li>
+      <li>✅ <strong>Task 3 & 4:</strong> 10-item menu table and image copyright source log</li>
+      <li>✅ <strong>Task 5 & 6:</strong> Combined information and file format explanations</li>
+      <li>✅ <strong>Task 7:</strong> Mood board and wireframe image evidence</li>
+      <li>✅ <strong>Task 8 & 9:</strong> Styled UI screenshot and completed JavaScript code screenshot</li>
+      <li>✅ <strong>Task 10 & 11:</strong> Git commit log screenshot and completed testing table</li>
+      <li>✅ <strong>Task 12:</strong> Final evaluation and student declaration signature</li>
     </ul>
 
     <div class="nav-footer">
-      <a href="guide-3-coding-challenges.html">&larr; Guide 3: Coding Challenges</a>
+      <a href="guide-3-coding-challenges.html" class="secondary">&larr; Guide 3: Coding Challenges</a>
       <a href="guide-1-research-and-design.html">Return to Guide 1 &uarr;</a>
     </div>
   </div>

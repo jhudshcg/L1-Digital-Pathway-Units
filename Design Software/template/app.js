@@ -149,8 +149,8 @@ function calculateSubtotal(tray) {
 function checkBudgetLimit(totalAmount) {
   var voucherLimit = 5.50;
 
-  // TODO 2: Replace '===' with the correct comparison operator ( > or < )
-  if (totalAmount === voucherLimit) {
+  // TODO 2: Replace '==' with the correct comparison operator ( > or < )
+  if (totalAmount == voucherLimit) {
     return "Warning: Your order of £" + totalAmount.toFixed(2) + " exceeds the £5.50 meal voucher limit!";
   }
 
@@ -180,14 +180,14 @@ function checkOrderAllergies(tray) {
 /**
  * CHALLENGE 4: HEALTHY PROMOTION DISCOUNT (Snippet Bank Practice)
  * -------------------------------------------------------------
- * Goal: If 2 or more items have healthpromo === true, give a 10% discount (subtotal * 0.10).
+ * Goal: If 2 or more items have healthpromo == true, give a 10% discount (subtotal * 0.10).
  */
 function checkHealthyPromotion(tray, subtotal) {
   var healthyCount = 0;
 
   // TODO 4: Count how many healthy items are in the tray
   for (var i = 0; i < tray.length; i++) {
-    if (tray[i].healthpromo === true) {
+    if (tray[i].healthpromo == true) {
       // Add 1 to healthyCount:
       healthyCount += 0;
     }

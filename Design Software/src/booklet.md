@@ -30,294 +30,339 @@ footer-center: "Page \\thepage"
 
 \vspace{1.5cm}
 
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                    [ PASTE COVER SCREENSHOT HERE ]                    |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
+| **Cover Screenshot Evidence:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your finished Canteen App cover screenshot here)*                  |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
 
 \newpage
 
-## 1. Project Overview & Assessment Matrix
+## Project Overview & Assessment Matrix
 
-### 1.1 Unit Aim
+### Unit Aim
 This unit enables you to use design software tools and web design techniques to obtain, prepare, manipulate, and combine information into an interactive, user-friendly digital design.
 
-### 1.2 Project Brief
+### Project Brief
 You have been commissioned by the College Catering Department to design and build an interactive **Canteen Ordering System**. 
 
 Your web application will allow students and staff to:
 1. Browse a menu of at least 10 food and drink items with prices, images, descriptions, and allergy warnings.
 2. Select an engaging visual design (layout, colours, fonts, and theme) tailored to your target audience.
 3. Automatically calculate order totals, check budget limits (e.g. £5.50 meal vouchers), highlight healthy choices, and display allergen alerts.
-4. Manage your project versions using Git in VS Code.
+4. Manage your project files and versions using local folders and Git in VS Code.
 
-### 1.3 Assessment Criteria Tracking Grid
+### Assessment Criteria Tracking Grid
 
-| Criteria | Description | Task Section | Achieved? |
-| :--- | :--- | :--- | :--- |
-| **1.1** | Identify what designs are needed. | Section 2 | [ ] |
-| **1.2** | Obtain, input and prepare designs to meet requirements. | Section 2 & 3 | [ ] |
-| **1.3** | Identify the main copyright and other constraints which apply. | Section 3 | [ ] |
-| **1.4** | Combine information of two different types or sources. | Section 3 | [ ] |
-| **1.5** | Identify how the designs will be used. | Section 2 | [ ] |
-| **1.6** | Identify which file format to use for saving and exchanging designs. | Section 4 & 6 | [ ] |
-| **1.7** | Store and retrieve files appropriately using guidelines and conventions. | Section 6 | [ ] |
-| **2.1** | Use suitable tools and techniques to create designs. | Section 4 & 5 | [ ] |
-| **2.2** | Use appropriate tools and techniques to manipulate and edit designs. | Section 4 & 5 | [ ] |
-| **2.3** | Check designs meet requirements, using IT tools and making corrections. | Section 6 | [ ] |
-
-\newpage
-
-## 2. Planning Your Design (AC 1.1, 1.5)
-
-### Task 2.1: Target Audience & Design Purpose (AC 1.1, 1.5)
-*Answer the questions below in full sentences.*
-
-**1. Who is the target audience for your canteen ordering system?**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
-
-**2. How will users interact with this design (e.g. tablet on counter, mobile phone, desktop kiosk)?**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
-
-**3. What specific features and elements does your ordering system need to include?**
-```
-[ ] App Title & Tagline               [ ] Menu Category Filter Dropdown
-[ ] 10 Food & Drink Cards             [ ] Price Display in £ (GBP)
-[ ] Allergen Warning Labels           [ ] Healthy Choice Badges
-[ ] Interactive Tray (Basket)         [ ] Subtotal & Total Calculations
-[ ] £5.50 Voucher Budget Alert        [ ] Order Confirmation Notification
-```
-
----
-
-### Task 2.2: Mood Board & Visual Theme (AC 1.1, 1.2)
-*Create a mood board (using provector.app or image collage) showing your chosen colours, typography style, and food themes.*
-
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                       [ PASTE MOOD BOARD HERE ]                       |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
-
-**Explain why you chose this colour scheme and theme for your canteen:**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
-
----
-
-### Task 2.3: User Interface Wireframe (AC 1.1, 1.2, 2.1)
-*Sketch or digitally draw the layout of your header, filter bar, menu cards, and order summary.*
-
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                       [ PASTE WIREFRAME HERE ]                        |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
+| Criteria | Description | Evidence Task(s) | Achieved? |
+| :--- | :--- | :--- | :---: |
+| **1.1** | Identify what designs are needed. | Task 1, Task 7 | [ ] |
+| **1.2** | Obtain, input and prepare designs to meet requirements. | Task 3, Task 7 | [ ] |
+| **1.3** | Identify the main copyright and other constraints which apply. | Task 4 | [ ] |
+| **1.4** | Combine information of two different types or from two sources. | Task 3, Task 5 | [ ] |
+| **1.5** | Identify how the designs will be used. | Task 2 | [ ] |
+| **1.6** | Identify which file format to use for saving and exchanging designs. | Task 6 | [ ] |
+| **1.7** | Store and retrieve files appropriately using guidelines and conventions. | Task 10 | [ ] |
+| **2.1** | Use suitable tools and techniques to create designs. | Task 7, Task 8, Task 9 | [ ] |
+| **2.2** | Use appropriate tools and techniques to manipulate and edit designs. | Task 8, Task 9 | [ ] |
+| **2.3** | Check designs meet requirements, using IT tools and making corrections. | Task 11, Task 12 | [ ] |
 
 \newpage
 
-## 3. Menu Research, Sourcing & Copyright (AC 1.2, 1.3, 1.4)
+## Planning & Understanding Design Requirements
 
-### Task 3.1: Menu Research & Information Sourcing (AC 1.2, 1.4)
+### Task 1: Identifying Design Needs (AC 1.1)
+*Answer the questions below to identify what designs and features are needed for your canteen ordering system.*
+
+**1. Who is the target audience for your canteen system (e.g. college students, staff, visitors)?**
+
+| **Target Audience Response:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Type your target audience details here)*                                 |
+|                                                                            |
+| :::                                                                        |
+
+**2. List the key features and visual elements your ordering system must include:**
+
+| **Required Features and Interface Elements List:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| 1.                                                                         |
+| 2.                                                                         |
+| 3.                                                                         |
+| 4.                                                                         |
+| 5.                                                                         |
+| 6.                                                                         |
+| 7.                                                                         |
+| 8.                                                                         |
+| :::                                                                        |
+
+---
+
+### Task 2: How the Design Will Be Used (AC 1.5)
+*Explain the context, platform, and user environment for your design.*
+
+**1. On what devices will users interact with this design (e.g. counter touchscreen kiosk, tablet, mobile phone, desktop browser)?**
+
+| **Device & Context of Use:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Explain what devices and environments users will view the app on)*       |
+|                                                                            |
+| :::                                                                        |
+
+**2. How does the layout and colour choice help users easily order food during a busy lunchtime?**
+
+| **User Experience Explanation:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Explain how your design choices make ordering fast and easy)*            |
+|                                                                            |
+| :::                                                                        |
+
+\newpage
+
+## Obtaining, Sourcing & Preparing Information
+
+### Task 3: Menu Research & Data Preparation (AC 1.2, 1.4)
 *Research 10 menu items (at least 4 mains, 3 snacks/desserts, 3 drinks). Include at least 3 healthy choices.*
 
-| # | Item Name | Category | Price (£) | Healthy? | Allergens (e.g. gluten, dairy, nuts) |
-|---|---|---|---|---|---|
-| 1 | | Main | £ | Yes / No | |
-| 2 | | Main | £ | Yes / No | |
-| 3 | | Main | £ | Yes / No | |
-| 4 | | Main | £ | Yes / No | |
-| 5 | | Snack | £ | Yes / No | |
-| 6 | | Snack | £ | Yes / No | |
-| 7 | | Snack | £ | Yes / No | |
-| 8 | | Drink | £ | Yes / No | |
-| 9 | | Drink | £ | Yes / No | |
-| 10| | Drink | £ | Yes / No | |
+| # | Item Name | Category (Main / Snack / Drink) | Price (£) | Healthy Choice? (Yes / No) | Allergens (e.g. gluten, dairy, nuts, eggs) |
+|---|---|---|---|:---:|---|
+| 1 | | Main | £ | | |
+| 2 | | Main | £ | | |
+| 3 | | Main | £ | | |
+| 4 | | Main | £ | | |
+| 5 | | Snack | £ | | |
+| 6 | | Snack | £ | | |
+| 7 | | Snack | £ | | |
+| 8 | | Drink | £ | | |
+| 9 | | Drink | £ | | |
+| 10| | Drink | £ | | |
 
 ---
 
-### Task 3.2: Image Copyright & Asset Log (AC 1.3, 1.4)
-*Record the source website and copyright license for the images you obtained for your design.*
+### Task 4: Copyright Constraints & Image Sourcing (AC 1.3)
+*Record the source website, photographer/creator, and license for the images you obtained.*
 
-| Item # | Image URL / Sourcing Website | Copyright License (e.g. Unsplash, Creative Commons, Pexels) |
-|---|---|---|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
-| 6 | | |
-| 7 | | |
-| 8 | | |
-| 9 | | |
-| 10| | |
+| Item # | Local Image Filename (e.g. `images/burger.jpg`) | Sourcing Website / URL | Copyright License (e.g. Unsplash, Pexels, Creative Commons) |
+|---|---|---|---|
+| 1 | `images/` | | |
+| 2 | `images/` | | |
+| 3 | `images/` | | |
+| 4 | `images/` | | |
+| 5 | `images/` | | |
+| 6 | `images/` | | |
+| 7 | `images/` | | |
+| 8 | `images/` | | |
+| 9 | `images/` | | |
+| 10| `images/` | | |
 
-**Why is it important to check copyright permissions before using images in commercial or college designs? (AC 1.3)**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
+**Why must designers check copyright licenses before using images found on the internet? (AC 1.3)**
+
+| **Copyright & Intellectual Property Explanation:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Explain copyright laws and why permission/licensing is required)*         |
+|                                                                            |
+| :::                                                                        |
 
 \newpage
 
-## 4. Customising Look & Feel in VS Code (AC 2.1, 2.2, 1.6)
+### Task 5: Combining Information from Multiple Sources (AC 1.4)
+*Explain how your canteen design combines different types of information from multiple sources into each menu card.*
 
-### Task 4.1: Applying Design Classes
-*Record the classes you selected in `index.html` to customise your design:*
+| **Information Types Combined in Each Menu Card:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| **Text Information:**                                                      |
+|                                                                            |
+| **Numerical / Pricing Data:**                                              |
+|                                                                            |
+| **Graphic / Image Assets:**                                                |
+|                                                                            |
+| **Health & Allergen Icons:**                                               |
+|                                                                            |
+| :::                                                                        |
 
-| Design Aspect | Chosen Class Name | Why did you choose this? |
+---
+
+### Task 6: Identifying File Formats (AC 1.6)
+*Identify the purpose of each file format used in your design project:*
+
+| File Format | Role in the Project | Why is this format suitable? |
+| :--- | :--- | :--- |
+| **HTML (`.html`)** | Page structure & content | |
+| **CSS (`.css`)** | Styling, colours, layouts & fonts | |
+| **JavaScript (`.js`)** | Interactive logic, calculations & data | |
+| **JPG / PNG / WebP** | Food photography & icons | |
+
+\newpage
+
+## Creating & Manipulating Designs
+
+### Task 7: Mood Board & Wireframe Creation (AC 1.1, 1.2, 2.1)
+*Create a visual mood board and a UI wireframe using provector.app or design software.*
+
+**Mood Board (Colours, Typography & Theme Ideas):**
+
+| **Mood Board Evidence:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your Mood Board image here)*                                       |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
+
+**UI Layout Wireframe (Structure of Header, Filters, Cards & Tray):**
+
+| **Wireframe Blueprint Evidence:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your Wireframe design image here)*                                 |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
+
+\newpage
+
+### Task 8: Applying Look & Feel Customisations (AC 2.1, 2.2)
+*Record the classes selected on the `<body>` tag in `index.html` to manipulate the design:*
+
+| Design Aspect | Selected Class Name | Visual Reason for Choice |
 | :--- | :--- | :--- |
 | **Layout** | `layout-__________________` | |
 | **Colour Scheme** | `colour-__________________` | |
-| **Design Theme**| `theme-___________________` | |
+| **Design Theme** | `theme-___________________` | |
 | **Spacing** | `spacing-_________________` | |
 
----
+*Paste a screenshot showing your styled interface with your researched food cards loaded:*
 
-### Task 4.2: Screenshot of Customised Interface (AC 2.1, 2.2)
-*Paste a screenshot showing your styled Canteen UI displaying your researched menu items.*
-
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                 [ PASTE CUSTOMISED UI SCREENSHOT HERE ]               |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
-
----
-
-### Task 4.3: File Formats in Web Design (AC 1.6)
-*Answer the questions on file formats used in this project:*
-
-1. **What file format is used for the structure of your page?** `____________________`
-2. **What file format is used for styling and layout?** `____________________`
-3. **What file format is used for interactive logic and data?** `____________________`
-4. **Why are JPG/PNG/WebP formats suitable for web food photos?**
-```
-_________________________________________________________________________________
-```
+| **Customised User Interface Screenshot:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your styled Canteen UI screenshot here)*                           |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
 
 \newpage
 
-## 5. JavaScript Logic & Implementation (AC 2.1, 2.2)
+### Task 9: Implementing Interactive Logic (AC 2.1, 2.2)
+*Record your completed coding challenges from `app.js` and paste screenshot evidence.*
 
-### Task 5.1: Coding Challenges Summary
-*Confirm completion of each coding challenge in `app.js`:*
+| Challenge # | Logic Feature | How you implemented it (Snippet / Operator used) |
+| :---: | :--- | :--- |
+| **1** | Calculate Tray Subtotal | Loop through `tray` array adding `item.price` |
+| **2** | £5.50 Meal Voucher Budget Alert | Checked if `totalAmount > 5.50` |
+| **3** | Allergen Warning Alert | Checked if item includes allergen (e.g. `'nuts'`) |
+| **4** | Healthy Choice 10% Discount | Counted healthy items and applied `0.10` discount |
+| **5** | Custom Order Confirmation | Displayed feedback banner with tray item count |
 
-| Challenge | Feature | Completed in `app.js`? | Verified in Browser? |
-| :--- | :--- | :---: | :---: |
-| **Challenge 1** | Calculate Subtotal (Loop through tray array) | [ ] Yes | [ ] Yes |
-| **Challenge 2** | £5.50 Meal Voucher Budget Limit Check | [ ] Yes | [ ] Yes |
-| **Challenge 3** | Allergen Warning Check (e.g. nuts) | [ ] Yes | [ ] Yes |
-| **Challenge 4** | Healthy Choice 10% Discount Promotion | [ ] Yes | [ ] Yes |
-| **Challenge 5** | Custom Order Confirmation Notification | [ ] Yes | [ ] Yes |
+*Paste a screenshot of your completed JavaScript code in `app.js`:*
 
----
-
-### Task 5.2: Code Evidence (AC 2.1, 2.2)
-*Paste a screenshot or code snippet of your completed logic in `app.js`:*
-
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                 [ PASTE JAVASCRIPT CODE SCREENSHOT HERE ]             |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
+| **JavaScript Logic (`app.js`) Code Screenshot:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your completed app.js code screenshot here)*                       |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
 
 \newpage
 
-## 6. Testing, Quality Assurance & Git Management (AC 1.7, 2.3)
+## File Management, Testing & Evaluation
 
-### Task 6.1: Quality Assurance & Testing Log (AC 2.3)
-*Perform live tests of your app in the browser and record any fixes you made.*
-
-| Test # | Test Action | Expected Result | Actual Result | Pass/Fail | Fix / Correction Made (if failed) |
-|---|---|---|---|:---:|---|
-| 1 | Filter dropdown by 'Mains' | Only main dishes show | | | |
-| 2 | Add 2 items to tray | Subtotal updates accurately | | | |
-| 3 | Toggle £5.50 voucher over budget | Warning banner appears | | | |
-| 4 | Add item with allergen | Allergen alert shows | | | |
-| 5 | Add 2 healthy items | 10% discount applies | | | |
-| 6 | Click 'Clear Tray' | Tray resets to 0 items | | | |
-
----
-
-### Task 6.2: Git Version Control & File Storage (AC 1.7)
+### Task 10: File Storage & Git Version Control (AC 1.7)
 *Demonstrate good file organisation and regular Git commits in VS Code.*
 
-**List 3 commit messages you recorded during the project:**
-1. `_____________________________________________________________________________`
-2. `_____________________________________________________________________________`
-3. `_____________________________________________________________________________`
+**1. Where are your project images and scripts stored in your workspace?**
 
-*Paste a screenshot of your Git commit log or Source Control panel in VS Code:*
+| **File Organisation Answer:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Explain where your images, HTML, CSS, and JS files are kept)*            |
+|                                                                            |
+| :::                                                                        |
 
-```
-+-----------------------------------------------------------------------+
-|                                                                       |
-|                                                                       |
-|                 [ PASTE GIT COMMIT LOG SCREENSHOT HERE ]              |
-|                                                                       |
-|                                                                       |
-+-----------------------------------------------------------------------+
-```
+**2. List 3 meaningful Git commit messages you made in VS Code:**
+
+| **Git Commit Log:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| 1.                                                                         |
+| 2.                                                                         |
+| 3.                                                                         |
+| :::                                                                        |
+
+*Paste a screenshot of your Git commit history or VS Code Source Control panel:*
+
+| **Git Commit Log Screenshot:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+|                                                                            |
+| *(Paste your VS Code Git Source Control / commit history screenshot here)* |
+|                                                                            |
+|                                                                            |
+| :::                                                                        |
 
 \newpage
 
-## 7. Final Evaluation & Declaration
+### Task 11: Testing & Making Corrections (AC 2.3)
+*Perform live tests of your app in the browser, check for errors, and record any corrections made.*
 
-### 7.1 Student Evaluation (AC 2.3)
-*Reflect on your finished design:*
-
-**1. What part of your canteen ordering system design are you most proud of, and why?**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
-
-**2. If you had more time, what additional feature or styling would you add to improve user experience?**
-```
-_________________________________________________________________________________
-_________________________________________________________________________________
-```
+| Test # | Test Action | Expected Result | Actual Result | Pass / Fail | Correction Made (if failed) |
+|:---:|---|---|---|:---:|---|
+| **1** | Filter menu by category | Only selected category shows | | | |
+| **2** | Add 2 items to tray | Subtotal updates accurately | | | |
+| **3** | Check £5.50 voucher over limit | Warning alert displays | | | |
+| **4** | Add item with allergen | Allergen warning banner appears | | | |
+| **5** | Add 2 healthy items to tray | 10% discount row appears | | | |
+| **6** | Click 'Clear Tray' | Tray resets to £0.00 and empties | | | |
 
 ---
 
-### 7.2 Student Declaration
+### Task 12: Review & Evaluation (AC 2.3)
+*Evaluate your finished canteen design against requirements.*
+
+**1. How well does your final design meet the needs of your target audience?**
+
+| **Target Audience Evaluation:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Reflect on how well your design fits your target users)*                  |
+|                                                                            |
+| :::                                                                        |
+
+**2. What improvements or additional features would you add if you had more time?**
+
+| **Future Improvements & Next Steps:** |
+| :------------------------------------------------------------------------- |
+| ::: {custom-style="AnswerBox"}                                             |
+| *(Suggest 1 or 2 features you would like to build next)*                   |
+|                                                                            |
+| :::                                                                        |
+
+\newpage
+
+## Declaration & Assessment Feedback
+
+### Student Declaration
 I confirm that the work presented in this project booklet and codebase is my own work and has been carried out according to the assignment instructions.
 
 **Student Signature:** ________________________________________ **Date:** ______________
 
 ---
 
-### 7.3 Assessor Assessment & Feedback Sheet (Teacher Use Only)
+### Assessor Feedback & Grading (Teacher Use Only)
 
 | Learning Outcome / Criteria | Met (Y/N) | Assessor Comments |
 | :--- | :---: | :--- |

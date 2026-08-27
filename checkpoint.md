@@ -35,10 +35,10 @@
   - `demo-americana-diner/`: `layout-grid colour-light theme-americana spacing-standard` (Bungee typography, red diner borders, tray on right).
   - `demo-punk-eats/`: `layout-sidebar-left colour-dark theme-punk spacing-compact` (Tray on the LEFT, stark B&W + neon pink, Creepster & Special Elite fonts, tilted cards, ban-the-bomb ☮ & anarchy Ⓐ decals).
 - **HTML Guides (`guides/`):**
-  - `guide-1-research-and-design.html`: Menu research, local image downloading & copyright sourcing, mood board, wireframing (`provector.app`).
-  - `guide-2-customising-styles.html`: Class-based CSS theming, Google Fonts, colour tweaks.
-  - `guide-3-coding-challenges.html`: JavaScript snippet bank and fill-in-the-blank challenge walkthroughs.
-  - `guide-4-testing-and-git.html`: QA testing matrix, VS Code GUI Git commit workflow.
+  - `guide-1-research-and-design.html`: Minimum menu requirements, spreadsheet research table, image copyright & local `images/` downloads, visual diagram mockups of mood boards & wireframes.
+  - `guide-2-customising-styles.html`: 3 building blocks of the web (HTML/CSS/JS), elements, `<body>` tag, CSS classes, and hands-on styling micro-activity with full cheat sheet.
+  - `guide-3-coding-challenges.html`: Friendly programming intro (variables, loops, if-conditions, functions), snippet bank adaptation, option-driven multiple-choice problem solving for 5 coding challenges without giving answers away.
+  - `guide-4-testing-and-git.html`: QA testing matrix, browser developer tools console debugging, and VS Code GUI Git commit workflow.
 - **Student Project Booklet (`src/booklet.md`):**
   - Full evidence workbook covering AC 1.1–1.7 and AC 2.1–2.3 with prompt boxes, tables, and teacher feedback rubric.
 
