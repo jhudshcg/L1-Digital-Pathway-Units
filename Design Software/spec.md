@@ -46,11 +46,13 @@ They will use git in VSCode to version manage their project. No branches or comm
 
 **Initial CSS design options:**
 
-selectable (by changing the html class attributes) styles:
-- grid layout, flex layout, single column layout
-- light theme, dark theme, high contrast theme
-- typography, colour and adornment styles: retro, americana, modern, punk, emo (should require 1 or 2 class attr changes)
-- spacing options: compact, standard, spacious (should require 1 class attr change and work with all layout and typography options)
+selectable (by changing the html class attributes on `<body>`):
+- layout options: `layout-grid`, `layout-flex`, `layout-sidebar-left`, `layout-single-column`
+- colour schemes: `colour-light`, `colour-dark`, `colour-contrast`
+- design themes (typography, mood and adornment): `theme-modern`, `theme-retro`, `theme-americana`, `theme-punk`, `theme-emo`
+- spacing options: `spacing-compact`, `spacing-standard`, `spacing-spacious`
+
+Images are stored locally within an `images/` directory in the project rather than hotlinked externally.
 
 The CSS will make use of Google Fonts, and will include a few different font options for headings and body text, which students can select by changing the class attributes in the HTML file. There should be simple guidance on using Google Fonts to add additional fonts or change existing choices, if students wish to do so.
 

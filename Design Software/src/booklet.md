@@ -189,8 +189,8 @@ ________________________________________________________________________________
 | Design Aspect | Chosen Class Name | Why did you choose this? |
 | :--- | :--- | :--- |
 | **Layout** | `layout-__________________` | |
-| **Base Theme** | `theme-___________________` | |
-| **Aesthetic Style**| `style-___________________` | |
+| **Colour Scheme** | `colour-__________________` | |
+| **Design Theme**| `theme-___________________` | |
 | **Spacing** | `spacing-_________________` | |
 
 ---

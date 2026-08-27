@@ -1,6 +1,6 @@
 # Project Checkpoint: L1 Digital Skills Course Units
 
-**Last Updated:** 2026-08-26  
+**Last Updated:** 2026-08-27  
 **Active Focus:** Design Software Unit (R/505/6389) & Course Framework Setup
 
 ---
@@ -18,18 +18,24 @@
 
 ---
 
-### B. Unit 1: Design Software (`Design Software/`) — Draft Resources Created
+### B. Unit 1: Design Software (`Design Software/`) — Draft Resources Created & Refined
 - **Theme:** Canteen Ordering System (HTML/CSS/JS in VS Code).
+- **Images:** All images stored locally in `images/` within `template/` and each exemplar (no external hotlinking).
+- **Class Naming Architecture:**
+  - Layouts: `layout-grid`, `layout-flex`, `layout-sidebar-left`, `layout-single-column`
+  - Colour Schemes: `colour-light`, `colour-dark`, `colour-contrast`
+  - Design Themes: `theme-modern`, `theme-retro`, `theme-americana`, `theme-punk`, `theme-emo`
+  - Spacing: `spacing-compact`, `spacing-standard`, `spacing-spacious`
 - **Starter Template (`template/`):**
-  - `index.html`: Base layout, menu grid, interactive tray, voucher checkbox, status banner.
-  - `style.css`: Class-based theming engine (`layout-*`, `theme-*`, `style-*`, `spacing-*`, Google Fonts).
-  - `util.js`: Background rendering, event listeners, state management (students do not need to edit).
-  - `app.js`: 10-item data skeleton + 5 scaffolded coding challenges (subtotal calculation, £5.50 voucher budget check, allergy warnings, healthy choice promotion discount, custom checkout feedback).
+  - `index.html`: Base semantic structure with class customization options.
+  - `style.css`: Modular stylesheet with layout flexibility, typography, and contrast themes.
+  - `util.js`: Background rendering, event listeners, state management.
+  - `app.js`: 10-item data skeleton with local `images/` paths + 5 scaffolded coding challenges.
 - **Exemplar Projects (`examples/`):**
-  - `demo-americana-diner/`: Grid layout, light theme, Americana 50s diner aesthetic, Bungee typography.
-  - `demo-punk-eats/`: Flex layout, dark theme, Punk street-food aesthetic, Creepster typography.
+  - `demo-americana-diner/`: `layout-grid colour-light theme-americana spacing-standard` (Bungee typography, red diner borders, tray on right).
+  - `demo-punk-eats/`: `layout-sidebar-left colour-dark theme-punk spacing-compact` (Tray on the LEFT, stark B&W + neon pink, Creepster & Special Elite fonts, tilted cards, ban-the-bomb ☮ & anarchy Ⓐ decals).
 - **HTML Guides (`guides/`):**
-  - `guide-1-research-and-design.html`: Menu research, copyright sourcing, mood board, wireframing (`provector.app`).
+  - `guide-1-research-and-design.html`: Menu research, local image downloading & copyright sourcing, mood board, wireframing (`provector.app`).
   - `guide-2-customising-styles.html`: Class-based CSS theming, Google Fonts, colour tweaks.
   - `guide-3-coding-challenges.html`: JavaScript snippet bank and fill-in-the-blank challenge walkthroughs.
   - `guide-4-testing-and-git.html`: QA testing matrix, VS Code GUI Git commit workflow.

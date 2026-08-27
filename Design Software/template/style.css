@@ -5,10 +5,16 @@
    HOW TO USE THIS STYLESHEET:
    You can change the look and feel of your app by simply changing class 
    names in the <body> tag in index.html!
+   
+   OPTIONS ON <body>:
+   1. Layout:     layout-grid | layout-flex | layout-sidebar-left | layout-single-column
+   2. Colour:     colour-light | colour-dark | colour-contrast
+   3. Theme:      theme-modern | theme-retro | theme-americana | theme-punk | theme-emo
+   4. Spacing:    spacing-compact | spacing-standard | spacing-spacious
    ========================================================================== */
 
 /* ==========================================================================
-   1. ROOT VARIABLES (Default theme values)
+   1. ROOT VARIABLES (Default base values)
    ========================================================================== */
 :root {
   --font-heading: 'Montserrat', sans-serif;
@@ -81,6 +87,7 @@ body {
   color: var(--text-header);
   padding: 1.5rem 2rem;
   border-bottom: var(--border-width) solid var(--border-color);
+  position: relative;
 }
 
 .app-header h1 {
@@ -123,11 +130,11 @@ body {
 }
 
 /* ==========================================================================
-   3. THEME OPTIONS (Applied to <body>)
+   3. COLOUR SCHEMES (Applied to <body>)
    ========================================================================== */
 
-/* Light Theme (Default) */
-body.theme-light {
+/* Light Colour Scheme (Default) */
+body.colour-light {
   --bg-page: #f8fafc;
   --bg-card: #ffffff;
   --bg-header: #1e293b;
@@ -136,8 +143,8 @@ body.theme-light {
   --text-muted: #64748b;
 }
 
-/* Dark Theme */
-body.theme-dark {
+/* Dark Colour Scheme */
+body.colour-dark {
   --bg-page: #0f172a;
   --bg-card: #1e293b;
   --bg-header: #020617;
@@ -149,8 +156,8 @@ body.theme-dark {
   --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
 }
 
-/* High Contrast Theme (Accessibility) */
-body.theme-contrast {
+/* High Contrast Colour Scheme (Accessibility) */
+body.colour-contrast {
   --bg-page: #000000;
   --bg-card: #000000;
   --bg-header: #000000;
@@ -166,22 +173,22 @@ body.theme-contrast {
   --color-primary-hover: #ffffff;
   --box-shadow: none;
 }
-body.theme-contrast .btn-primary {
+body.colour-contrast .btn-primary {
   color: #000000;
   font-weight: bold;
 }
-body.theme-contrast .menu-card,
-body.theme-contrast .order-section,
-body.theme-contrast .filter-section {
+body.colour-contrast .menu-card,
+body.colour-contrast .order-section,
+body.colour-contrast .filter-section {
   border: 2px solid #ffffff;
 }
 
 /* ==========================================================================
-   4. STYLE / TYPOGRAPHY / ADORNMENT OPTIONS (Applied to <body>)
+   4. DESIGN THEMES / TYPOGRAPHY / ADORNMENT (Applied to <body>)
    ========================================================================== */
 
-/* Modern (Clean, crisp, tech) */
-body.style-modern {
+/* Theme: Modern (Clean, crisp, tech) */
+body.theme-modern {
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
   --border-radius: 12px;
@@ -189,8 +196,8 @@ body.style-modern {
   --color-primary-hover: #0369a1;
 }
 
-/* Retro (Warm, rounded, cheerful) */
-body.style-retro {
+/* Theme: Retro (Warm, rounded, cheerful) */
+body.theme-retro {
   --font-heading: 'Fredoka', cursive;
   --font-body: 'Fredoka', sans-serif;
   --border-radius: 20px;
@@ -199,15 +206,15 @@ body.style-retro {
   --border-width: 2px;
   --border-color: #fed7aa;
 }
-body.style-retro .app-header {
+body.theme-retro .app-header {
   background-color: #ea580c;
 }
-body.style-retro .btn {
+body.theme-retro .btn {
   border-radius: 25px;
 }
 
-/* Americana (Bold 50s diner style) */
-body.style-americana {
+/* Theme: Americana (Bold 50s diner style) */
+body.theme-americana {
   --font-heading: 'Bungee', cursive;
   --font-body: 'Oswald', sans-serif;
   --border-radius: 4px;
@@ -216,38 +223,185 @@ body.style-americana {
   --border-width: 3px;
   --border-color: #b91c1c;
 }
-body.style-americana .app-header {
+body.theme-americana .app-header {
   background: repeating-linear-gradient(45deg, #b91c1c, #b91c1c 20px, #991b1b 20px, #991b1b 40px);
 }
-body.style-americana .menu-card {
+body.theme-americana .menu-card {
   border: 3px solid #b91c1c;
 }
 
-/* Punk (Raw, edgy, rebellious, high energy) */
-body.style-punk {
+/* Theme: Punk (Raw DIY zine, stark black & white, neon pink, ban-the-bomb / anarchy motifs) */
+body.theme-punk {
   --font-heading: 'Creepster', cursive;
   --font-body: 'Special Elite', cursive;
+  --bg-page: #000000;
+  --bg-card: #0d0d0d;
+  --bg-header: #000000;
+  --bg-footer: #000000;
+  --bg-accent: #1a1a1a;
+  
+  --text-main: #ffffff;
+  --text-muted: #ffffff;
+  --text-header: #ff007f;
+  --text-footer: #ffffff;
+  
   --border-radius: 0px;
-  --color-primary: #a21caf;
-  --color-primary-hover: #701a75;
   --border-width: 3px;
-  --border-color: #000000;
-  --box-shadow: 6px 6px 0px #000000;
-}
-body.style-punk .menu-card {
-  border: 3px solid #000000;
-  transform: rotate(-0.5deg);
-}
-body.style-punk .menu-card:nth-child(even) {
-  transform: rotate(0.8deg);
-}
-body.style-punk .app-header {
-  background-color: #a21caf;
-  border-bottom: 5px solid #000000;
+  --border-color: #ffffff;
+  --box-shadow: 6px 6px 0px #ff007f;
+
+  --color-primary: #ff007f;
+  --color-primary-hover: #ffffff;
+  --color-secondary: #000000;
+  --color-secondary-hover: #222222;
+
+  --color-info-bg: #000000;
+  --color-info-text: #ffffff;
+  --color-info-border: #ffffff;
+
+  --color-warning-bg: #ff007f;
+  --color-warning-text: #000000;
+  --color-warning-border: #ffffff;
+
+  --color-success-bg: #ffffff;
+  --color-success-text: #000000;
+  --color-success-border: #ff007f;
+
+  --color-error-bg: #000000;
+  --color-error-text: #ff007f;
+  --color-error-border: #ff007f;
 }
 
-/* Emo (Moody, typewriter, dark purple/grey notes) */
-body.style-emo {
+body.theme-punk .app-header {
+  background-color: #000000;
+  border-bottom: 5px solid #ffffff;
+  background-image: 
+    radial-gradient(#ffffff 15%, transparent 16%),
+    radial-gradient(#ff007f 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+body.theme-punk .app-header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 0px #ffffff, -2px -2px 0px #000000;
+}
+
+body.theme-punk .section-heading {
+  border-bottom: 3px solid #ff007f;
+  color: #ff007f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.theme-punk .menu-card {
+  border: 3px solid #ffffff;
+  box-shadow: 6px 6px 0px #ff007f;
+  transform: rotate(-0.8deg);
+  background-color: #000000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.theme-punk .menu-card:nth-child(even) {
+  transform: rotate(1deg);
+  box-shadow: 6px 6px 0px #ffffff;
+  border-color: #ff007f;
+}
+
+body.theme-punk .menu-card:hover {
+  transform: scale(1.02) rotate(0deg);
+  box-shadow: 8px 8px 0px #ffff00;
+}
+
+body.theme-punk .btn {
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 3px 3px 0px #ffffff;
+}
+
+body.theme-punk .btn-primary {
+  background-color: #ff007f;
+  color: #000000;
+  font-weight: 900;
+}
+
+body.theme-punk .btn-primary:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 4px 4px 0px #ff007f;
+}
+
+body.theme-punk .btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+body.theme-punk .btn-secondary:hover {
+  background-color: #ff007f;
+  color: #000000;
+}
+
+body.theme-punk .filter-section,
+body.theme-punk .order-section {
+  border: 3px solid #ffffff;
+  box-shadow: 6px 6px 0px #ffffff;
+  background-color: #000000;
+}
+
+body.theme-punk .badge-type {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  font-family: 'Special Elite', cursive;
+}
+
+body.theme-punk .badge-health {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ff007f;
+  border-radius: 0;
+  font-family: 'Special Elite', cursive;
+  box-shadow: 2px 2px 0px #ff007f;
+}
+
+/* Punk decorative badges and symbols */
+.punk-symbol-cnd, .punk-symbol-anarchy, .punk-sticker {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.punk-sticker {
+  background: #ff007f;
+  color: #000000;
+  padding: 0.2rem 0.6rem;
+  font-family: 'Special Elite', cursive;
+  font-size: 0.85rem;
+  border: 2px solid #ffffff;
+  box-shadow: 3px 3px 0px #000000;
+  transform: rotate(-3deg);
+  margin: 0.25rem;
+}
+
+.punk-sticker.sticker-white {
+  background: #ffffff;
+  color: #000000;
+  transform: rotate(2.5deg);
+  border-color: #ff007f;
+}
+
+.punk-sticker.sticker-yellow {
+  background: #ffff00;
+  color: #000000;
+  transform: rotate(-1.5deg);
+}
+
+/* Theme: Emo (Moody typewriter, dark indigo/charcoal notes) */
+body.theme-emo {
   --font-heading: 'Special Elite', cursive;
   --font-body: 'Special Elite', cursive;
   --border-radius: 2px;
@@ -256,7 +410,7 @@ body.style-emo {
   --border-color: #64748b;
   --border-width: 1px;
 }
-body.style-emo .app-header {
+body.theme-emo .app-header {
   background-color: #1e1b4b;
 }
 
@@ -289,7 +443,7 @@ body.spacing-spacious {
    6. LAYOUT OPTIONS (Applied to <body>)
    ========================================================================== */
 
-/* Main layout grid for app structure */
+/* Default: 2-column with main menu on left, tray on right */
 .app-main {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -309,23 +463,24 @@ body.spacing-spacious {
   gap: 1rem;
 }
 
-/* Single column layout variation */
-body.layout-single-column .app-main {
-  grid-template-columns: 1fr;
-}
-body.layout-single-column .order-section {
-  order: -1; /* Place tray at top or stacked */
+.menu-section {
+  min-width: 0;
 }
 
-/* Menu Container layout options */
-/* 1. Grid Layout */
+/* 1. Layout Grid (Default menu display) */
+#menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--gap-size);
+}
+
 body.layout-grid #menu-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--gap-size);
 }
 
-/* 2. Flex Layout (Horizontal wrapping cards) */
+/* 2. Layout Flex (Fluid wrapping cards) */
 body.layout-flex #menu-container {
   display: flex;
   flex-wrap: wrap;
@@ -335,7 +490,26 @@ body.layout-flex .menu-card {
   flex: 1 1 280px;
 }
 
-/* 3. Single Column Layout (List format) */
+/* 3. Layout Sidebar Left (Tray on the left, Menu on the right) */
+body.layout-sidebar-left .app-main {
+  grid-template-columns: 340px 1fr;
+}
+body.layout-sidebar-left .order-section {
+  grid-column: 1;
+  grid-row: 2;
+}
+body.layout-sidebar-left .menu-section {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 4. Layout Single Column (Vertical list view with horizontal cards) */
+body.layout-single-column .app-main {
+  grid-template-columns: 1fr;
+}
+body.layout-single-column .order-section {
+  order: -1; /* Tray displayed first/top */
+}
 body.layout-single-column #menu-container {
   display: flex;
   flex-direction: column;
@@ -347,9 +521,10 @@ body.layout-single-column .menu-card {
   align-items: center;
   gap: 1.5rem;
 }
-body.layout-single-column .menu-card img {
-  width: 140px;
-  height: 120px;
+body.layout-single-column .menu-card-img-wrapper {
+  width: 180px;
+  min-width: 180px;
+  height: 140px;
 }
 body.layout-single-column .menu-card-content {
   flex: 1;
@@ -658,6 +833,17 @@ select, input[type="text"] {
 /* Responsive adjustments */
 @media (max-width: 850px) {
   .app-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+  body.layout-sidebar-left .app-main {
+    grid-template-columns: 1fr !important;
+  }
+  body.layout-sidebar-left .order-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  body.layout-sidebar-left .menu-section {
+    grid-column: 1;
+    grid-row: auto;
   }
 }

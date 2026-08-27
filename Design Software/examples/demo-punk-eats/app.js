@@ -2,12 +2,12 @@
  * RIOT BITES - EXEMPLAR APP (app.js)
  * 
  * DESIGN RATIONALE:
- * - Theme: Edgy Punk Street Food
+ * - Theme: Edgy Punk DIY Street Food
  * - Target Audience: College students wanting bold, spicy, fast-paced food
  * - Design Choices:
- *   - Layout: .layout-flex (flexible wrapping card rows)
- *   - Theme: .theme-dark (dark street vibe)
- *   - Style: .style-punk (uses 'Creepster' and 'Special Elite' fonts, skewed cards)
+ *   - Layout: .layout-sidebar-left (distinct wireframe structure: tray on the left)
+ *   - Colour: .colour-dark (stark black & white high-contrast underground zine)
+ *   - Theme: .theme-punk (uses 'Creepster' & 'Special Elite', tilted cards, ban-the-bomb/anarchy decals)
  *   - Spacing: .spacing-compact (snug layout fit)
  */
 
@@ -15,7 +15,7 @@ var orderItems = [
   {
     name: "Atomic Buffalo Hot Wings",
     price: 3.90,
-    image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=400",
+    image: "images/hot-wings.jpg",
     type: "main",
     description: "6 crispy wings tossed in fiery habanero glaze served with cool ranch dip.",
     healthpromo: false,
@@ -24,7 +24,7 @@ var orderItems = [
   {
     name: "Korean BBQ Tofu Bowl",
     price: 3.30,
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
+    image: "images/korean-tofu-bowl.jpg",
     type: "main",
     description: "Crispy glazed tofu cubes, steamed edamame, kimchi and brown rice.",
     healthpromo: true,
@@ -33,7 +33,7 @@ var orderItems = [
   {
     name: "Loaded Anarchy Nachos",
     price: 3.50,
-    image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=400",
+    image: "images/loaded-nachos.jpg",
     type: "main",
     description: "Tortilla chips loaded with jalapeños, warm cheese sauce and spicy salsa.",
     healthpromo: false,
@@ -42,7 +42,7 @@ var orderItems = [
   {
     name: "Superfood Protein Power Bowl",
     price: 3.20,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400",
+    image: "images/power-bowl.jpg",
     type: "main",
     description: "Quinoa, roasted sweet potato, baby kale, chickpeas and lemon tahini dressing.",
     healthpromo: true,
@@ -51,7 +51,7 @@ var orderItems = [
   {
     name: "Sonic Salt & Pepper Fries",
     price: 1.50,
-    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400",
+    image: "images/salt-pepper-fries.jpg",
     type: "snack",
     description: "Chunky skin-on fries seasoned with chilli flakes, spring onion and sea salt.",
     healthpromo: false,
@@ -60,7 +60,7 @@ var orderItems = [
   {
     name: "Charred Street Corn on Cob",
     price: 1.40,
-    image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400",
+    image: "images/street-corn.jpg",
     type: "snack",
     description: "Flame-grilled sweetcorn dusted with mild smoked paprika and lime juice.",
     healthpromo: true,
@@ -69,7 +69,7 @@ var orderItems = [
   {
     name: "Dark Chocolate Brownie Bomb",
     price: 1.70,
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400",
+    image: "images/brownie-bomb.jpg",
     type: "snack",
     description: "70% dark cocoa brownie loaded with fudge chunks and sea salt.",
     healthpromo: false,
@@ -78,7 +78,7 @@ var orderItems = [
   {
     name: "Cold Brew Rocket Fuel",
     price: 1.80,
-    image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400",
+    image: "images/cold-brew.jpg",
     type: "drink",
     description: "12-hour steeped artisan Colombian cold brew coffee served black over ice.",
     healthpromo: true,
@@ -87,7 +87,7 @@ var orderItems = [
   {
     name: "Electric Dragonfruit Lemonade",
     price: 1.40,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400",
+    image: "images/dragonfruit-lemonade.jpg",
     type: "drink",
     description: "Tart fresh lemonade infused with vibrant pink pitaya dragonfruit extract.",
     healthpromo: true,
@@ -96,7 +96,7 @@ var orderItems = [
   {
     name: "Monster Mango Energy Blast",
     price: 1.60,
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400",
+    image: "images/energy-blast.jpg",
     type: "drink",
     description: "Sparkling tropical juice drink packed with B-vitamins and green tea extract.",
     healthpromo: false,

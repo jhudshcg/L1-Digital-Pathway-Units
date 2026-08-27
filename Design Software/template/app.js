@@ -21,7 +21,7 @@ var orderItems = [
   {
     name: "Classic Chicken Burger",
     price: 3.50,
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+    image: "images/chicken-burger.jpg",
     type: "main",
     description: "Crispy breaded chicken breast fillet with lettuce and mayo in a seeded bun.",
     healthpromo: false,
@@ -30,7 +30,7 @@ var orderItems = [
   {
     name: "Mediterranean Veggie Wrap",
     price: 3.20,
-    image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400",
+    image: "images/veggie-wrap.jpg",
     type: "main",
     description: "Grilled peppers, hummus, cucumber and spinach in a wholemeal tortilla wrap.",
     healthpromo: true,
@@ -39,7 +39,7 @@ var orderItems = [
   {
     name: "Margherita Pizza Slice",
     price: 2.20,
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=400",
+    image: "images/pizza-slice.jpg",
     type: "main",
     description: "Stonebaked pizza base topped with rich tomato sauce and melted mozzarella cheese.",
     healthpromo: false,
@@ -48,7 +48,7 @@ var orderItems = [
   {
     name: "Jacket Potato with Tuna Mayo",
     price: 3.00,
-    image: "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?w=400",
+    image: "images/jacket-potato.jpg",
     type: "main",
     description: "Fluffy baked potato served with fresh tuna and light mayonnaise filling.",
     healthpromo: true,
@@ -57,7 +57,7 @@ var orderItems = [
   {
     name: "Fresh Fruit Salad Pot",
     price: 1.50,
-    image: "https://images.unsplash.com/photo-1565895405139-e188df996e0b?w=400",
+    image: "images/fruit-salad.jpg",
     type: "snack",
     description: "Seasonal mix of watermelon, grapes, strawberries, melon and pineapple chunks.",
     healthpromo: true,
@@ -66,7 +66,7 @@ var orderItems = [
   {
     name: "Salted Caramel Brownie",
     price: 1.60,
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400",
+    image: "images/caramel-brownie.jpg",
     type: "snack",
     description: "Rich chocolate brownie topped with smooth salted caramel drizzle.",
     healthpromo: false,
@@ -75,7 +75,7 @@ var orderItems = [
   {
     name: "Cheese & Onion Crisps",
     price: 0.90,
-    image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400",
+    image: "images/crisps.jpg",
     type: "snack",
     description: "Crunchy hand-cooked British potato crisps with mature cheddar flavouring.",
     healthpromo: false,
@@ -84,7 +84,7 @@ var orderItems = [
   {
     name: "Sparkling Orange Water",
     price: 1.10,
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400",
+    image: "images/orange-water.jpg",
     type: "drink",
     description: "Zero sugar lightly sparkling spring water with natural orange flavour.",
     healthpromo: true,
@@ -93,7 +93,7 @@ var orderItems = [
   {
     name: "Cold Chocolate Milkshake",
     price: 1.80,
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400",
+    image: "images/milkshake.jpg",
     type: "drink",
     description: "Creamy whole milk blended with cocoa powder and vanilla ice cream.",
     healthpromo: false,
@@ -102,7 +102,7 @@ var orderItems = [
   {
     name: "Hot Tea or Filter Coffee",
     price: 1.20,
-    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400",
+    image: "images/hot-drink.jpg",
     type: "drink",
     description: "Freshly brewed fairtrade English Breakfast tea or freshly ground dark roast coffee.",
     healthpromo: true,
