@@ -257,20 +257,20 @@
     <p class="subtitle">A beginner-friendly problem-solving guide to making your canteen ordering system interactive.</p>
 
     <h2>🧠 1. What is JavaScript? (Beginner Friendly Intro)</h2>
-    <p>JavaScript is the programming language that gives your canteen app its <strong>intelligence</strong>. While HTML displays the cards and CSS makes them look great, JavaScript does the math calculations, checks meal voucher budgets, and alerts users about allergies.</p>
+    <p>JavaScript is the programming language that gives your canteen app its <strong>interactive features</strong>. While HTML displays the cards and CSS makes them look great, JavaScript does the math calculations, checks meal voucher budgets, and alerts users about allergies.</p>
 
     <div class="concepts-grid">
       <div class="concept-card">
         <div class="concept-title">📦 Variables (<code>var</code>)</div>
-        <div class="concept-desc">Labelled storage boxes that hold information, such as numbers (<code>price: 3.50</code>) or text (<code>name: "Burger"</code>).</div>
+        <div class="concept-desc">Named storage that hold information, such as numbers (<code>price: 3.50</code>) or text strings (<code>name: "Burger"</code>).</div>
       </div>
       <div class="concept-card">
         <div class="concept-title">🔄 Loops (<code>for</code>)</div>
-        <div class="concept-desc">A repetition machine that looks at every item on the user's tray, one by one, to add up prices or check allergies.</div>
+        <div class="concept-desc">A repetition block for repeating code. For example to look at every item on the user's tray, one by one, to add up prices or check allergies.</div>
       </div>
       <div class="concept-card">
         <div class="concept-title">⚖️ If Conditions (<code>if</code>)</div>
-        <div class="concept-desc">Decision makers that ask True/False questions (e.g. "Is the total over £5.50?" or "Does this item contain nuts?").</div>
+        <div class="concept-desc">Decision makers that ask True/False questions (e.g. "Is the total over £5.50?" or "Does this item contain nuts?"). Then runs code if the answer is True.</div>
       </div>
       <div class="concept-card">
         <div class="concept-title">⚙️ Functions</div>
@@ -331,7 +331,7 @@ return total;</pre>
     <div class="challenge-card">
       <div class="challenge-header">
         <div class="challenge-title">Challenge 2: £5.50 Meal Voucher Budget Check</div>
-        <span class="challenge-badge">Fill-in-the-Blank</span>
+        <span class="challenge-badge">Fix the Code</span>
       </div>
       <p><strong>Goal:</strong> If the student's order exceeds the £5.50 meal voucher limit, trigger a warning message.</p>
 
@@ -367,18 +367,18 @@ return total;</pre>
       <pre>for (var i = 0; i < tray.length; i++) {
   var item = tray[i];
   
-  // Replace BLANK_ALLERGEN with the correct code:
-  if (item.alergy_warning.includes('BLANK_ALLERGEN')) {
+  // Replace 'BLANK' with the correct code:
+  if (item.alergy_warning.includes('BLANK')) {
     return "Allergy Alert: " + item.name + " contains nuts! Please check ingredients.";
   }
 }</pre>
 
       <div class="options-box">
         <div class="options-prompt">🤔 Which value correctly searches the allergy list for nuts?</div>
-        <div class="option-item"><strong>Option A:</strong> <code>'nuts'</code> &mdash; (The text string 'nuts' enclosed in single quotation marks)</div>
-        <div class="option-item"><strong>Option B:</strong> <code>nuts</code> &mdash; (Missing quotes &mdash; JavaScript will think this is an undefined variable and cause an error!)</div>
-        <div class="option-item"><strong>Option C:</strong> <code>5.50</code> &mdash; (A price number instead of an allergy name)</div>
-        <div class="option-item"><strong>Option D:</strong> <code>true</code> &mdash; (A boolean flag instead of an allergy name)</div>
+        <div class="option-item"><strong>Option A:</strong> <code>nuts</code> &mdash; (Missing quotes &mdash;)</div>
+        <div class="option-item"><strong>Option B:</strong> <code>5.50</code> &mdash; (A price number instead of an allergy name)</div>
+        <div class="option-item"><strong>Option C:</strong> <code>true</code> &mdash; (A boolean flag instead of an allergy name)</div>
+        <div class="option-item"><strong>Option D:</strong> <code>'nuts'</code> &mdash; (The text string 'nuts' enclosed in single quotation marks)</div>      
       </div>
     </div>
 
@@ -441,7 +441,7 @@ return total;</pre>
 
     <div class="nav-footer">
       <a href="guide-2-customising-styles.html" class="secondary">&larr; Guide 2: Customising Styles</a>
-      <a href="guide-4-testing-and-git.html">Next: Guide 4 &mdash; Testing & Git Commits &rarr;</a>
+      <a href="git-and-testing-guide.html">Next: Git Version Control & Testing Guide &rarr;</a>
     </div>
   </div>
 

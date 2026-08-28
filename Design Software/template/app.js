@@ -203,6 +203,23 @@ function checkHealthyPromotion(tray, subtotal) {
 
 
 /**
+ * CALCULATE FINAL TOTAL TO PAY
+ * -------------------------------------------------------------
+ * Takes the subtotal and subtracts any discount amount.
+ */
+function calculateFinalTotal(subtotal, discountAmount) {
+  var finalTotal = subtotal - discountAmount;
+  
+  // Make sure total never goes below £0.00
+  if (finalTotal < 0) {
+    finalTotal = 0;
+  }
+
+  return finalTotal;
+}
+
+
+/**
  * CHALLENGE 5: CHECKOUT CONFIRMATION (Fill-in-the-blank)
  * -------------------------------------------------------------
  * Goal: Create a friendly order confirmation message.

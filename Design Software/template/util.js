@@ -170,10 +170,16 @@ function refreshTrayUI() {
     discountRow.style.display = "none";
   }
 
-  var finalTotal = Math.max(0, subtotal - discountAmount);
+  // 3. Calculate final total to pay (calls calculateFinalTotal from app.js)
+  var finalTotal = 0;
+  if (typeof calculateFinalTotal === "function") {
+    finalTotal = calculateFinalTotal(subtotal, discountAmount);
+  } else {
+    finalTotal = Math.max(0, subtotal - discountAmount);
+  }
   totalSpan.textContent = formatPrice(finalTotal);
 
-  // 3. Check allergy warnings
+  // 4. Check allergy warnings
   var allergyWarningMessage = "";
   if (typeof checkOrderAllergies === "function") {
     allergyWarningMessage = checkOrderAllergies(currentTray);

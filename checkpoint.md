@@ -38,7 +38,7 @@
   - `guide-1-research-and-design.html`: Minimum menu requirements, spreadsheet research table, image copyright & local `images/` downloads, visual diagram mockups of mood boards & wireframes.
   - `guide-2-customising-styles.html`: 3 building blocks of the web (HTML/CSS/JS), elements, `<body>` tag, CSS classes, and hands-on styling micro-activity with full cheat sheet.
   - `guide-3-coding-challenges.html`: Friendly programming intro (variables, loops, if-conditions, functions), snippet bank adaptation, option-driven multiple-choice problem solving for 5 coding challenges without giving answers away.
-  - `guide-4-testing-and-git.html`: QA testing matrix, browser developer tools console debugging, and VS Code GUI Git commit workflow.
+  - `git-and-testing-guide.html` (*Git Version Control & Testing Guide*): Unnumbered guide for use prior to coding with GitHub repo cloning, local per-project Git config, skipping staging, diff comparison test activity, undo/rollback workflows, and browser QA test matrix.
 - **Student Project Booklet (`src/booklet.md`):**
   - Full evidence workbook covering AC 1.1–1.7 and AC 2.1–2.3 with prompt boxes, tables, and teacher feedback rubric.
 
