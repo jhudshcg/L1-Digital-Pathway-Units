@@ -18,29 +18,18 @@
 
 ---
 
-### B. Unit 1: Design Software (`Design Software/`) — Draft Resources Created & Refined
-- **Theme:** Canteen Ordering System (HTML/CSS/JS in VS Code).
-- **Images:** All images stored locally in `images/` within `template/` and each exemplar (no external hotlinking).
-- **Class Naming Architecture:**
-  - Layouts: `layout-grid`, `layout-flex`, `layout-sidebar-left`, `layout-single-column`
-  - Colour Schemes: `colour-light`, `colour-dark`, `colour-contrast`
-  - Design Themes: `theme-modern`, `theme-retro`, `theme-americana`, `theme-punk`, `theme-emo`
-  - Spacing: `spacing-compact`, `spacing-standard`, `spacing-spacious`
-- **Starter Template (`template/`):**
-  - `index.html`: Base semantic structure with class customization options.
-  - `style.css`: Modular stylesheet with layout flexibility, typography, and contrast themes.
-  - `util.js`: Background rendering, event listeners, state management.
-  - `app.js`: 10-item data skeleton with local `images/` paths + 5 scaffolded coding challenges.
-- **Exemplar Projects (`examples/`):**
-  - `demo-americana-diner/`: `layout-grid colour-light theme-americana spacing-standard` (Bungee typography, red diner borders, tray on right).
-  - `demo-punk-eats/`: `layout-sidebar-left colour-dark theme-punk spacing-compact` (Tray on the LEFT, stark B&W + neon pink, Creepster & Special Elite fonts, tilted cards, ban-the-bomb ☮ & anarchy Ⓐ decals).
-- **HTML Guides (`guides/`):**
-  - `guide-1-research-and-design.html`: Minimum menu requirements, spreadsheet research table, image copyright & local `images/` downloads, visual diagram mockups of mood boards & wireframes.
-  - `guide-2-customising-styles.html`: 3 building blocks of the web (HTML/CSS/JS), elements, `<body>` tag, CSS classes, and hands-on styling micro-activity with full cheat sheet.
-  - `guide-3-coding-challenges.html`: Friendly programming intro (variables, loops, if-conditions, functions), snippet bank adaptation, option-driven multiple-choice problem solving for 5 coding challenges without giving answers away.
-  - `git-and-testing-guide.html` (*Git Version Control & Testing Guide*): Unnumbered guide for use prior to coding with GitHub repo cloning, local per-project Git config, skipping staging, diff comparison test activity, undo/rollback workflows, and browser QA test matrix.
-- **Student Project Booklet (`src/booklet.md`):**
-  - Full evidence workbook covering AC 1.1–1.7 and AC 2.1–2.3 with prompt boxes, tables, and teacher feedback rubric.
+### B. Unit 1: Design Software (`Design Software/`) — Draft Resources Created & Submodule Ready
+- **Student Repository (`Design Software/design-software-student/`):**
+  - Git initialized as standalone student repo ready to be linked as a Git submodule and pushed to GitHub.
+  - `.gitignore` (ignores `.docx`, temporary and OS files).
+  - `README.md` (clear getting-started steps for Level 1 learners).
+  - `project/` (working directory with starter instructions).
+  - `template/` (`index.html`, `style.css`, `app.js`, `util.js`, `images/`).
+  - `examples/` (`demo-americana-diner/` and `demo-punk-eats/`).
+  - `guides/` (`guide-1-research-and-design.html`, `guide-2-customising-styles.html`, `guide-3-coding-challenges.html`, `git-and-testing-guide.html`).
+- **Teacher Planning & Evidence (Kept in main repo only):**
+  - `Design Software/spec.md`: Project specification, theme, data structure, and assessment criteria.
+  - `Design Software/src/booklet.md`: Student project booklet source in Markdown ready for Pandoc `.docx` conversion.
 
 ---
 
