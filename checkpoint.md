@@ -19,7 +19,8 @@
 ---
 
 ### B. Unit 1: Design Software (`Design Software/`) — Draft Resources Created & Submodule Ready
-- **Student Repository (`Design Software/design-software-student/`):**
+- **Student Repository (`Design Software/l1-design-software-student/`):**
+  - Remote naming convention: `l1-design-software-student` (tagged with GitHub topic `level-1`).
   - Git initialized as standalone student repo ready to be linked as a Git submodule and pushed to GitHub.
   - `.gitignore` (ignores `.docx`, temporary and OS files).
   - `README.md` (clear getting-started steps for Level 1 learners).
