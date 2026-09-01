@@ -1,45 +1,33 @@
 ---
-title: "Student Project Booklet"
-subtitle: "Canteen Ordering System Project"
+title: "Design Software (R/505/6389)"
+subtitle: "Campus Canteen Interactive Ordering System"
 author: "Level 1 Digital Skills"
 date: "Academic Year 2026/2027"
-geometry: margin=2cm
-header-left: "Design Software (R/505/6389)"
-header-right: "Credit Value: 3"
-footer-center: "Page \\thepage"
 ---
 
+::: {.layout-unit-header unit-title="Design Software" unit-code="R/505/6389" credits="3 Credits" project="Campus Canteen Ordering System"}
+:::
+
 # STUDENT PROJECT BOOKLET
+### Level 1 Certificate in Digital Skills
 
-\vspace{1cm}
-
-**Unit Title:** Design Software  
-**Unit Code:** R/505/6389  
-**Credit Value:** 3 Credits  
-**Project Title:** Campus Canteen Interactive Ordering System  
-
-\vspace{1cm}
-
-| Student Details | |
+::: layout-metadata-table
+| Field | Details |
 | :--- | :--- |
-| **Student Name:** | __________________________________________________ |
-| **Student ID:** | __________________________________________________ |
-| **Teacher Name:** | __________________________________________________ |
-| **Issue Date:** | __________________________________________________ |
-| **Submission Date:** | __________________________________________________ |
+| **Learner Name:** | |
+| **Learner ID:** | |
+| **Assessor Name:** | |
+| **Issue Date:** | |
+| **Submission Date:** | |
+| **Internal Verification (IV) Date:** | |
+:::
 
-\vspace{1.5cm}
+::: {.layout-textbox height="7.5cm" title="Cover Screenshot Evidence (Finished Canteen App):"}
+*(Paste your completed Canteen Ordering System screenshot here)*
+:::
 
-| **Cover Screenshot Evidence:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your finished Canteen App cover screenshot here)*                  |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
-
-\newpage
+::: layout-page-break
+:::
 
 ## Project Overview & Assessment Matrix
 
@@ -70,36 +58,32 @@ Your web application will allow students and staff to:
 | **2.2** | Use appropriate tools and techniques to manipulate and edit designs. | Task 8, Task 9 | [ ] |
 | **2.3** | Check designs meet requirements, using IT tools and making corrections. | Task 11, Task 12 | [ ] |
 
-\newpage
+::: layout-page-break
+:::
 
-## Planning & Understanding Design Requirements
+## Section 1: Planning & Understanding Design Requirements
 
 ### Task 1: Identifying Design Needs (AC 1.1)
 *Answer the questions below to identify what designs and features are needed for your canteen ordering system.*
 
 **1. Who is the target audience for your canteen system (e.g. college students, staff, visitors)?**
 
-| **Target Audience Response:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Type your target audience details here)*                                 |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Target Audience Response:"}
+*(Type your target audience details here)*
+:::
 
 **2. List the key features and visual elements your ordering system must include:**
 
-| **Required Features and Interface Elements List:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| 1.                                                                         |
-| 2.                                                                         |
-| 3.                                                                         |
-| 4.                                                                         |
-| 5.                                                                         |
-| 6.                                                                         |
-| 7.                                                                         |
-| 8.                                                                         |
-| :::                                                                        |
+::: {.layout-textbox height="4.5cm" title="Required Features and Interface Elements List:"}
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+:::
 
 ---
 
@@ -108,25 +92,20 @@ Your web application will allow students and staff to:
 
 **1. On what devices will users interact with this design (e.g. counter touchscreen kiosk, tablet, mobile phone, desktop browser)?**
 
-| **Device & Context of Use:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Explain what devices and environments users will view the app on)*       |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Device & Context of Use:"}
+*(Explain what devices and environments users will view the app on)*
+:::
 
 **2. How does the layout and colour choice help users easily order food during a busy lunchtime?**
 
-| **User Experience Explanation:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Explain how your design choices make ordering fast and easy)*            |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="User Experience Explanation:"}
+*(Explain how your design choices make ordering fast and easy)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
-## Obtaining, Sourcing & Preparing Information
+## Section 2: Obtaining, Sourcing & Preparing Information
 
 ### Task 3: Menu Research & Data Preparation (AC 1.2, 1.4)
 *Research 10 menu items (at least 4 mains, 3 snacks/desserts, 3 drinks). Include at least 3 healthy choices.*
@@ -164,30 +143,25 @@ Your web application will allow students and staff to:
 
 **Why must designers check copyright licenses before using images found on the internet? (AC 1.3)**
 
-| **Copyright & Intellectual Property Explanation:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Explain copyright laws and why permission/licensing is required)*         |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Copyright & Intellectual Property Explanation:"}
+*(Explain copyright laws and why permission/licensing is required)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
 ### Task 5: Combining Information from Multiple Sources (AC 1.4)
 *Explain how your canteen design combines different types of information from multiple sources into each menu card.*
 
-| **Information Types Combined in Each Menu Card:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| **Text Information:**                                                      |
-|                                                                            |
-| **Numerical / Pricing Data:**                                              |
-|                                                                            |
-| **Graphic / Image Assets:**                                                |
-|                                                                            |
-| **Health & Allergen Icons:**                                               |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="5cm" title="Information Types Combined in Each Menu Card:"}
+**Text Information:**
+
+**Numerical / Pricing Data:**
+
+**Graphic / Image Assets:**
+
+**Health & Allergen Icons:**
+:::
 
 ---
 
@@ -201,36 +175,56 @@ Your web application will allow students and staff to:
 | **JavaScript (`.js`)** | Interactive logic, calculations & data | |
 | **JPG / PNG / WebP** | Food photography & icons | |
 
-\newpage
+::: layout-page-break
+:::
 
-## Creating & Manipulating Designs
+## Section 3: Creating & Manipulating Designs
 
-### Task 7: Mood Board & Wireframe Creation (AC 1.1, 1.2, 2.1)
-*Create a visual mood board and a UI wireframe using provector.app or design software.*
+### Task 7: Concept Brainstorming & Wireframing (AC 1.1, 1.2, 2.1)
+*Use the 5-point concept map below to plan your visual style, typography, interactivity, and assets.*
 
-**Mood Board (Colours, Typography & Theme Ideas):**
+::: {.layout-5-textbox-cross}
 
-| **Mood Board Evidence:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your Mood Board image here)*                                       |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
+::: tl
+**Visual Style & Colours**
+- Palette ideas:
+- Theme inspiration:
+:::
 
-**UI Layout Wireframe (Structure of Header, Filters, Cards & Tray):**
+::: tr
+**Typography & Fonts**
+- Heading font:
+- Body font:
+:::
 
-| **Wireframe Blueprint Evidence:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your Wireframe design image here)*                                 |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
+::: center
+**CORE DESIGN THEME**
+**Campus Canteen App**
+Target Audience:
+:::
 
-\newpage
+::: bl
+**Interactive Features**
+- Allergen filters:
+- Budget limit warnings:
+:::
+
+::: br
+**Assets & Photography**
+- Image sources:
+- Icon style:
+:::
+
+:::
+
+**UI Layout Wireframe Blueprint:**
+
+::: {.layout-textbox height="6.5cm" title="Wireframe Blueprint Evidence:"}
+*(Paste your Wireframe design image or sketch here)*
+:::
+
+::: layout-page-break
+:::
 
 ### Task 8: Applying Look & Feel Customisations (AC 2.1, 2.2)
 *Record the classes selected on the `<body>` tag in `index.html` to manipulate the design:*
@@ -244,16 +238,12 @@ Your web application will allow students and staff to:
 
 *Paste a screenshot showing your styled interface with your researched food cards loaded:*
 
-| **Customised User Interface Screenshot:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your styled Canteen UI screenshot here)*                           |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="7.5cm" title="Customised User Interface Screenshot:"}
+*(Paste your styled Canteen UI screenshot here)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
 ### Task 9: Implementing Interactive Logic (AC 2.1, 2.2)
 *Record your completed coding challenges from `app.js` and paste screenshot evidence.*
@@ -268,53 +258,40 @@ Your web application will allow students and staff to:
 
 *Paste a screenshot of your completed JavaScript code in `app.js`:*
 
-| **JavaScript Logic (`app.js`) Code Screenshot:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your completed app.js code screenshot here)*                       |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="7.5cm" title="JavaScript Logic (app.js) Code Screenshot:"}
+*(Paste your completed app.js code screenshot here)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
-## File Management, Testing & Evaluation
+## Section 4: File Management, Testing & Evaluation
 
 ### Task 10: File Storage & Git Version Control (AC 1.7)
 *Demonstrate good file organisation and regular Git commits in VS Code.*
 
 **1. Where are your project images and scripts stored in your workspace?**
 
-| **File Organisation Answer:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Explain where your images, HTML, CSS, and JS files are kept)*            |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="File Organisation Answer:"}
+*(Explain where your images, HTML, CSS, and JS files are kept)*
+:::
 
 **2. List 3 meaningful Git commit messages you made in VS Code:**
 
-| **Git Commit Log:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| 1.                                                                         |
-| 2.                                                                         |
-| 3.                                                                         |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Git Commit Log:"}
+1. 
+2. 
+3. 
+:::
 
 *Paste a screenshot of your Git commit history or VS Code Source Control panel:*
 
-| **Git Commit Log Screenshot:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-|                                                                            |
-| *(Paste your VS Code Git Source Control / commit history screenshot here)* |
-|                                                                            |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="7cm" title="Git Commit Log Screenshot:"}
+*(Paste your VS Code Git Source Control / commit history screenshot here)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
 ### Task 11: Testing & Making Corrections (AC 2.3)
 *Perform live tests of your app in the browser, check for errors, and record any corrections made.*
@@ -335,32 +312,32 @@ Your web application will allow students and staff to:
 
 **1. How well does your final design meet the needs of your target audience?**
 
-| **Target Audience Evaluation:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Reflect on how well your design fits your target users)*                  |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Target Audience Evaluation:"}
+*(Reflect on how well your design fits your target users)*
+:::
 
 **2. What improvements or additional features would you add if you had more time?**
 
-| **Future Improvements & Next Steps:** |
-| :------------------------------------------------------------------------- |
-| ::: {custom-style="AnswerBox"}                                             |
-| *(Suggest 1 or 2 features you would like to build next)*                   |
-|                                                                            |
-| :::                                                                        |
+::: {.layout-textbox height="3.5cm" title="Future Improvements & Next Steps:"}
+*(Suggest 1 or 2 features you would like to build next)*
+:::
 
-\newpage
+::: layout-page-break
+:::
 
-## Declaration & Assessment Feedback
+## Section 5: Declaration & Assessment Feedback
 
-### Student Declaration
+::: layout-declaration
 I confirm that the work presented in this project booklet and codebase is my own work and has been carried out according to the assignment instructions.
 
-**Student Signature:** ________________________________________ **Date:** ______________
+[ ] **I confirm this is my own authentic work.**
 
----
+**Student Name:** ________________________________________  
+**Student ID:** ____________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Date:** ______________  
+**Student Signature:** ____________________________________
+:::
+
+\vspace{0.5cm}
 
 ### Assessor Feedback & Grading (Teacher Use Only)
 
@@ -373,3 +350,4 @@ I confirm that the work presented in this project booklet and codebase is my own
 
 **Assessor Name:** ________________________________  
 **Assessor Signature:** ____________________________ **Date:** ______________
+

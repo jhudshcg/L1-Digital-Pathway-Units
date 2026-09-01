@@ -108,9 +108,11 @@ if (numMatchingItems > 1) {
   orderTotal *= 0.9; // apply 10% discount
 }
 
-```javascript
+```
 
-Overall, students be complete 3 - 4 fill in the blanks and 2 - 3 snippet bank exercises, with a total of 5 - 7 coding challenges to complete in the project.
+Overall, students should complete 3 - 4 fill in the blanks and 2 - 3 snippet bank exercises, with a total of 5 - 7 coding challenges to complete in the project.
+
+Challenges needs to be well scaffolded, but do not give away the solutions in the questions. Students need to do some thinking and problem solving.
 
 ** Additional design links **
 

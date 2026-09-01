@@ -37,6 +37,65 @@ Project booklet header will contain the unit title and code to the left and the 
 
 Project booklets will first be created in md format, then converted to docx format using pandoc. The md files will be stored in the project src folder for each unit, and the docx files will be stored in the root folder for each unit.
 
+#### Booklet Layout & Pandoc Shorthands
+All `booklet.md` files must use the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`:
+
+- **Unit Header Banner (Page 1 top):** Always use `::: {.layout-unit-header unit-title="..." unit-code="..." credits="..." project="..."}` at the top of the cover page.
+- **Student metadata & cover details:** Always use `::: layout-metadata-table` containing a 2-column markdown table for Learner Name, Learner ID, Assessor Name, Issue Date, Submission Date, and IV Date.
+- **Student written answers & screenshot evidence:** Always wrap responses in `::: {.layout-textbox height="3.5cm" title="..."}` (adjust `height` as needed, e.g. `6.5cm`–`7.5cm` for screenshots or code). **Never wrap `:::` divs inside markdown pipe tables (`|`).**
+- **Concept mapping / moodboards / feature brainstorming:** Use a variety of suitable task evidencing layouts to keep the booklet visually interesting and engaging for students. For example, for 5 related concepts, perhaps with a central concept, use `::: {.layout-5-textbox-cross}` with nested `::: tl`, `::: tr`, `::: center`, `::: bl`, and `::: br` divs.
+- **Page breaks:** Use `::: layout-page-break` between major sections/tasks.
+- **Student declaration:** Always end the booklet with `::: layout-declaration` containing the authenticity statement, checkbox, name, ID, date, and signature fields.
+
+Tabular data and data entry areas should be formatted as tables with visible cell borders.
+
+Text entry areas should be formatted as boxes with visible borders, with a title above the box to indicate what the student should enter.
+
+Default text entry box height should be sufficient for 5 lines of text, but should be adjustable for longer responses or for screenshot evidence.
+
+Default text size should be 14pt.
+
+Full use of Title, Subtitle, Heading 1, Heading 2, Heading 3, and normal text styles (normal, italic, bold) should be used throughout the booklet to create a clear visual hierarchy.
+
+General look and feel of booklets should be consistent across all units, with a clean, simple and professional design, using a consistent font, colour scheme and layout.
+
+#### Front page content
+
+[Front page name] student name
+
+[Title] unit title and code
+
+[Subtitle] Level 1 Ascentis Progression
+
+Unit cover image
+
+[Table] 2 rows. header: issue date, hand in date, iv date, teacher name
+
+#### Second page content
+
+Learning outcomes and assessment criteria heading with table, with 2 columns. Left column: learning outcome. Right column: assessment criteria.
+
+Text before table:
+"In order to pass this unit, the evidence that the learner presents for assessment needs to demonstrate that they can meet all the learning outcomes for the unit. The assessment criteria determine the standard required to achieve the unit."
+
+#### Third page content
+
+Assignment/project brief and requirements.
+
+Short list of useful links and references for the project, including links to any exemplar projects and starter template files and well as any external resources.
+
+#### Fourth page onwards content
+
+Sequence of tasks and activities linked to specific assessment criteria, which take students through the project in a clear and structured way. Each task section will include clearly marked areas (spaces, boxes, lined sections, tables, etc.) for students to record their work and evidence their learning outcomes.
+
+#### Last page content
+
+Student declaration of authenticity, with checkbox, name, ID, date and signature fields.
+
+#### Example layouts
+
+For visual example layouts to base new booklet designs on, see layouts/example_front_p1_1.png and layouts/example_front_p1_2.png. Note in particular the use of tables, font sizes and spacing.
+
 ## Course breakdown
 
 4 units, delivered over 3 90 minute lessons per week, over the academic year (Sept - June, with 2 weeks in July for overrun if needed).
