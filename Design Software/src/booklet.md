@@ -1,62 +1,57 @@
 ---
-title: "Design Software (R/505/6389)"
-subtitle: "Campus Canteen Interactive Ordering System"
-author: "Level 1 Digital Skills"
-date: "Academic Year 2026/2027"
 ---
 
-::: {.layout-unit-header unit-title="Design Software" unit-code="R/505/6389" credits="3 Credits" project="Campus Canteen Ordering System"}
+**Learner Name:** __________________________________________________
+
+# Design Software (R/505/6389)
+### Level 1 Ascentis Progression
+
+::: {.layout-textbox height="6.5cm" title="Unit Cover Artwork / Application Screenshot:"}
+*(Paste your finished Canteen Ordering System screenshot or cover artwork here)*
 :::
 
-# STUDENT PROJECT BOOKLET
-### Level 1 Certificate in Digital Skills
-
-::: layout-metadata-table
-| Field | Details |
-| :--- | :--- |
-| **Learner Name:** | |
-| **Learner ID:** | |
-| **Assessor Name:** | |
-| **Issue Date:** | |
-| **Submission Date:** | |
-| **Internal Verification (IV) Date:** | |
-:::
-
-::: {.layout-textbox height="7.5cm" title="Cover Screenshot Evidence (Finished Canteen App):"}
-*(Paste your completed Canteen Ordering System screenshot here)*
-:::
+| Issue Date | Hand in Date | IV Date | Teacher Name |
+| :---: | :---: | :---: | :---: |
+| | | | |
 
 ::: layout-page-break
 :::
 
-## Project Overview & Assessment Matrix
+## Learning Outcomes and Assessment Criteria
+
+In order to pass this unit, the evidence that the learner presents for assessment needs to demonstrate that they can meet all the learning outcomes for the unit. The assessment criteria determine the standard required to achieve the unit.
+
+| Learning Outcome (The learner will:) | Assessment Criteria (The learner can:) |
+| :--- | :--- |
+| **1. Obtain, insert and combine information for designs** | **1.1** Identify what designs are needed.<br>**1.2** Obtain, input and prepare designs to meet requirements.<br>**1.3** Identify the main copyright and other constraints which apply.<br>**1.4** Combine information of two different types or from two sources.<br>**1.5** Identify how the designs will be used.<br>**1.6** Identify which file format to use for saving and exchanging designs.<br>**1.7** Store and retrieve files appropriately using guidelines and conventions. |
+| **2. Use design software tools to create and edit designs** | **2.1** Use suitable tools and techniques to create designs.<br>**2.2** Use appropriate tools and techniques to manipulate and edit designs.<br>**2.3** Check designs meet requirements, using IT tools and making corrections. |
+
+::: layout-page-break
+:::
+
+## Assignment Brief & Requirements
+
+### Project Title
+**Campus Canteen Interactive Ordering System**
 
 ### Unit Aim
 This unit enables you to use design software tools and web design techniques to obtain, prepare, manipulate, and combine information into an interactive, user-friendly digital design.
 
-### Project Brief
+### Project Brief & Scenario
 You have been commissioned by the College Catering Department to design and build an interactive **Canteen Ordering System**. 
 
 Your web application will allow students and staff to:
-1. Browse a menu of at least 10 food and drink items with prices, images, descriptions, and allergy warnings.
-2. Select an engaging visual design (layout, colours, fonts, and theme) tailored to your target audience.
-3. Automatically calculate order totals, check budget limits (e.g. £5.50 meal vouchers), highlight healthy choices, and display allergen alerts.
-4. Manage your project files and versions using local folders and Git in VS Code.
+1. **Browse a Menu:** Display at least 10 food and drink items with prices, photos, descriptions, and allergy warnings.
+2. **Custom Visual Look & Feel:** Select an engaging visual layout, colour scheme, fonts, and theme tailored to your target audience.
+3. **Interactive Ordering & Logic:** Calculate order totals, display warnings if £5.50 meal vouchers are exceeded, and highlight allergen alerts.
+4. **File & Version Management:** Keep files well organized and manage revisions using Git in VS Code.
 
-### Assessment Criteria Tracking Grid
-
-| Criteria | Description | Evidence Task(s) | Achieved? |
-| :--- | :--- | :--- | :---: |
-| **1.1** | Identify what designs are needed. | Task 1, Task 7 | [ ] |
-| **1.2** | Obtain, input and prepare designs to meet requirements. | Task 3, Task 7 | [ ] |
-| **1.3** | Identify the main copyright and other constraints which apply. | Task 4 | [ ] |
-| **1.4** | Combine information of two different types or from two sources. | Task 3, Task 5 | [ ] |
-| **1.5** | Identify how the designs will be used. | Task 2 | [ ] |
-| **1.6** | Identify which file format to use for saving and exchanging designs. | Task 6 | [ ] |
-| **1.7** | Store and retrieve files appropriately using guidelines and conventions. | Task 10 | [ ] |
-| **2.1** | Use suitable tools and techniques to create designs. | Task 7, Task 8, Task 9 | [ ] |
-| **2.2** | Use appropriate tools and techniques to manipulate and edit designs. | Task 8, Task 9 | [ ] |
-| **2.3** | Check designs meet requirements, using IT tools and making corrections. | Task 11, Task 12 | [ ] |
+### Useful Links & Starter Resources
+- **Starter Template Code:** Located in `l1-design-software-student/template/` (`index.html`, `style.css`, `app.js`, `util.js`)
+- **Exemplar Demo Projects:** Located in `l1-design-software-student/examples/` (`demo-americana-diner`, `demo-punk-eats`)
+- **Student HTML Guides:** Located in `l1-design-software-student/guides/` (`guide-1-research-and-design.html`, `guide-2-customising-styles.html`, `guide-3-coding-challenges.html`)
+- **ProVector Vector Drawing Tool:** `https://provector.app` (for wireframes and UI blueprints)
+- **Royalty-Free Image Sources:** `https://unsplash.com`, `https://pexels.com`
 
 ::: layout-page-break
 :::

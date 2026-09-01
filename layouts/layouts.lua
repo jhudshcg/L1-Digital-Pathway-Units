@@ -1,8 +1,7 @@
 ﻿--[[
   layouts.lua
   Pandoc Lua filter using clean, native Pandoc AST transformations.
-  All visual styling (borders, fonts, cell padding, shading) is inherited
-  from booklet_template.docx.
+  Applies custom-style="TableGrid" to all tables so Word links to the TableGrid style in booklet_template.docx.
   Location: Units/layouts/layouts.lua
 ]]
 
@@ -58,7 +57,9 @@ local function render_textbox(elem)
     rows
   )
 
-  return pandoc.utils.from_simple_table(simple)
+  local tbl = pandoc.utils.from_simple_table(simple)
+  tbl.attributes['custom-style'] = 'TableGrid'
+  return tbl
 end
 
 -- 2. LAYOUT: Unit Header Top Banner
@@ -96,7 +97,9 @@ local function render_unit_header(elem)
     { { left_cell, right_cell } }
   )
 
-  return pandoc.utils.from_simple_table(simple)
+  local tbl = pandoc.utils.from_simple_table(simple)
+  tbl.attributes['custom-style'] = 'TableGrid'
+  return tbl
 end
 
 -- 3. LAYOUT: Student Declaration Box
@@ -118,7 +121,9 @@ local function render_declaration(elem)
     }
   )
 
-  return pandoc.utils.from_simple_table(simple)
+  local tbl = pandoc.utils.from_simple_table(simple)
+  tbl.attributes['custom-style'] = 'TableGrid'
+  return tbl
 end
 
 -- 4. LAYOUT: 5-textbox-cross (Concept Map / Moodboard)
@@ -157,13 +162,16 @@ local function render_5_textbox_cross(elem)
     rows
   )
 
-  return pandoc.utils.from_simple_table(simple)
+  local tbl = pandoc.utils.from_simple_table(simple)
+  tbl.attributes['custom-style'] = 'TableGrid'
+  return tbl
 end
 
 -- 5. LAYOUT: Metadata Form Table (Front Cover / Info)
 local function render_metadata_table_div(elem)
   for _, item in ipairs(elem.content) do
     if item.t == "Table" then
+      item.attributes['custom-style'] = 'TableGrid'
       item.colspecs = {
         { pandoc.AlignLeft, 0.35 },
         { pandoc.AlignLeft, 0.65 }
@@ -218,4 +226,10 @@ function Div(elem)
   end
 
   return elem
+end
+
+-- Table Dispatcher: ensure ALL standard markdown tables receive the TableGrid style
+function Table(tbl)
+  tbl.attributes['custom-style'] = 'TableGrid'
+  return tbl
 end

@@ -96,6 +96,12 @@ Student declaration of authenticity, with checkbox, name, ID, date and signature
 
 For visual example layouts to base new booklet designs on, see layouts/example_front_p1_1.png and layouts/example_front_p1_2.png. Note in particular the use of tables, font sizes and spacing.
 
+#### XML vs Pandoc AST & Word Style Mapping
+
+- **Avoid using custom Open XML tags in the booklet md files.** Use only clean Pandoc AST and the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`.
+- **Word Style IDs vs Display Names:** When referencing or assigning Word styles via Pandoc AST attributes (`custom-style`), always use the underlying **Style ID** without spaces (e.g. `custom-style="TableGrid"`, not `custom-style="Table Grid"`). Microsoft Word resolves styles strictly by their exact XML Style ID; mismatched display names cause Word to silently fall back to unstyled defaults (`TableNormal` without borders).
+- **Template-Driven Styling:** All visual styling (borders, padding, background shading, table gridlines, and fonts) must be managed in `booklet_template.docx` rather than hardcoded XML in filters. Pandoc AST structures inherit directly from the reference doc.
+
 ## Course breakdown
 
 4 units, delivered over 3 90 minute lessons per week, over the academic year (Sept - June, with 2 weeks in July for overrun if needed).
