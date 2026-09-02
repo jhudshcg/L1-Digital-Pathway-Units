@@ -86,3 +86,9 @@ Learning Outcomes and Assessment Criteria
     4.3. Control the playback of multimedia files.
     
     4.4. Adjust display settings to meet needs.
+
+## Booklet tasks/activities with assessment criteria mapping
+
+Use this section to identify, sequence and outline each task and the evidence that students will provide, along with the accessment criteria mapping.
+
+This section should stabelize the booklet unit specific context, while booklet layout styling may be in flux.

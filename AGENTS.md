@@ -35,10 +35,10 @@ The project booklets will use a consistent style, but have activities and tasks 
 
 Project booklet header will contain the unit title and code to the left and the unit credit to the right. The footer will contain page # of #.
 
-Project booklets will first be created in md format, then converted to docx format using pandoc. The md files will be stored in the project src folder for each unit, and the docx files will be stored in the root folder for each unit.
+Project booklets will first be created in md format, named `booklet-[unit-name].md` (e.g. `booklet-design-software.md`, `booklet-word-processing-software.md`, `booklet-imaging-software.md`, `booklet-multimedia-software.md`), then converted to `booklet-[unit-name].docx` format using pandoc. The md files will be stored in the project `src` folder for each unit (`<Unit>/src/booklet-<unit-name>.md`), and the docx files will be stored in the root folder for each unit.
 
 #### Booklet Layout & Pandoc Shorthands
-All `booklet.md` files must use the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`:
+All `booklet-[unit-name].md` files must use the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`:
 
 - **Unit Header Banner (Page 1 top):** Always use `::: {.layout-unit-header unit-title="..." unit-code="..." credits="..." project="..."}` at the top of the cover page.
 - **Student metadata & cover details:** Always use `::: layout-metadata-table` containing a 2-column markdown table for Learner Name, Learner ID, Assessor Name, Issue Date, Submission Date, and IV Date.
@@ -110,6 +110,20 @@ For visual example layouts to base new booklet designs on, see layouts/example_f
 - **Strict Heading Hierarchy:** Always use proper Markdown heading syntax (`## Heading 2`, `### Heading 3`) for all section and task titles (e.g., `## Student Declaration of Authenticity`, `## Assessor Feedback & Grading`). Never simulate headings using bold or manually styled normal text paragraphs.
 
 Set the correct document property YAML in the booklet md files to ensure the correct title, subtitle, and other metadata is applied to the generated Word document.
+
+#### Booklet content planning
+
+Use the `Booklet tasks/activities with assessment criteria mapping` section in each unit spec.md file to plan the content and sequence of tasks and activities for the project booklet, along with the evidence that students will provide, and the assessment criteria mapping. Then use that agreed plan to help create the booklet.md file for the unit, which will be converted to docx format using pandoc. This way the content and sequence can be stabilized independently of the booklet layout styling, which may be in flux.
+
+Each sequenced item in this section of the unit spec file should be concise, but with enough detail to clearly indicate the task or activity, the evidence that students will provide, and the assessment criteria mapping.
+
+If booklet tasks/activities change, they should be changed in the spec.md section first, then the booklet.md file should be updated to match the agreed plan.
+
+When designing and planning the booklet tasks, consider the following:
+- Each assessment criteria should be evidenced by at least one task or activity in the booklet.
+- The link from the task to the assessment criteria should be logical and clear.
+- Large differences in assessment criteria coverage should be avoided, e.g. one assessment criteria should not have 5 tasks linked to it and another only 1 task.
+- After the initial task list draft, review the list to see if other criteria can be reasonably linked to the tasks.
 
 ## Course breakdown
 

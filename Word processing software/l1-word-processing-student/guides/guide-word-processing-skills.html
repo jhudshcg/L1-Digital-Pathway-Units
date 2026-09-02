@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Processing Skills Guide | Level 1 Digital Skills (Unit D/505/6398)</title>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-dark: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
+      --border-light: #e2e8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .guide-container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.3rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid var(--border-light);
+    }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary-dark);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #0f172a;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    p, li {
+      margin-bottom: 0.75rem;
+      color: #334155;
+      font-size: 1rem;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      margin-bottom: 1.35rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    
+    /* Why this matters callout */
+    .benefit-box {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-left: 5px solid var(--success);
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+    }
+    .benefit-box .benefit-title {
+      color: #166534;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tip-box {
+      background: #eff6ff;
+      border-left: 5px solid var(--primary);
+      padding: 1.15rem 1.35rem;
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+    }
+    .tip-box strong { color: var(--primary-dark); }
+
+    .warning-box {
+      background: var(--warning-bg);
+      border-left: 5px solid var(--warning);
+      padding: 1.15rem 1.35rem;
+      border-radius: var(--radius);
+      margin: 1.25rem 0;
+    }
+    .warning-box strong { color: #92400e; }
+
+    .checklist-box {
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 1.5rem 0;
+    }
+
+    /* Comparison / Visual Mockups */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    @media (max-width: 680px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+    .compare-bad {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .compare-bad h4 {
+      color: var(--danger);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .compare-good {
+      background: #ecfdf5;
+      border: 1px solid #86efac;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .compare-good h4 {
+      color: var(--success);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Navigation Breadcrumb Pill */
+    .menu-path {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin: 0.3rem 0;
+    }
+    .menu-tab {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .menu-arrow {
+      color: #64748b;
+      font-weight: bold;
+    }
+    .menu-item {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    table.guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    table.guide-table th, table.guide-table td {
+      border: 1px solid var(--border);
+      padding: 0.7rem 0.9rem;
+      text-align: left;
+    }
+    table.guide-table th {
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+    table.guide-table tr:nth-child(even) { background: #f8fafc; }
+
+    .key-combo {
+      background: #e2e8f0;
+      border: 1px solid #cbd5e1;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.9rem;
+    }
+
+    .toc-menu {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .toc-menu ol {
+      margin-left: 1.25rem;
+      margin-bottom: 0;
+    }
+    .toc-menu li {
+      margin-bottom: 0.4rem;
+    }
+    .toc-menu a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .toc-menu a:hover { text-decoration: underline; color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<div class="guide-container">
+  <div class="header-badge">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    Level 1 Digital Skills • Unit D/505/6398
+  </div>
+  <h1>Microsoft Word Skills & Document Design Guide</h1>
+  <div class="subtitle">A clear, step-by-step practical guide to planning, creating, styling, and presenting professional 5+ page documents in Microsoft Word.</div>
+
+  <!-- TOC MENU -->
+  <div class="toc-menu">
+    <h3 style="margin-top:0; color:var(--primary-dark);">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Guide Contents:
+    </h3>
+    <ol>
+      <li><a href="#section1">Setting Up Your 5+ Page Document & Choosing Templates</a></li>
+      <li><a href="#section2">Heading Styles vs Manual Formatting (Why Styles Win)</a></li>
+      <li><a href="#section3">Generating an Automated Table of Contents (ToC)</a></li>
+      <li><a href="#section4">Formatting Body Text, Lists & Callout Quote Boxes</a></li>
+      <li><a href="#section5">Inserting & Styling Data Tables</a></li>
+      <li><a href="#section6">Working with Images & Text Wrapping</a></li>
+      <li><a href="#section7">Adding Meaningful Web Hyperlinks</a></li>
+      <li><a href="#section8">Page Setup, Section Breaks, Running Headers & Page Numbers</a></li>
+      <li><a href="#section9">Proofing Tools, Spell Check & Peer Review</a></li>
+      <li><a href="#section10">Saving Files & Exporting as PDF</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 id="section1">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    1. Setting Up Your 5+ Page Document & Choosing Templates
+  </h2>
+  <p>In this project, you will build an engaging, structured <strong>5+ page guide</strong> on a topic you enjoy (such as your favourite video game, sport, hobby, film series, automotive topic, or music artist).</p>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Plan Your Document Structure First?
+    </div>
+    <p>Starting with a clear page plan prevents you from getting stuck halfway through. It ensures your document looks like a real magazine, book, or professional report rather than a messy wall of random text.</p>
+  </div>
+
+  <div class="card">
+    <h3>When to Use Templates vs. Blank Documents</h3>
+    <ul>
+      <li><strong>Word Templates:</strong> Pre-made documents that already have built-in color themes, fonts, and layout boxes (e.g., resumes, event flyers, brochures). Use templates when you need a fast, standardized design.</li>
+      <li><strong>Blank Documents with Custom Styles:</strong> Starting from a blank page gives you total creative freedom to choose your exact heading hierarchy, page structure, and custom colors.</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <strong>📋 Your 5-Page Minimum Structure:</strong>
+    <ul>
+      <li><strong>Page 1 — Cover Page:</strong> Eye-catching Title, Subtitle, Featured Graphic/Photo, Learner Name, and Date.</li>
+      <li><strong>Page 2 — Table of Contents & Introduction:</strong> Automated ToC, welcoming intro paragraph, and guide overview.</li>
+      <li><strong>Page 3 — Section 1 (Core Knowledge):</strong> Background history, key rules, main characters, or how-to steps.</li>
+      <li><strong>Page 4 — Section 2 (Data & Tips):</strong> Comparison table with stats/specs, plus a styled Callout Quote box.</li>
+      <li><strong>Page 5 — Section 3 (Pro Recommendations & Summary):</strong> Advanced advice, curated web links, and final summary.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 id="section2">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+    2. Heading Styles vs Manual Formatting (Why Styles Win)
+  </h2>
+  
+  <p>A common beginner mistake is highlighting text and manually clicking <strong>Bold</strong> and <strong>18pt font</strong> to make headings. In professional document design, <strong>always use Word's built-in Styles Gallery</strong> on the <strong>Home</strong> ribbon tab.</p>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Why Are Styles So Much Better Than Manual Formatting?
+    </div>
+    <ul>
+      <li><strong>⚡ 1-Click Document Restyling:</strong> If your teacher or client asks to change font from Blue Arial to Navy Calibri across 20 pages, you change the Style once and all 50 headings update instantly. With manual formatting, you'd have to edit every single heading by hand!</li>
+      <li><strong>📑 Powers the Table of Contents:</strong> Word cannot generate an automatic Table of Contents unless you use <code>Heading 1</code>, <code>Heading 2</code>, etc.</li>
+      <li><strong>🧭 Instant Navigation Pane:</strong> Press <span class="key-combo">Ctrl + F</span> to see an interactive outline of your document and jump between sections in a second.</li>
+      <li><strong>♿ Accessibility:</strong> Screen readers used by visually impaired readers use heading tags to read aloud the structure of the document.</li>
+    </ul>
+  </div>
+
+  <div class="comparison-grid">
+    <div class="compare-bad">
+      <h4>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Manual Formatting (Slow &amp; Fragile)
+      </h4>
+      <p>Manually selecting text and clicking font size, color, and bold on each line. Inconsistent sizes, breaks the Table of Contents, and takes ages to fix.</p>
+    </div>
+    <div class="compare-good">
+      <h4>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        Word Styles (Fast &amp; Professional)
+      </h4>
+      <p>Clicking <code>Heading 1</code> or <code>Heading 2</code> in the Styles bar. Keeps every heading perfectly uniform, enables 1-click ToC, and saves hours.</p>
+    </div>
+  </div>
+
+  <table class="guide-table">
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Word Style Name</th>
+        <th>How &amp; Where to Use It</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Document Title</strong></td>
+        <td><code>Title</code></td>
+        <td>Page 1 main title (e.g. <em>The Ultimate Elden Ring Beginner's Guide</em>)</td>
+      </tr>
+      <tr>
+        <td><strong>Subtitle</strong></td>
+        <td><code>Subtitle</code></td>
+        <td>Page 1 tagline (e.g. <em>Essential Combat Strategies, Map Secrets &amp; Character Builds</em>)</td>
+      </tr>
+      <tr>
+        <td><strong>Main Heading</strong></td>
+        <td><code>Heading 1</code></td>
+        <td>Top of every major section (e.g. <em>1. Choosing Your Starting Class</em>)</td>
+      </tr>
+      <tr>
+        <td><strong>Sub-Heading</strong></td>
+        <td><code>Heading 2</code></td>
+        <td>Sub-topics within a section (e.g. <em>Vagabond vs. Astrologer</em>)</td>
+      </tr>
+      <tr>
+        <td><strong>Body Text</strong></td>
+        <td><code>Normal</code></td>
+        <td>Regular explanation paragraphs (12pt clean font)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3 -->
+  <h2 id="section3">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+    3. Generating an Automated Table of Contents (ToC)
+  </h2>
+  
+  <p>Never type a Table of Contents manually with full stops and page numbers! Word creates and updates it for you in seconds.</p>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Use an Automated Table of Contents?
+    </div>
+    <p>When you type dots (<code>Section 1 ......... Page 3</code>) manually, adding just one image or paragraph pushes text down, making all your page numbers wrong. Word's <strong>Automatic Table of Contents</strong> scans your document headings and updates all page numbers in a single click.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step-by-Step: How to Insert Your Table of Contents</h3>
+    <ol>
+      <li>Click where you want the table to appear (usually on <strong>Page 2</strong>).</li>
+      <li>Open the <strong>References</strong> tab on the Word ribbon.</li>
+      <li>Click the <strong>Table of Contents</strong> button on the far left.</li>
+      <li>Select <strong>Automatic Table 1</strong> or <strong>Automatic Table 2</strong>.</li>
+    </ol>
+    <div class="menu-path">
+      <span class="menu-tab">References Tab</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Table of Contents</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Automatic Table 1</span>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>🔄 How to Update Your Table of Contents When Pages Change:</strong>
+    <p>If you add new sections, change headings, or add pictures that push text onto another page:</p>
+    <ol>
+      <li>Click on your Table of Contents box.</li>
+      <li>Click the <strong>Update Table</strong> button at the top of the box.</li>
+      <li>Choose <strong>Update entire table</strong> ➔ click <strong>OK</strong>. Done!</li>
+    </ol>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 id="section4">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    4. Formatting Body Text, Lists & Callout Quote Boxes
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      Why Paragraph Spacing & Callout Boxes Matter
+    </div>
+    <p>Large blocks of cramped text cause eye fatigue. Proper line spacing gives text breathing room, while styled Callout Boxes draw the reader's eye immediately to key tips, warnings, or quotes.</p>
+  </div>
+
+  <div class="card">
+    <h3>Standard Body Text Guidelines</h3>
+    <ul>
+      <li><strong>Font Size:</strong> Set body paragraphs to <strong>12pt</strong> (e.g., Calibri, Aptos, or Arial).</li>
+      <li><strong>Line Spacing:</strong> Set to <strong>1.15</strong> line spacing.</li>
+      <li><strong>Paragraph Spacing:</strong> Set <strong>6pt Space After</strong> paragraphs so you never have to spam the Enter key twice between paragraphs.</li>
+      <li><strong>Lists:</strong> Use <strong>Bullet Points</strong> for unordered items and <strong>Numbered Lists</strong> for step-by-step instructions.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>How to Insert a Styled Callout Text Box</h3>
+    <ol>
+      <li>Go to the <span class="menu-tab">Insert</span> tab ➔ click <strong>Text Box</strong> ➔ choose <strong>Simple Text Box</strong>.</li>
+      <li>Type a key tip, definition, or pro advice quote inside.</li>
+      <li>Click the box outline to open the <strong>Shape Format</strong> ribbon:
+        <ul>
+          <li><strong>Shape Fill:</strong> Pick a soft background color (e.g. Light Blue or Soft Gray).</li>
+          <li><strong>Shape Outline:</strong> Choose a clean 1.5pt solid border.</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="menu-path">
+      <span class="menu-tab">Insert</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Text Box</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Simple Text Box</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Shape Format</span>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 id="section5">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+    5. Inserting & Styling Data Tables
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Use Tables Instead of Spacebar or Tabs?
+    </div>
+    <p>Trying to line up columns by pressing the Spacebar or Tab key always creates jagged, misaligned columns when printed or opened on different screens. Tables lock information into neat, readable rows and columns with crisp borders.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step-by-Step Table Creation:</h3>
+    <ol>
+      <li>Go to <span class="menu-tab">Insert</span> ➔ click <strong>Table</strong> ➔ drag the grid to choose your size (e.g., 4 columns × 5 rows).</li>
+      <li><strong>Header Row Shading:</strong> Select the top row ➔ go to <strong>Table Design</strong> tab ➔ click <strong>Shading</strong> ➔ choose a dark color and set text to white bold.</li>
+      <li><strong>Add/Remove Rows or Columns:</strong> Right-click any cell ➔ choose <em>Insert</em> ➔ <em>Insert Rows Below</em> or <em>Insert Columns Right</em>.</li>
+      <li><strong>Ensure Borders are Visible:</strong> Select the whole table ➔ go to <strong>Table Design</strong> ➔ <strong>Borders</strong> ➔ choose <strong>All Borders</strong>.</li>
+    </ol>
+    <div class="menu-path">
+      <span class="menu-tab">Insert</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Table</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-tab">Table Design</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Shading &amp; Borders</span>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2 id="section6">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+    6. Working with Images & Text Wrapping
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Why Text Wrapping is Essential
+    </div>
+    <p>By default, Word treats inserted pictures like giant letters of text ("In Line with Text"), leaving awkward giant blank gaps. Changing text wrapping to <strong>Square</strong> or <strong>Tight</strong> lets paragraphs flow neatly around your image, giving a magazine-quality layout.</p>
+  </div>
+
+  <div class="card">
+    <h3>Inserting & Formatting an Image:</h3>
+    <ol>
+      <li>Go to <span class="menu-tab">Insert</span> ➔ <strong>Pictures</strong> ➔ choose <em>This Device...</em> (or stock images).</li>
+      <li>Click the picture to reveal the <strong>Picture Format</strong> tab on the ribbon.</li>
+      <li>Click <strong>Wrap Text</strong> ➔ select <strong>Square</strong> or <strong>Top and Bottom</strong>.</li>
+      <li>Resize the image using the corner handles (hold Shift if needed to maintain aspect ratio without stretching).</li>
+      <li>Add a subtle border or picture style for a polished look.</li>
+    </ol>
+    <div class="menu-path">
+      <span class="menu-tab">Insert</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Pictures</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-tab">Picture Format</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Wrap Text (Square)</span>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2 id="section7">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+    7. Adding Meaningful Web Hyperlinks
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Use Meaningful Link Text?
+    </div>
+    <p>Pasting a raw URL like <code>https://en.wikipedia.org/wiki/Special_Topic?id=98374829374</code> looks messy and clutters your page. Turning natural words (e.g. <em>"Read the Official Game Wiki"</em>) into clickable links looks clean, professional, and accessible.</p>
+  </div>
+
+  <div class="card">
+    <h3>How to Insert a Hyperlink:</h3>
+    <ol>
+      <li>Highlight the specific text you want to become clickable (e.g. <em>Official Tournament Rules</em>).</li>
+      <li>Press the keyboard shortcut <span class="key-combo">Ctrl + K</span> (or go to <span class="menu-tab">Insert</span> ➔ <strong>Link</strong>).</li>
+      <li>In the <strong>Address</strong> box at the bottom, paste the web URL (e.g. <code>https://www.ea.com</code>).</li>
+      <li>Click <strong>OK</strong>. The text will turn blue and underlined, ready for readers to Ctrl+Click.</li>
+    </ol>
+  </div>
+
+  <!-- SECTION 8 -->
+  <h2 id="section8">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+    8. Page Setup, Section Breaks, Running Headers & Page Numbers
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Section Breaks Beat Hitting Enter 20 Times
+    </div>
+    <p>If you press Enter over and over to push text onto the next page, adding even a single line of text later pushes everything on future pages completely out of position. <strong>Page Breaks</strong> and <strong>Section Breaks</strong> cleanly separate pages and allow you to have a cover page without page numbers while your body pages have headers and footers.</p>
+  </div>
+
+  <div class="card">
+    <h3>Setting Up Margins & Breaks</h3>
+    <ul>
+      <li><strong>Margins:</strong> Go to <span class="menu-tab">Layout</span> ➔ <strong>Margins</strong> ➔ select <strong>Normal (2.54 cm / 1 inch)</strong>.</li>
+      <li><strong>Page Break:</strong> Press <span class="key-combo">Ctrl + Enter</span> to immediately jump to a clean new page.</li>
+      <li><strong>Section Break (Next Page):</strong> Go to <span class="menu-tab">Layout</span> ➔ <strong>Breaks</strong> ➔ <strong>Next Page</strong>. Use this after your Cover Page.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Adding Running Headers & "Page X of Y" Footers</h3>
+    <ol>
+      <li>Double-click the top margin of Page 2 to open the <strong>Header &amp; Footer</strong> ribbon.</li>
+      <li>Tick the box for <strong>Different First Page</strong> (this keeps your cover page free of clutter).</li>
+      <li>Type your guide's title in the Header (e.g. <em>Rocket League Player's Handbook</em>).</li>
+      <li>Move to the Footer: Click <strong>Page Number</strong> ➔ <strong>Bottom of Page</strong> ➔ choose <strong>Page X of Y</strong> (e.g. <em>Page 2 of 6</em>).</li>
+      <li>Double-click the middle of the page to exit Header &amp; Footer editing.</li>
+    </ol>
+    <div class="menu-path">
+      <span class="menu-tab">Insert</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Header &amp; Footer</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Different First Page</span>
+      <span class="menu-arrow">➔</span>
+      <span class="menu-item">Page Number (Page X of Y)</span>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <h2 id="section9">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    9. Proofing Tools, Spell Check & Peer Review
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Check Before You Submit?
+    </div>
+    <p>Typos, repeated words, and broken formatting ruin an otherwise great document. Proofing tools catch errors automatically, and peer review gives you honest feedback before your final assessment.</p>
+  </div>
+
+  <div class="card">
+    <h3>Top Proofing Tools to Use</h3>
+    <ul>
+      <li><strong>Spelling &amp; Grammar (Editor):</strong> Press <span class="key-combo">F7</span> or click <span class="menu-tab">Review</span> ➔ <strong>Editor</strong> to scan your entire document for spelling mistakes and grammar improvements.</li>
+      <li><strong>Find &amp; Replace:</strong> Press <span class="key-combo">Ctrl + H</span> to instantly find and fix words that you may have misspelled repeatedly.</li>
+      <li><strong>Thesaurus:</strong> Highlight a word and press <span class="key-combo">Shift + F7</span> to find more exciting, accurate vocabulary.</li>
+    </ul>
+  </div>
+
+  <div class="warning-box">
+    <strong>👥 Peer Learning Activity:</strong> Swap documents with a partner in class. Go to the <span class="menu-tab">Review</span> tab ➔ click <strong>New Comment</strong> to leave 3 helpful suggestions on their document, and record the improvements in your booklet log.
+  </div>
+
+  <!-- SECTION 10 -->
+  <h2 id="section10">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+    10. Saving Files & Exporting as PDF
+  </h2>
+
+  <div class="benefit-box">
+    <div class="benefit-title">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Why Export to PDF?
+    </div>
+    <p>A <code>.docx</code> file might shift its layout or replace fonts if opened on another computer or phone. A <strong>PDF (Portable Document Format)</strong> freezes your layout, photos, and fonts permanently so it looks identical on any phone, tablet, PC, or printer.</p>
+  </div>
+
+  <div class="card">
+    <h3>Saving &amp; Exporting Steps:</h3>
+    <ol>
+      <li><strong>Save Word Document:</strong> Go to <strong>File</strong> ➔ <strong>Save As</strong> ➔ name your file clearly using standard naming conventions (e.g., <code>AlexSmith-GamingGuide.docx</code>).</li>
+      <li><strong>Export as PDF:</strong> Go to <strong>File</strong> ➔ <strong>Export</strong> ➔ click <strong>Create PDF/XPS Document</strong> ➔ click <strong>Publish</strong>.</li>
+    </ol>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="checklist-box">
+    <h3 style="margin-top:0; color:var(--primary-dark);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      Final Submission Checklist
+    </h3>
+    <p>Before handing in your project booklet and files, check off each item:</p>
+    <ul>
+      <li>[ ] Document is at least <strong>5 full pages</strong> long.</li>
+      <li>[ ] <strong>Page 1 Cover:</strong> Title, Subtitle, Artwork image, and Learner Name.</li>
+      <li>[ ] <strong>Page 2 ToC:</strong> Automated Table of Contents is inserted and updated.</li>
+      <li>[ ] <strong>Heading Hierarchy:</strong> Applied using Word Styles (<code>Title</code>, <code>Heading 1</code>, <code>Heading 2</code>).</li>
+      <li>[ ] <strong>Body Text:</strong> 12pt font with consistent 1.15 line spacing and space after paragraphs.</li>
+      <li>[ ] <strong>Data Table:</strong> At least 1 styled table with shaded headers and visible grid borders.</li>
+      <li>[ ] <strong>Callout Box:</strong> At least 1 styled text box with background fill and border.</li>
+      <li>[ ] <strong>Images:</strong> At least 2 pictures with text wrapping enabled (Square or Tight).</li>
+      <li>[ ] <strong>Hyperlinks:</strong> At least 1 live hyperlink with descriptive link text.</li>
+      <li>[ ] <strong>Header &amp; Footer:</strong> Running header on Page 2+ and "Page X of Y" in the footer.</li>
+      <li>[ ] <strong>Proofread:</strong> F7 spell check completed and peer review comments logged.</li>
+      <li>[ ] <strong>Saved &amp; Exported:</strong> Saved as <code>.docx</code> and exported to <code>.pdf</code>.</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

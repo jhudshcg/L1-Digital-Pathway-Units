@@ -151,6 +151,80 @@ Learning Outcomes and Assessment Criteria
 
 ## Booklet tasks/activities with assessment criteria mapping
 
-Use this section to identify, sequence and outline each task and the evidence that students will provide, along with the accessment criteria mapping.
+The sequence of tasks and activities in the student project booklet, the student evidence required, and the assessment criteria mapping:
 
-This section should stabelize the booklet unit specific context, while booklet layout styling may be in flux.
+### Section 1: Planning & Understanding Design Requirements
+* **Task 1: Identifying Design Needs (AC 1.1)**
+  - *Activity:* Define the primary target audience (students, staff, visitors) and list at least 8 essential UI features and visual elements required for the canteen ordering system.
+  - *Student Evidence:* Target audience written response box; 8-item numbered list of required features and interface elements.
+  - *Criteria Mapping:* **AC 1.1**
+
+* **Task 2: How the Design Will Be Used (AC 1.5)**
+  - *Activity:* Identify the physical and digital contexts of use (counter kiosks, tablets, smartphones, desktop browsers) and explain how layout and color choices improve speed and usability during peak lunchtime periods.
+  - *Student Evidence:* Device & context written explanation box; user experience & visual layout explanation box.
+  - *Criteria Mapping:* **AC 1.5**
+
+---
+
+### Section 2: Obtaining, Sourcing & Preparing Information
+* **Task 3: Menu Research & Data Preparation (AC 1.2, 1.4)**
+  - *Activity:* Research and structure 10 menu items (at least 4 mains, 3 snacks/desserts, 3 drinks), including at least 3 healthy choices, prices, categories, and allergen information.
+  - *Student Evidence:* 10-row structured table recording Item Name, Category, Price (£), Healthy Choice (Yes/No), and Allergen warnings.
+  - *Criteria Mapping:* **AC 1.2, AC 1.4**
+
+* **Task 4: Copyright Constraints & Image Sourcing (AC 1.3)**
+  - *Activity:* Source royalty-free image assets for all 10 menu items from permitted stock libraries (e.g., Unsplash, Pexels) and explain copyright, licensing, and intellectual property constraints.
+  - *Student Evidence:* 10-row asset log table recording local filenames (`images/...`), source URLs, and specific licenses; written explanation box covering copyright law and permission requirements.
+  - *Criteria Mapping:* **AC 1.3**
+
+* **Task 5: Combining Information from Multiple Sources (AC 1.4)**
+  - *Activity:* Explain how multiple distinct information types (text names/descriptions, numerical prices, graphic images, health/allergen badges) from different sources are combined into unified menu cards.
+  - *Student Evidence:* Structured response box identifying and explaining the 4 combined data streams in the canteen card component.
+  - *Criteria Mapping:* **AC 1.4**
+
+* **Task 6: Identifying File Formats (AC 1.6)**
+  - *Activity:* Identify and justify the file formats used in the web app design project (`.html`, `.css`, `.js`, `.jpg`/`.png`/`.webp`), explaining their specific role and suitability for saving and exchanging digital designs.
+  - *Student Evidence:* 4-row table detailing the role and technical suitability of each file format.
+  - *Criteria Mapping:* **AC 1.6**
+
+---
+
+### Section 3: Creating & Manipulating Designs
+* **Task 7: Concept Brainstorming & Wireframing (AC 1.1, 1.2, 2.1)**
+  - *Activity:* Plan the visual theme, typography, interactivity, and assets using a 5-point concept map, then sketch or construct a UI layout wireframe blueprint using ProVector (`provector.app`) or design software.
+  - *Student Evidence:* Completed 5-box concept cross map (`layout-5-textbox-cross`); screenshot / diagram box of the finished wireframe blueprint.
+  - *Criteria Mapping:* **AC 1.1, AC 1.2, AC 2.1**
+
+* **Task 8: Applying Look & Feel Customisations (AC 2.1, 2.2)**
+  - *Activity:* Select and apply CSS theme, layout, colour, and spacing classes on `<body>` in `index.html` to manipulate the visual look and feel, loading researched food items into the interface.
+  - *Student Evidence:* 4-row customization record table documenting selected classes and design rationale; full-page screenshot of the customized user interface with food cards displayed.
+  - *Criteria Mapping:* **AC 2.1, AC 2.2**
+
+* **Task 9: Implementing Interactive Logic (AC 2.1, 2.2)**
+  - *Activity:* Complete beginner JavaScript coding challenges in `app.js` (calculating tray subtotals, checking £5.50 meal voucher budget limits, flagging allergen warnings, applying 10% healthy choice discounts, and showing order confirmations).
+  - *Student Evidence:* 5-row logic implementation table recording code snippets/operators used; screenshot of completed JavaScript logic in `app.js`.
+  - *Criteria Mapping:* **AC 2.1, AC 2.2**
+
+---
+
+### Section 4: File Management, Testing & Evaluation
+* **Task 10: File Storage & Git Version Control (AC 1.7)**
+  - *Activity:* Organize project files into proper folder conventions (`images/`, root scripts/styles) and use VS Code Source Control to make regular, meaningful Git commits tracking project progress.
+  - *Student Evidence:* File organisation explanation box; 3-item log of meaningful commit messages; screenshot of VS Code Git commit history / Source Control panel.
+  - *Criteria Mapping:* **AC 1.7**
+
+* **Task 11: Testing & Making Corrections (AC 2.3)**
+  - *Activity:* Execute a 6-point test plan testing category filtering, subtotal calculations, voucher limits, allergen banners, healthy discounts, and clearing the tray, noting any bug fixes made.
+  - *Student Evidence:* 6-row test plan table recording Test Action, Expected Result, Actual Result, Pass/Fail status, and Corrections Made.
+  - *Criteria Mapping:* **AC 2.3**
+
+* **Task 12: Review & Evaluation (AC 2.3)**
+  - *Activity:* Evaluate the final canteen ordering system against the initial brief and target audience requirements, and identify potential future enhancements.
+  - *Student Evidence:* Written evaluation box reflecting on target audience fit; written response box proposing 1–2 future technical/design improvements.
+  - *Criteria Mapping:* **AC 2.3**
+
+---
+
+### Section 5: Declaration & Assessor Feedback
+* **Student Declaration of Authenticity:** Formal authenticity confirmation checkbox, learner name, ID, date, and signature (`layout-declaration`).
+* **Assessor Feedback & Grading Grid:** Assessment matrix mapping LO1 and LO2, overall Pass/Resubmission decision, assessor signature, and date.
