@@ -5,6 +5,9 @@
   Location: Units/layouts/layouts.lua
 ]]
 
+-- Global metadata captured from YAML header
+local doc_meta = {}
+
 -- Helper: wrap list of blocks in cell contents (returns list of blocks)
 local function make_cell(blocks)
   blocks = blocks or {}
@@ -12,6 +15,26 @@ local function make_cell(blocks)
     return { pandoc.Para({}) }
   end
   return blocks
+end
+
+function Meta(meta)
+  doc_meta = meta
+  -- Keep meta intact so Pandoc writes docProps/core.xml (title, etc.)
+  return meta
+end
+
+-- Suppress Pandoc's default title block insertion on body if custom front cover is present
+function Pandoc(doc)
+  local new_blocks = {}
+  for _, blk in ipairs(doc.blocks) do
+    -- Pandoc creates title block as a Div with class 'title-block' or Header 1 matching title
+    if blk.t == "Div" and blk.classes:includes("title-block") then
+      -- skip default title block
+    else
+      table.insert(new_blocks, blk)
+    end
+  end
+  return pandoc.Pandoc(new_blocks, doc.meta)
 end
 
 -- Estimate empty paragraphs for default 5-line height
@@ -104,10 +127,6 @@ end
 
 -- 3. LAYOUT: Student Declaration Box
 local function render_declaration(elem)
-  local header_cell = make_cell({
-    pandoc.Para({ pandoc.Strong({ pandoc.Str("STUDENT DECLARATION OF AUTHENTICITY") }) })
-  })
-
   local body_cell = make_cell(elem.content)
 
   local simple = pandoc.SimpleTable(
@@ -116,7 +135,6 @@ local function render_declaration(elem)
     { 1.0 },
     {},
     {
-      { header_cell },
       { body_cell }
     }
   )

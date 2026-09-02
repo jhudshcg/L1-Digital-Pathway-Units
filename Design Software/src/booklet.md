@@ -1,4 +1,6 @@
 ---
+title: "Design Software (R/505/6389)"
+subtitle: "Level 1 Ascentis Progression"
 ---
 
 **Learner Name:** __________________________________________________
@@ -21,10 +23,37 @@
 
 In order to pass this unit, the evidence that the learner presents for assessment needs to demonstrate that they can meet all the learning outcomes for the unit. The assessment criteria determine the standard required to achieve the unit.
 
-| Learning Outcome (The learner will:) | Assessment Criteria (The learner can:) |
-| :--- | :--- |
-| **1. Obtain, insert and combine information for designs** | **1.1** Identify what designs are needed.<br>**1.2** Obtain, input and prepare designs to meet requirements.<br>**1.3** Identify the main copyright and other constraints which apply.<br>**1.4** Combine information of two different types or from two sources.<br>**1.5** Identify how the designs will be used.<br>**1.6** Identify which file format to use for saving and exchanging designs.<br>**1.7** Store and retrieve files appropriately using guidelines and conventions. |
-| **2. Use design software tools to create and edit designs** | **2.1** Use suitable tools and techniques to create designs.<br>**2.2** Use appropriate tools and techniques to manipulate and edit designs.<br>**2.3** Check designs meet requirements, using IT tools and making corrections. |
++-------------------------------------------------------+-------------------------------------------------------+
+| Learning Outcome (The learner will:)                  | Assessment Criteria (The learner can:)                |
++=======================================================+=======================================================+
+| **1. Obtain, insert and combine information for       | **1.1** Identify what designs are needed.             |
+| designs**                                             |                                                       |
+|                                                       | **1.2** Obtain, input and prepare designs to meet     |
+|                                                       | requirements.                                         |
+|                                                       |                                                       |
+|                                                       | **1.3** Identify the main copyright and other         |
+|                                                       | constraints which apply.                              |
+|                                                       |                                                       |
+|                                                       | **1.4** Combine information of two different types    |
+|                                                       | or from two sources.                                  |
+|                                                       |                                                       |
+|                                                       | **1.5** Identify how the designs will be used.       |
+|                                                       |                                                       |
+|                                                       | **1.6** Identify which file format to use for saving  |
+|                                                       | and exchanging designs.                               |
+|                                                       |                                                       |
+|                                                       | **1.7** Store and retrieve files appropriately using  |
+|                                                       | guidelines and conventions.                           |
++-------------------------------------------------------+-------------------------------------------------------+
+| **2. Use design software tools to create and edit     | **2.1** Use suitable tools and techniques to create   |
+| designs**                                             | designs.                                              |
+|                                                       |                                                       |
+|                                                       | **2.2** Use appropriate tools and techniques to       |
+|                                                       | manipulate and edit designs.                          |
+|                                                       |                                                       |
+|                                                       | **2.3** Check designs meet requirements, using IT     |
+|                                                       | tools and making corrections.                         |
++-------------------------------------------------------+-------------------------------------------------------+
 
 ::: layout-page-break
 :::
@@ -320,21 +349,19 @@ Target Audience:
 ::: layout-page-break
 :::
 
-## Section 5: Declaration & Assessment Feedback
+## Student Declaration of Authenticity
 
 ::: layout-declaration
 I confirm that the work presented in this project booklet and codebase is my own work and has been carried out according to the assignment instructions.
 
 [ ] **I confirm this is my own authentic work.**
 
-**Student Name:** ________________________________________  
-**Student ID:** ____________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Date:** ______________  
-**Student Signature:** ____________________________________
+**Learner Name:** ________________________________________  
+**Learner ID:** ____________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Date:** ______________  
+**Learner Signature:** ____________________________________
 :::
 
-\vspace{0.5cm}
-
-### Assessor Feedback & Grading (Teacher Use Only)
+## Assessor Feedback & Grading (Teacher Use Only)
 
 | Learning Outcome / Criteria | Met (Y/N) | Assessor Comments |
 | :--- | :---: | :--- |

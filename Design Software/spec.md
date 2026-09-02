@@ -147,3 +147,10 @@ Learning Outcomes and Assessment Criteria
     2.2. Use appropriate tools and techniques to  manipulate and edit designs.  
 
     2.3. Check designs meet requirements, using IT  tools and making corrections as necessary. 
+
+
+## Booklet tasks/activities with assessment criteria mapping
+
+Use this section to identify, sequence and outline each task and the evidence that students will provide, along with the accessment criteria mapping.
+
+This section should stabelize the booklet unit specific context, while booklet layout styling may be in flux.

@@ -105,6 +105,11 @@ For visual example layouts to base new booklet designs on, see layouts/example_f
 - **Avoid using custom Open XML tags in the booklet md files.** Use only clean Pandoc AST and the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`.
 - **Word Style IDs vs Display Names:** When referencing or assigning Word styles via Pandoc AST attributes (`custom-style`), always use the underlying **Style ID** without spaces (e.g. `custom-style="TableGrid"`, not `custom-style="Table Grid"`). Microsoft Word resolves styles strictly by their exact XML Style ID; mismatched display names cause Word to silently fall back to unstyled defaults (`TableNormal` without borders).
 - **Template-Driven Styling:** All visual styling (borders, padding, background shading, table gridlines, and fonts) must be managed in `booklet_template.docx` rather than hardcoded XML in filters. Pandoc AST structures inherit directly from the reference doc.
+- **YAML Frontmatter & Word Running Headers:** Set `title: "<Unit Name> (<Unit Code>)"` in the YAML frontmatter. Pandoc writes this metadata to Word's `docProps/core.xml` property, which dynamically populates the Word running header field on Page 2+. The Lua filter intercepts the default body title block so that Page 1 cover layout remains clean and uncorrupted.
+- **Table Formatting for Assessment Criteria:** Always use Pandoc Markdown grid table syntax (`+---+---+`) rather than pipe tables (`|`) when cells contain multiple distinct paragraphs (such as each assessment criterion on its own line). Pipe tables treat `<br>` as line breaks within a single paragraph, whereas grid tables produce true separate Word paragraphs with correct spacing.
+- **Strict Heading Hierarchy:** Always use proper Markdown heading syntax (`## Heading 2`, `### Heading 3`) for all section and task titles (e.g., `## Student Declaration of Authenticity`, `## Assessor Feedback & Grading`). Never simulate headings using bold or manually styled normal text paragraphs.
+
+Set the correct document property YAML in the booklet md files to ensure the correct title, subtitle, and other metadata is applied to the generated Word document.
 
 ## Course breakdown
 
@@ -121,6 +126,14 @@ Plan for the assessed parts of each unit, including the individualproject bookle
 Each unit will have its own folder, with a subfolder for the student repository, which will be a git submodule. The student repository will contain the starter template files, exemplar projects, and any additional guides or resources for the unit - essentially anything that isn't the src folder or the spec.md file, should be moved into the student repo submodule folder.
 
 Each submodule should be named l1-[unit-name]-student, e.g. l1-design-software-student, and should be tagged with the GitHub topic level-1.
+
+## Development iterations
+
+Avoid applying time consuming temp file clean up or zip/unzip operations each round. Use numbered temp files for each iteration to avoid having to delete and re-create and apply clean up only periodically, e.g. every 10 rounds.
+
+Minimize running commands that require permissions.
+
+If you have to read file contents, read the complete file, then scan/search from that single read, rather than make multiple separate requests.
 
 ## Units
 
