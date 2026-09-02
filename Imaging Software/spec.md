@@ -1,20 +1,38 @@
-# Design Software unit - Canteen Ordering System
+# Imaging Software R/505/3062
 
 Photoshop based project.
 
+GLH: 20
+
 **Theme:** 
 
-
+Make a poster to advertize the Kickstart course. Showcase some of your work along with your Photoshop skills.
 
 **Project structure:**
 
+Students learn the basics of Photoshop, including layers, layer groups, selections, masks, filters, brush types and text. They will use these skills to create a poster to advertize the Kickstart course, showcasing some of their work, and work of other people, along with their Photoshop skills.
 
+As they progress with the above they will be completing the unit booklet to evidence the assessment criteria.
 
 **Project requirements:**
 
+- Students must create a poster using Photoshop.
+- The poster should advertise the Kickstart course.
+- The poster should showcase some of the student's work, and work of other people.
+- The poster should demonstrate the student's Photoshop skills, including use of:
+    - layers
+    - selection
+    - masks
+    - filters
+    - brush selection
+    - text
+    - imported images as layers
+
+The poster must be saved as a .psd file, and also exported as a .jpg or .png file at suitable print and web resolutions for submission.
 
 **Resource set:** 
 
+- Photoshop guide HTML file, designed to help students develop and practice the skills they need to meet the project requirements and assessment criteria.
 
 **Assessment criteria from qualification spec:**
 

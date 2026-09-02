@@ -51,11 +51,15 @@ Tabular data and data entry areas should be formatted as tables with visible cel
 
 Text entry areas should be formatted as boxes with visible borders, with a title above the box to indicate what the student should enter.
 
-Default text entry box height should be sufficient for 5 lines of text, but should be adjustable for longer responses or for screenshot evidence.
+Default text entry box height should be sufficient for 5 lines of text (including in 5 textbox cross layouts), but should be adjustable for longer responses or for screenshot evidence. If using a grid to arrange text boxes (e.g. the 5 textbox cross layout), only the text boxes that students type in should have visible borders, not the grid cells just used for layout.
+
+Table column widths: if column data is short, e.g. a single number or a few characters, then make the column width shorter, to allow more space for any longer data columns, e.g. file paths, descriptions or screenshots, which should be made wider.
 
 Default text size should be 14pt.
 
-Full use of Title, Subtitle, Heading 1, Heading 2, Heading 3, and normal text styles (normal, italic, bold) should be used throughout the booklet to create a clear visual hierarchy.
+Full use of Title, Subtitle, Heading 1, Heading 2, Heading 3, and normal text styles (normal, italic, bold) should be used throughout the booklet to create a clear visual hierarchy. 
+
+Never use normal text for what is functioning as a heading or sub heading - user the appropriate heading level style.
 
 General look and feel of booklets should be consistent across all units, with a clean, simple and professional design, using a consistent font, colour scheme and layout.
 
@@ -67,13 +71,13 @@ General look and feel of booklets should be consistent across all units, with a 
 
 [Subtitle] Level 1 Ascentis Progression
 
-Unit cover image
+Unit cover image (not chosen by student)
 
-[Table] 2 rows. header: issue date, hand in date, iv date, teacher name
+[Table] 2 rows, full width. header: issue date, hand in date, iv date, teacher name
 
 #### Second page content
 
-Learning outcomes and assessment criteria heading with table, with 2 columns. Left column: learning outcome. Right column: assessment criteria.
+Learning outcomes and assessment criteria heading with table, with 2 columns. Left column: learning outcome. Right column: assessment criteria. Within the right column, each individual criteria should be on its own line, not bunched into a single paragraph.
 
 Text before table:
 "In order to pass this unit, the evidence that the learner presents for assessment needs to demonstrate that they can meet all the learning outcomes for the unit. The assessment criteria determine the standard required to achieve the unit."
@@ -111,6 +115,12 @@ For visual example layouts to base new booklet designs on, see layouts/example_f
 Units can take less time. Most have 20-27 guided learning hours (GLH) from the qualification spec. But some are also organized with additional learning to take more (e.g. programming in Design Software). Any surplus time can be used for additional learning, or to allow students to work at their own pace and focus on areas where they need more support, or to start their own additional projects using related skills and knowledge.
 
 Plan for the assessed parts of each unit, including the individualproject booklets to be fully completed within the first 6-7 weeks of each unit. This builds in some overrun time and allows for additional learning for students who can go further.
+
+## File organization and submodules
+
+Each unit will have its own folder, with a subfolder for the student repository, which will be a git submodule. The student repository will contain the starter template files, exemplar projects, and any additional guides or resources for the unit - essentially anything that isn't the src folder or the spec.md file, should be moved into the student repo submodule folder.
+
+Each submodule should be named l1-[unit-name]-student, e.g. l1-design-software-student, and should be tagged with the GitHub topic level-1.
 
 ## Units
 

@@ -1,6 +1,8 @@
-# Design Software unit - Canteen Ordering System
+# Design Software R/505/6389 - Canteen Ordering System
 
 JS based project, using VSCode, with a simple program design and implementation.
+
+GLH: 20
 
 **Theme:** 
 
