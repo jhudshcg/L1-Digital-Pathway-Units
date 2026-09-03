@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide 2: Customising Styles, Layout & Media Tags | L1 Multimedia Software</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #8b5cf6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #eff6ff 0%, #fdf4ff 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .guide-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #8b5cf6;
+      color: #ffffff;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    h2 {
+      font-size: 1.35rem;
+      color: #6d28d9;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #0f172a;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      margin-bottom: 0.75rem;
+      color: #334155;
+      font-size: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+      color: #6d28d9;
+      font-weight: 600;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 0.92rem;
+      margin: 0.75rem 0 1.25rem 0;
+      border-left: 4px solid var(--accent);
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 5px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+    }
+    .callout.tip {
+      background: #eff6ff;
+      border-left-color: #2563eb;
+    }
+    .callout.activity {
+      background: #faf5ff;
+      border-left-color: #8b5cf6;
+    }
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .theme-preview {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #ffffff;
+    }
+    .theme-preview strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="guide-container">
+    <div class="header-badge">🎨 Guide 2</div>
+    <h1>Customising Styles, Layout &amp; Media Tags</h1>
+    <div class="subtitle">Unit R/505/1688 - How to change CSS theme classes, embed video controls, and customize your webpage layout.</div>
+
+    <h2>1. The Power of CSS Class Customisation</h2>
+    <p>You can completely transform the design, typography, and mood of your webpage without rewriting complex CSS. Simply change the class names on the <code>&lt;body&gt;</code> tag in <code>index.html</code>!</p>
+
+    <pre><code>&lt;!-- Example 1: Playful Purple theme with Grid layout --&gt;
+&lt;body class="layout-grid theme-playful spacing-standard"&gt;
+
+&lt;!-- Example 2: Warm Sunset theme with Single Column layout --&gt;
+&lt;body class="layout-single-column theme-sunset spacing-spacious"&gt;
+
+&lt;!-- Example 3: Cool Ocean theme with Left Sidebar layout --&gt;
+&lt;body class="layout-sidebar-left theme-ocean spacing-compact"&gt;</code></pre>
+
+    <h2>2. Selectable Theme Options</h2>
+    <div class="theme-grid">
+      <div class="theme-preview">
+        <strong>🌲 theme-nature (Default)</strong>
+        <span>Forest greens, mint badges, clean sans-serif typography. Perfect for wildlife &amp; woodland animals.</span>
+      </div>
+      <div class="theme-preview">
+        <strong>🌊 theme-ocean</strong>
+        <span>Deep blues, cyan highlights, soft sky backgrounds. Great for aquatic life, marine pets, and birds.</span>
+      </div>
+      <div class="theme-preview">
+        <strong>🌅 theme-sunset</strong>
+        <span>Warm terracottas, amber accents, sandy desert tones. Ideal for reptiles, cats, and safari animals.</span>
+      </div>
+      <div class="theme-preview">
+        <strong>🎈 theme-playful</strong>
+        <span>Vibrant purples, rounded corners, bubbly fonts. Great for energetic puppies, kittens, and fun pets.</span>
+      </div>
+      <div class="theme-preview">
+        <strong>🌙 theme-dark</strong>
+        <span>Sleek dark slate background with glowing neon accents. Perfect for nocturnal animals and modern aesthetics.</span>
+      </div>
+    </div>
+
+    <h2>3. Using &amp; Adapting the Navigation Bar (Optional)</h2>
+    <p>The template includes an optional navigation bar in the header. It uses simple <strong>anchor links</strong> that jump down to each section on the page:</p>
+
+    <pre><code>&lt;!-- In the header: links with href="#..." --&gt;
+&lt;nav class="header-nav" aria-label="Page Sections"&gt;
+  &lt;a href="#about" class="nav-link"&gt;About&lt;/a&gt;
+  &lt;a href="#gallery" class="nav-link"&gt;Photos&lt;/a&gt;
+  &lt;a href="#videos" class="nav-link"&gt;Videos&lt;/a&gt;
+  &lt;a href="#facts" class="nav-link"&gt;Care Guide&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;!-- In the page: sections with matching id="..." --&gt;
+&lt;section id="about"&gt;...&lt;/section&gt;
+&lt;section id="gallery"&gt;...&lt;/section&gt;
+&lt;section id="videos"&gt;...&lt;/section&gt;
+&lt;section id="facts"&gt;...&lt;/section&gt;</code></pre>
+
+    <div class="callout tip">
+      <strong>How to Adapt or Remove Navigation:</strong>
+      <ul>
+        <li><strong>Change link names:</strong> Simply change the text between <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> (e.g. change <em>Photos</em> to <em>Dragon Gallery</em>).</li>
+        <li><strong>Add a new link:</strong> Add a new <code>&lt;a href="#new-section" class="nav-link"&gt;Title&lt;/a&gt;</code> and give your target section <code>id="new-section"</code>.</li>
+        <li><strong>Optional:</strong> If you want a simpler page without top navigation links, you can safely delete the whole <code>&lt;nav class="header-nav"&gt;...&lt;/nav&gt;</code> block!</li>
+      </ul>
+    </div>
+
+    <h2>4. Embedding Videos with Native Controls (AC 4.2 &amp; 4.3)</h2>
+    <p>HTML5 makes embedding videos simple. Always include the <code>controls</code> attribute so users can play, pause, seek, and adjust sound:</p>
+
+    <pre><code>&lt;video controls poster="images/my-preview.jpg" class="video-player"&gt;
+  &lt;!-- 1. Your exported local video --&gt;
+  &lt;source src="videos/my-pet-clip.mp4" type="video/mp4"&gt;
+  
+  &lt;!-- 2. Optional online test video (for testing playback) --&gt;
+  &lt;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"&gt;
+  
+  Your browser does not support HTML5 video.
+&lt;/video&gt;</code></pre>
+
+    <div class="callout tip">
+      <strong>Key Video Attributes to Know:</strong>
+      <ul>
+        <li><code>controls</code>: Displays the play/pause button, progress seek bar, volume slider, and fullscreen button.</li>
+        <li><code>poster="..."</code>: Shows a thumbnail cover image before the visitor hits play.</li>
+        <li><code>source src="..."</code>: Tells the browser where the video file is saved on disk.</li>
+      </ul>
+    </div>
+
+    <h2>5. Creating Click-to-Reveal Info Cards (Accordion)</h2>
+    <p>HTML5 provides built-in expandable sections using <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>. No JavaScript required!</p>
+
+    <pre><code>&lt;details class="accordion-item"&gt;
+  &lt;summary class="accordion-summary"&gt;
+    &lt;span class="summary-icon"&gt;🥗&lt;/span&gt;
+    &lt;span class="summary-title"&gt;Feeding &amp; Nutrition Guide&lt;/span&gt;
+    &lt;span class="chevron"&gt;▼&lt;/span&gt;
+  &lt;/summary&gt;
+  &lt;div class="accordion-body"&gt;
+    &lt;p&gt;Adult dogs eat twice daily with access to fresh water...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/details&gt;</code></pre>
+
+    <div class="callout activity">
+      <strong>Try It Out:</strong> Open your <code>index.html</code>, try switching between <code>theme-nature</code>, <code>theme-sunset</code>, and <code>theme-playful</code>, and observe how all colors and fonts instantly transform!
+    </div>
+
+  </div>
+
+</body>
+</html>

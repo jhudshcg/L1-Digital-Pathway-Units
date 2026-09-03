@@ -251,3 +251,17 @@ function Table(tbl)
   tbl.attributes['custom-style'] = 'TableGrid'
   return tbl
 end
+
+-- Header Dispatcher: Shift body headers down by 1 so Markdown ## becomes Word's Heading 1,
+-- ### becomes Heading 2, and #### becomes Heading 3.
+-- Level 1 headers map to Word's Title style.
+function Header(el)
+  if el.level == 1 then
+    el.attributes['custom-style'] = 'Title'
+    return el
+  elseif el.level > 1 then
+    el.level = el.level - 1
+    return el
+  end
+  return el
+end

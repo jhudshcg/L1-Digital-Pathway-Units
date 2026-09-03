@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet & Wildlife Showcase</title>
+
+  <!-- Google Fonts for selectable style themes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;600;700&family=Montserrat:wght@400;700;800&family=Nunito:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;1,400&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 
+  ==========================================================================
+  DESIGN CHOICES (Customise by changing class names on <body>):
+  
+  1. Layout:     layout-grid | layout-single-column | layout-sidebar-left
+  2. Theme:      theme-nature | theme-ocean | theme-sunset | theme-playful | theme-dark
+  3. Spacing:    spacing-compact | spacing-standard | spacing-spacious
+  ==========================================================================
+-->
+<body class="layout-grid theme-nature spacing-standard">
+
+  <!-- Main Website Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-branding">
+        <span class="header-icon">🐾</span>
+        <div>
+          <h1 id="page-title">Golden Retriever World</h1>
+          <p id="page-tagline">Loyal, playful, and the ultimate family companion</p>
+        </div>
+      </div>
+      <!-- Optional Header Navigation -->
+      <nav class="header-nav" aria-label="Page Sections">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Photos</a>
+        <a href="#videos" class="nav-link">Videos</a>
+        <a href="#facts" class="nav-link">Care &amp; Facts</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Feature Overview -->
+  <section class="hero-section" id="about">
+    <div class="hero-content">
+      <span class="badge">Featured Animal Profile</span>
+      <h2>Meet the World's Friendliest Companion</h2>
+      <p>Golden Retrievers are renowned for their gentle temperament, intelligence, and boundless energy. Whether playing in the garden, learning new tricks, or relaxing with family, they bring joy to every home.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-value">10–12</span>
+          <span class="stat-label">Years Lifespan</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">High</span>
+          <span class="stat-label">Energy Level</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">⭐ 5/5</span>
+          <span class="stat-label">Family Friendly</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <figure class="media-card">
+        <img src="images/hero-animal.jpg" alt="Golden retriever smiling outdoors in the grass" class="hero-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&auto=format&fit=crop&q=80';">
+        <figcaption class="media-caption">Photo 1: Natural habitat and outdoor recreation</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="main-container">
+
+    <!-- Image Gallery Section (Minimum 4 Images required in total) -->
+    <section class="content-section" id="gallery">
+      <div class="section-header">
+        <h2 class="section-title">Photo Gallery</h2>
+        <p class="section-subtitle">Explore daily life, behaviors, and unique features</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo Card 1 -->
+        <article class="gallery-card">
+          <figure>
+            <img src="images/feeding-behavior.jpg" alt="Golden retriever enjoying a healthy meal" class="gallery-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&auto=format&fit=crop&q=80';">
+            <figcaption>
+              <h3>Feeding &amp; Nutrition</h3>
+              <p>A balanced diet rich in protein and vitamins keeps their golden coat shiny and healthy.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Photo Card 2 -->
+        <article class="gallery-card">
+          <figure>
+            <img src="images/action-play.jpg" alt="Golden retriever running with a ball" class="gallery-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=600&auto=format&fit=crop&q=80';">
+            <figcaption>
+              <h3>Play &amp; Exercise</h3>
+              <p>Daily fetch and swimming sessions satisfy their natural retrieving instincts.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <!-- Photo Card 3 -->
+        <article class="gallery-card">
+          <figure>
+            <img src="images/portrait-feature.jpg" alt="Close-up portrait of a puppy" class="gallery-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&auto=format&fit=crop&q=80';">
+            <figcaption>
+              <h3>Unique Facial Features</h3>
+              <p>Expressive warm brown eyes and friendly smiles make them instantly recognisable.</p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- Video Showcase Section (Minimum 2 Videos with native controls) -->
+    <section class="content-section" id="videos">
+      <div class="section-header">
+        <h2 class="section-title">Video Showcase</h2>
+        <p class="section-subtitle">Watch action clips and video presentations</p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video 1: Action / Behavior Clip -->
+        <article class="video-card">
+          <div class="video-wrapper">
+            <!--
+              TIP FOR TESTING BEFORE LOCAL VIDEO EXPORT:
+              The browser tests local videos/action-clip.mp4 first,
+              then falls back to the online test video if needed.
+            -->
+            <video controls poster="images/hero-animal.jpg" class="video-player">
+              <source src="videos/action-clip.mp4" type="video/mp4">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-details">
+            <span class="badge badge-video">Video 1: Action Clip</span>
+            <h3>Playing &amp; Agility in Action</h3>
+            <p>Highlights of active playtime, demonstrating quick learning, speed, and retrieving skills in the park.</p>
+          </div>
+        </article>
+
+        <!-- Video 2: Recorded Presentation / Daily Routine Clip -->
+        <article class="video-card">
+          <div class="video-wrapper">
+            <video controls poster="images/portrait-feature.jpg" class="video-player">
+              <source src="videos/pet-intro.mp4" type="video/mp4">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="video-details">
+            <span class="badge badge-video">Video 2: Pet Intro</span>
+            <h3>Daily Routine &amp; Care Guide</h3>
+            <p>A short walkthrough of daily grooming essentials, training tips, and handling advice.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interactive Info Section (CSS-only click-to-reveal accordion) -->
+    <section class="content-section" id="facts">
+      <div class="section-header">
+        <h2 class="section-title">Care Guide &amp; Fun Facts</h2>
+        <p class="section-subtitle">Click each topic below to reveal essential care advice (No JS required!)</p>
+      </div>
+
+      <div class="accordion-container">
+        <details class="accordion-item" open>
+          <summary class="accordion-summary">
+            <span class="summary-icon">🥗</span>
+            <span class="summary-title">Daily Nutrition &amp; Feeding Routine</span>
+            <span class="chevron">▼</span>
+          </summary>
+          <div class="accordion-body">
+            <p>Adult dogs require 2 balanced meals per day tailored to their weight and activity level. Always keep fresh water accessible throughout the day.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary class="accordion-summary">
+            <span class="summary-icon">🎾</span>
+            <span class="summary-title">Exercise, Stimulation &amp; Play</span>
+            <span class="chevron">▼</span>
+          </summary>
+          <div class="accordion-body">
+            <p>Aim for at least 60 to 90 minutes of active exercise daily. Puzzle toys, scent trails, and agility games provide great mental stimulation.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary class="accordion-summary">
+            <span class="summary-icon">✂️</span>
+            <span class="summary-title">Grooming &amp; Coat Maintenance</span>
+            <span class="chevron">▼</span>
+          </summary>
+          <div class="accordion-body">
+            <p>Brush their double coat 2–3 times a week to reduce shedding and prevent mats. Regular nail trimming and ear checks keep them comfortable.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary class="accordion-summary">
+            <span class="summary-icon">💡</span>
+            <span class="summary-title">3 Amazing Fun Facts</span>
+            <span class="chevron">▼</span>
+          </summary>
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Soft Mouth:</strong> They can hold a raw egg in their mouth without breaking it!</li>
+              <li><strong>Water Lovers:</strong> They have webbed toes and a water-repellent outer coat.</li>
+              <li><strong>Service Heroes:</strong> They are one of the most common breeds used for search-and-rescue and guide dog work.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Website Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Multimedia Web Showcase Project</strong> &bull; Level 1 Digital Skills (Unit R/505/1688)</p>
+      <p class="footer-subtext">Designed with responsive HTML5 &amp; CSS3 &bull; All media stored locally &bull; College &amp; family friendly</p>
+      <a href="#about" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>

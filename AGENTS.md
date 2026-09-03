@@ -12,7 +12,11 @@ Short intros, demos, explanations and understanding checks, followed by practica
 
 ## Resource materials
 
-All learning material and activities and projects must be well scaffolded and engaging, with extremely clear and concise instructions for work sequence and requirements.
+All learning material and activities and projects must be well scaffolded and engaging, with extremely clear and concise instructions for work sequence and requirements. 
+
+Activities, challenges or tasks should require some thinking and problem solving. They should not directly give the answer away, while remaining suitable for the target audience.
+
+Early guide material activities and booklet tasks should be easier/simpler, with some progression as learning and progress through each unit is made.
 
 Use simple, clear, concise language in all resources. A little humour in places in fine.
 
@@ -21,6 +25,10 @@ Visual hiearchy, visual queues, images, icons and colour should be used for clar
 Resources should be designed to be accessible for students with a range of learning needs, including dyslexia, visual impairments, and other learning difficulties.
 
 Resources and project guidance should be complete enough to allow students to work independently, with minimal teacher support. This will allow for a more flexible learning environment, where students can work at their own pace and focus on areas where they need more support, while the teacher can provide targeted support to those who need it, along with selected whole class teaching and support.
+
+Language style in student facing resources should be clear, concise, simple and friendly. Encouragement and a sprinkling of humour is also good.
+
+Resources should be visually engaging, with use of colour, visual hierarchy, icons, clip-art and images to support clarity and understanding.
 
 ### Project booklets
 Each unit project will have a student project booklet in its resource set, in docx format. The project booklet will include:
@@ -102,12 +110,32 @@ For visual example layouts to base new booklet designs on, see layouts/example_f
 
 #### XML vs Pandoc AST & Word Style Mapping
 
-- **Avoid using custom Open XML tags in the booklet md files.** Use only clean Pandoc AST and the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`.
+- **Avoid using custom Open XML tags in the booklet md files.** Use only clean Pandoc AST and the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`. The exception to this is where a Word Form is explicitly required, which will need custom Open XML.
 - **Word Style IDs vs Display Names:** When referencing or assigning Word styles via Pandoc AST attributes (`custom-style`), always use the underlying **Style ID** without spaces (e.g. `custom-style="TableGrid"`, not `custom-style="Table Grid"`). Microsoft Word resolves styles strictly by their exact XML Style ID; mismatched display names cause Word to silently fall back to unstyled defaults (`TableNormal` without borders).
 - **Template-Driven Styling:** All visual styling (borders, padding, background shading, table gridlines, and fonts) must be managed in `booklet_template.docx` rather than hardcoded XML in filters. Pandoc AST structures inherit directly from the reference doc.
 - **YAML Frontmatter & Word Running Headers:** Set `title: "<Unit Name> (<Unit Code>)"` in the YAML frontmatter. Pandoc writes this metadata to Word's `docProps/core.xml` property, which dynamically populates the Word running header field on Page 2+. The Lua filter intercepts the default body title block so that Page 1 cover layout remains clean and uncorrupted.
 - **Table Formatting for Assessment Criteria:** Always use Pandoc Markdown grid table syntax (`+---+---+`) rather than pipe tables (`|`) when cells contain multiple distinct paragraphs (such as each assessment criterion on its own line). Pipe tables treat `<br>` as line breaks within a single paragraph, whereas grid tables produce true separate Word paragraphs with correct spacing.
-- **Strict Heading Hierarchy:** Always use proper Markdown heading syntax (`## Heading 2`, `### Heading 3`) for all section and task titles (e.g., `## Student Declaration of Authenticity`, `## Assessor Feedback & Grading`). Never simulate headings using bold or manually styled normal text paragraphs.
+- **Strict Heading Hierarchy & Markdown Heading Mapping (via Lua Header Shift):**
+  - Markdown files must remain 100% valid Markdown (single `#` for document title on cover page; all body sections start at `##`).
+  - The Lua filter (`layouts/layouts.lua`) automatically shifts body headers down by 1 level so they map cleanly to Word styles:
+    - `# Cover Title` -> Word `Title` style (Page 1 cover title)
+    - `## Major Section Title` -> Word `Heading 1` (e.g. `## Learning Outcomes...`, `## Assignment Brief...`, `## Section 1: Planning`, `## Student Declaration...`)
+    - `### Sub-Section / Task Title` -> Word `Heading 2` (e.g. `### Project Title`, `### Unit Aim`, `### Project Brief & Scenario`, `### Useful Links & Starter Resources`, `### Task 1: ...`)
+    - `#### Question / Item Title` -> Word `Heading 3` (e.g. `#### 1. Topic Selection & Requirements`)
+  - **NEVER simulate headings using inline code/backticks** (e.g. `` `Project Title` ``). Backticks map to Word's `VerbatimChar` / monospace code character style and do NOT create heading paragraphs.
+  - **NEVER simulate headings using bold paragraphs** (e.g. `**Project Title:**` on a standalone line).
+  - **NEVER leave headings unstyled as plain normal text** (e.g. `Project Brief & Scenario` without `###`).
+  - Explanatory body text below headings must always be regular unbolded paragraph text (`BodyText` / `Normal`).
+
+#### Word Form Templates & OpenXML Content Controls
+
+When creating interactive Word Forms (e.g. `topic-planning-form.md`):
+- **Native ECMA-376 SDTs:** Use standard `<w:sdt>` Content Controls embedded with Pandoc inline raw openxml (`\`<w:sdt>...\</w:sdt>\`{=openxml}`).
+- **Drop-Down Lists (Crucial Schema Rule):** Dropdown items MUST use tag `<w:listItem w:displayText="..." w:value="..."/>`. Never use `<w:listEntry>` or `w:val` for list items, as Word's strict schema validator will reject the document as corrupt.
+- **Plain Text & Date Pickers:** Use `<w:text/>` for text fields and `<w:date><w:dateFormat w:val="dd/MM/yyyy"/><w:lid w:val="en-GB"/></w:date>` for calendar pickers.
+- **No Undeclared Namespaces:** Avoid Office 2010+ extension controls (e.g. `<w14:checkbox>`) in Pandoc Markdown, as Pandoc does not emit the `xmlns:w14` root namespace declaration.
+- **No Raw Linefeeds in Runs:** Never use literal linefeeds (`&#10;` or raw `\n`) inside `<w:t>` elements; use separate runs or paragraphs instead.
+- **Reference Helper:** See `layouts/word-forms.lua` for reusable generator functions and Pandoc inline span filter shorthands (`.form-text`, `.form-date`, `.form-dropdown`).
 
 Set the correct document property YAML in the booklet md files to ensure the correct title, subtitle, and other metadata is applied to the generated Word document.
 
@@ -154,7 +182,7 @@ If you have to read file contents, read the complete file, then scan/search from
 Unit	                    Code	     Notes
 Imaging Software	        R/505/3062	 Photoshop, poster/ad designs
 
-Multi-media Software Skills	R/505/1688	 Make a webpage with images and audio
+Multi-media Software Skills	R/505/1688	 Make a webpage with images and video
 
 Design Software	            R/505/6389	 Could be design of a simple computer program, using VSCode
 
