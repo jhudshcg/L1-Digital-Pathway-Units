@@ -1,3 +1,6 @@
 [submodule "Design Software/l1-design-software-student"]
 	path = Design Software/l1-design-software-student
 	url = https://github.com/jhudshcg/l1-design-software-student.git
+[submodule "Word processing software/l1-word-processing-student"]
+	path = Word processing software/l1-word-processing-student
+	url = https://github.com/jhudshcg/l1-word-processing-student.git
