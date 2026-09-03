@@ -97,9 +97,9 @@ Your completed multimedia webpage must include:
 *(Note: All images, sound clips, and videos must be college-appropriate and family-friendly).*
 
 ### Useful Links & Starter Resources
-- **Starter Template Code:** Located in `template/` (`index.html`, `style.css`, `images/`, `videos/`)
-- **Exemplar Demo Projects:** Located in `examples/` (`demo-rescue-dog`, `demo-wildlife-reptiles`)
-- **Student HTML Guides:** Located in `guides/` (`git-and-testing-guide.html`, `guide-1-research-and-design.html`, `guide-2-customising-styles.html`)
+- **Starter Template Code:** Located in `l1-multimedia-software-student/template/` (`index.html`, `style.css`, `images/`, `videos/`)
+- **Exemplar Demo Projects:** Located in `l1-multimedia-software-student/examples/` (`demo-rescue-dog`, `demo-wildlife-reptiles`)
+- **Student HTML Guides:** Located in `l1-multimedia-software-student/guides/` (`git-and-testing-guide.html`, `guide-1-research-and-design.html`, `guide-2-customising-styles.html`)
 - **Royalty-Free Media Sources:** `https://unsplash.com`, `https://pexels.com`, `https://commons.wikimedia.org`
 - **Video & Image Tools:** Microsoft Clipchamp, Microsoft Photos / Paint, Squoosh (`https://squoosh.app`)
 

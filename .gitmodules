@@ -4,3 +4,6 @@
 [submodule "Word processing software/l1-word-processing-student"]
 	path = Word processing software/l1-word-processing-student
 	url = https://github.com/jhudshcg/l1-word-processing-student.git
+[submodule "Multimedia software skills/l1-multimedia-software-student"]
+	path = Multimedia software skills/l1-multimedia-software-student
+	url = https://github.com/jhudshcg/l1-multimedia-software-student.git
