@@ -177,6 +177,8 @@ Minimize running commands that require permissions.
 
 If you have to read file contents, read the complete file, then scan/search from that single read, rather than make multiple separate requests.
 
+Also, don't issue git commit commands. The human in the loop should remain in charge of what gets commited and when.
+
 ## Units
 
 Unit	                    Code	     Notes
