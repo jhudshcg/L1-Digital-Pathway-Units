@@ -48,8 +48,8 @@ Project booklets will first be created in md format, named `booklet-[unit-name].
 #### Booklet Layout & Pandoc Shorthands
 All `booklet-[unit-name].md` files must use the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`:
 
-- **Unit Header Banner (Page 1 top):** Always use `::: {.layout-unit-header unit-title="..." unit-code="..." credits="..." project="..."}` at the top of the cover page.
-- **Student metadata & cover details:** Always use `::: layout-metadata-table` containing a 2-column markdown table for Learner Name, Learner ID, Assessor Name, Issue Date, Submission Date, and IV Date.
+- **Cover:** Follow the PNG-based front-page layout below. Use the v2 `layout-cover` panel, not a `layout-unit-header` banner.
+- **Cover details:** Put the student-name line inside the main cover panel. Use `layout-cover-dates` below it: one header row and one blank data row, with Issue Date, Hand in Date, IV Date and Teacher Name columns. Do not use the generic two-column `layout-metadata-table` on the cover.
 - **Student written answers & screenshot evidence:** Always wrap responses in `::: {.layout-textbox height="3.5cm" title="..."}` (adjust `height` as needed, e.g. `6.5cm`–`7.5cm` for screenshots or code). **Never wrap `:::` divs inside markdown pipe tables (`|`).**
 - **Concept mapping / moodboards / feature brainstorming:** Use a variety of suitable task evidencing layouts to keep the booklet visually interesting and engaging for students. For example, for 5 related concepts, perhaps with a central concept, use `::: {.layout-5-textbox-cross}` with nested `::: tl`, `::: tr`, `::: center`, `::: bl`, and `::: br` divs.
 - **Page breaks:** Use `::: layout-page-break` between major sections/tasks.
@@ -71,17 +71,16 @@ Never use normal text for what is functioning as a heading or sub heading - user
 
 General look and feel of booklets should be consistent across all units, with a clean, simple and professional design, using a consistent font, colour scheme and layout.
 
-#### Front page content
+#### Front page content — authoritative layout
 
-[Front page name] student name
+Follow `layouts/example_front_p1_1.png` and `layouts/example_front_p1_2.png` for the cover layout. The only intentional layout difference is the date/teacher table described below.
 
-[Title] unit title and code
+- Keep the Ascentis logo above one large bordered panel.
+- Inside that panel, place the student-name line, Level 1 / Ascentis Progression, unit code, unit title and a prominent unit cover image, in that order. Centre the qualification, code, title and image as shown in the PNGs. Use each title/qualification label once.
+- Below the panel, use a four-column table with exactly two rows: a header row containing Issue Date, Hand in Date, IV Date and Teacher Name, followed by one blank data row.
+- Preserve the reference page border and branding. Do not add a unit banner, a six-field metadata form, repeated title/subtitle blocks, or a version label to the cover.
 
-[Subtitle] Level 1 Ascentis Progression
-
-Unit cover image (not chosen by student)
-
-[Table] 2 rows, full width. header: issue date, hand in date, iv date, teacher name
+The original Word Processing DOCX remains a legacy resource, not the cover-layout authority. The student's own project cover is separate from this assessment booklet cover.
 
 #### Second page content
 
@@ -106,19 +105,19 @@ Student declaration of authenticity, with checkbox, name, ID, date and signature
 
 #### Example layouts
 
-For visual example layouts to base new booklet designs on, see layouts/example_front_p1_1.png and layouts/example_front_p1_2.png. Note in particular the use of tables, font sizes and spacing.
+`layouts/example_front_p1_1.png` and `layouts/example_front_p1_2.png` define the required cover grouping, hierarchy, image placement and branding. Change only their paired label/value date-table arrangement to the header-row/data-row arrangement specified above.
 
 #### XML vs Pandoc AST & Word Style Mapping
 
 - **Avoid using custom Open XML tags in the booklet md files.** Use only clean Pandoc AST and the shared Lua layout filter classes defined in `layouts/layouts.lua` / `layouts/README.md`. The exception to this is where a Word Form is explicitly required, which will need custom Open XML.
 - **Word Style IDs vs Display Names:** When referencing or assigning Word styles via Pandoc AST attributes (`custom-style`), always use the underlying **Style ID** without spaces (e.g. `custom-style="TableGrid"`, not `custom-style="Table Grid"`). Microsoft Word resolves styles strictly by their exact XML Style ID; mismatched display names cause Word to silently fall back to unstyled defaults (`TableNormal` without borders).
 - **Template-Driven Styling:** All visual styling (borders, padding, background shading, table gridlines, and fonts) must be managed in `booklet_template.docx` rather than hardcoded XML in filters. Pandoc AST structures inherit directly from the reference doc.
-- **YAML Frontmatter & Word Running Headers:** Set `title: "<Unit Name> (<Unit Code>)"` in the YAML frontmatter. Pandoc writes this metadata to Word's `docProps/core.xml` property, which dynamically populates the Word running header field on Page 2+. The Lua filter intercepts the default body title block so that Page 1 cover layout remains clean and uncorrupted.
+- **YAML Frontmatter & Word Running Headers:** Set `title: "<Unit Name> (<Unit Code>)"` in the YAML frontmatter. Pandoc writes this metadata to Word's `docProps/core.xml` property, which dynamically populates the Word running header field on Page 2+. For `cover-layout: png`, the v2 filter moves the title into subject metadata and suppresses the automatic title/subtitle block so that the cover is rendered only inside its panel. The v2 reference header reads that subject field. Do not add a separate automatic title above the panel.
 - **Table Formatting for Assessment Criteria:** Always use Pandoc Markdown grid table syntax (`+---+---+`) rather than pipe tables (`|`) when cells contain multiple distinct paragraphs (such as each assessment criterion on its own line). Pipe tables treat `<br>` as line breaks within a single paragraph, whereas grid tables produce true separate Word paragraphs with correct spacing.
 - **Strict Heading Hierarchy & Markdown Heading Mapping (via Lua Header Shift):**
   - Markdown files must remain 100% valid Markdown (single `#` for document title on cover page; all body sections start at `##`).
   - The Lua filter (`layouts/layouts.lua`) automatically shifts body headers down by 1 level so they map cleanly to Word styles:
-    - `# Cover Title` -> Word `Title` style (Page 1 cover title)
+    - Cover title mapping must follow the PNG-based panel above. The v2 cover uses template-defined cover styles and suppresses the automatic YAML title block; do not repeat the title.
     - `## Major Section Title` -> Word `Heading 1` (e.g. `## Learning Outcomes...`, `## Assignment Brief...`, `## Section 1: Planning`, `## Student Declaration...`)
     - `### Sub-Section / Task Title` -> Word `Heading 2` (e.g. `### Project Title`, `### Unit Aim`, `### Project Brief & Scenario`, `### Useful Links & Starter Resources`, `### Task 1: ...`)
     - `#### Question / Item Title` -> Word `Heading 3` (e.g. `#### 1. Topic Selection & Requirements`)

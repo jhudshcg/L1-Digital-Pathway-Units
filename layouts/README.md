@@ -1,5 +1,7 @@
 # Shared Word Layout Library for L1 Digital Course Units
 
+> Legacy layout API reference. For revised booklets use [README-v2.md](README-v2.md) and the PNG-based cover rules in [AGENTS.md](../AGENTS.md). The generic banner and metadata examples below are not the required Word Processing cover.
+
 This folder contains the central Pandoc Lua filter (`layouts/layouts.lua`) used across all 4 units (`Design Software`, `Imaging Software`, `Multi-media Software Skills`, `Word processing Software`).
 
 ---
