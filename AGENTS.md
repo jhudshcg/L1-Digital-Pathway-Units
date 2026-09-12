@@ -30,6 +30,14 @@ Language style in student facing resources should be clear, concise, simple and 
 
 Resources should be visually engaging, with use of colour, visual hierarchy, icons, clip-art and images to support clarity and understanding.
 
+### Student guides
+
+The main visible title (`h1`) of each unit guide must be the unit name. Place the project or activity description directly below it as a visually distinct subtitle. Keep introductory encouragement and instructions separate from the subtitle. The HTML browser title (`title`) must begin with the unit name and may include the subtitle.
+
+For the Word Processing guide, use exactly:
+- **Title:** Word Processing Software
+- **Subtitle:** Make a guide about your interest
+
 ### Project booklets
 
 Each unit project will have a student project booklet in its resource set, in docx format. The project booklet will include:
