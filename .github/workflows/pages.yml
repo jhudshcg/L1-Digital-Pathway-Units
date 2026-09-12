@@ -1,0 +1,93 @@
+name: Publish course site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out course and student resources
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Prepare student site
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp index.html _site/index.html
+          touch _site/.nojekyll
+
+          # Preserve the paths used by the homepage and guides. Only these
+          # student-resource folders are published, never unit src folders.
+          while IFS= read -r module; do
+            test -d "$module/guides"
+            destination="_site/$module"
+            mkdir -p "$destination"
+            for folder in guides examples template templates; do
+              if [ -d "$module/$folder" ]; then
+                rsync -a --exclude='.git*' --exclude='.DS_Store' \
+                  --exclude='~$*' --exclude='AGENTS.md' \
+                  "$module/$folder/" "$destination/$folder/"
+              fi
+            done
+            for file in readme.txt README.md; do
+              if [ -f "$module/$file" ]; then
+                cp "$module/$file" "$destination/$file"
+              fi
+            done
+          done < <(git config --file .gitmodules --get-regexp '^submodule\..*\.path$' | sed 's/^.*\.path //')
+
+      - name: Check homepage destinations
+        run: |
+          python3 - <<'PYTHON'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          root = Path('_site')
+          class Links(HTMLParser):
+              def handle_starttag(self, tag, attrs):
+                  href = dict(attrs).get('href')
+                  if tag == 'a' and href:
+                      url = urlsplit(href)
+                      if not url.scheme and not url.netloc and url.path:
+                          target = root / unquote(url.path)
+                          assert target.is_file(), f'Missing homepage destination: {href}'
+
+          Links().feed((root / 'index.html').read_text())
+          print('All homepage destinations are included.')
+          PYTHON
+
+      - name: Upload student site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy course site
+        id: deployment
+        uses: actions/deploy-pages@v5

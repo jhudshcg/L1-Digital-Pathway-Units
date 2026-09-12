@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Level 1 Digital Pathway unit guides and student resources.">
+  <title>L1 Digital Pathway Units</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", system-ui, sans-serif; color: #172033; background: #f1f5fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 18px; line-height: 1.65; }
+    main { max-width: 1100px; margin: auto; padding: 40px 24px; }
+    header { padding: 36px; border-radius: 20px; background: linear-gradient(115deg, #172554, #1e40af, #0e7490); color: white; }
+    .eyebrow { margin: 0; font-size: .9rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 12px 0 20px; }
+    header p:last-child { max-width: 700px; margin-bottom: 0; }
+    h2 { font-size: 1.5rem; line-height: 1.3; }
+    .units { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    article { display: flex; flex-direction: column; padding: 28px; border: 1px solid #cbd5e1; border-top: 6px solid var(--accent); border-radius: 16px; background: white; box-shadow: 0 5px 18px #17255408; }
+    article h3 { font-size: 1.4rem; line-height: 1.3; margin: 14px 0 8px; }
+    article p { margin: 0 0 22px; }
+    .icon { font-size: 2rem; line-height: 1; }
+    .label { display: inline-block; width: fit-content; margin: 14px 0 0; padding: 3px 10px; border-radius: 6px; background: #eff6ff; color: #1e40af; font-size: .85rem; font-weight: 700; }
+    .link { margin-top: auto; align-self: flex-start; padding: 10px 16px; border-radius: 8px; background: var(--accent); color: white; font-weight: 700; text-decoration: none; }
+    .link:hover { text-decoration: underline; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid #92400e; outline-offset: 5px; }
+    .pending { margin-top: auto; color: #475569; font-weight: 600; }
+    footer { padding: 22px 0 0; color: #475569; }
+    footer p { margin: 0; }
+    @media (max-width: 640px) { main { padding: 20px 16px; } header, article { padding: 24px; } .units { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Level 1 · Digital skills</p>
+      <h1>L1 Digital Pathway Units</h1>
+      <p>Choose your unit to open its guide. Follow the steps, try the skills and use the linked templates and resources to build your project.</p>
+    </header>
+    <section aria-labelledby="units-heading">
+      <h2 id="units-heading">Your unit guides</h2>
+      <div class="units">
+        <article style="--accent: #1e40af">
+          <span class="icon" aria-hidden="true">📝</span>
+          <span class="label">Our first unit</span>
+          <h3>Word Processing Software</h3>
+          <p>Create a Word guide about an interest. Bring together text, pictures and tables, then check and share your work.</p>
+          <a class="link" href="Word%20processing%20software/l1-word-processing-student/guides/guide-word-processing-skills.html">Open Word Processing guide <span aria-hidden="true">→</span></a>
+        </article>
+        <article style="--accent: #7e22ce">
+          <span class="icon" aria-hidden="true">🎨</span>
+          <h3>Imaging Software</h3>
+          <p>Explore image editing and create a visual design for your audience.</p>
+          <span class="pending">Guide coming later</span>
+        </article>
+        <article style="--accent: #0f766e">
+          <span class="icon" aria-hidden="true">🎬</span>
+          <h3>Multimedia Software Skills</h3>
+          <p>Plan a webpage and combine text, images and media to tell your audience something useful.</p>
+          <a class="link" href="Multimedia%20software%20skills/l1-multimedia-software-student/guides/guide-1-research-and-design.html">Open Multimedia guide <span aria-hidden="true">→</span></a>
+        </article>
+        <article style="--accent: #9a3412">
+          <span class="icon" aria-hidden="true">🛠️</span>
+          <h3>Design Software</h3>
+          <p>Research an idea, plan your design and develop an interactive project.</p>
+          <a class="link" href="Design%20Software/l1-design-software-student/guides/guide-1-research-and-design.html">Open Design guide <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+    <footer><p>Use your guide alongside your project booklet. Your teacher will tell you which unit to work on and where to hand in your work.</p></footer>
+  </main>
+</body>
+</html>
