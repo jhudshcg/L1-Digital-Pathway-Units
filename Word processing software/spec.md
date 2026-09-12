@@ -1,68 +1,52 @@
-# Word processing Software	D/505/6398
+# Word Processing Software — D/505/6398
 
-GLH: 20
+- **Level:** 1
+- **Credits:** 3
+- **Guided learning hours (GLH):** 20
+- **Software:** Microsoft Word
 
-Learning basic word processing skills, including formatting, editing, and creating documents using MS Word.
+## Unit aim
 
-Students must be reminded to keep their Word docs saved outside of their project repo (which they also don't strictly need to clone for this project, as it's entirely MS Word based. They can access the guides and examples directly from the GitHub repo, and save their Word docs in their own OneDrive or local storage).
+Learn basic word processing skills: entering and editing information, organising a document, and using formatting and page layout to present it clearly. Understand how document structure and styles help with consistency, navigation and readability.
 
-**Theme:** 
+## Unit delivery
 
-Create a 5+ page document (cover page, table of contents, and at least 3 content pages), based on the theme of a favourite interest (game, sport, hobby, book, show, music, etc). 
+See [AGENTS.md](../AGENTS.md) for the target audience and shared course instructions.
 
-The document should include:
-- title
-- subtitle
-- table of contents
-- headings (h1, h2, h3)
-- paragraphs of text using at least 2 paragraph and font styles
-- lists (bullet and/or numbered)
-- at least 1 styled table
-- styled images
-- at least 1 styled text box
-- at least 1 hyperlink
+Word Processing is the first unit delivered.
 
-Students will learn how to create such a document and reflect on why document structure and styles are preferable to manual formatting.
+Students save working files in their own college OneDrive folder or another teacher-approved location, outside the resource repository. No Git, cloning or code editor is required for this unit. The student-facing resources remain in the unit's student submodule and can be accessed as a downloaded pack or through the repository.
 
-**Project structure:**
+## Project: My interest guide
 
-Student selects a favourite interest as the subject of their document.
+Create a guide or report about a favourite interest, such as a game, sport, hobby, book, programme or music artist. Choose a reader and explain information that would be useful to them.
 
-Student completes a Word doc form to record their choice and provide some info about it. They will save this as evidence and also use it as a reference for their document content.
+Explore the three supplied Word examples as editable template samples. Try changes in a saved copy, then choose a Word template or a blank document for the project. Replace sample text and remove unused features. The samples demonstrate different styles; they are not completed assessed projects to copy.
 
-Student follows HTML guide and some example docs for formatting and styling a doc document, to create their own.
+Build at least five pages: a cover, an automatic contents page and three short content pages. Short paragraphs, pictures, lists and tables can share these pages. This does not mean five pages of continuous prose.
 
-The unit booklet will be based on students evidencing their completed Word form and their created Word doc with screenshots, short descriptions or explanations, with a peer learning editing activity and reflection questions about the process and their learning.
+### Core project requirements
 
-**Project requirements:**
+- A project cover with title, subtitle, author name and an appropriate image.
+- An automatic table of contents on page 2, updated before submission.
+- Heading 1 for main sections and Heading 2 for at least one subsection; modify one existing style.
+- Consistent, readable body text using an appropriate style such as Normal. Use 12pt or larger to suit the reader, with clear paragraph spacing.
+- At least one bulleted or numbered list using Word's list tools.
+- At least one table that the student creates and modifies, with clear headings and visible borders.
+- At least two suitable images, with sources and any required permissions or credits recorded.
+- At least one readable text box containing a useful tip, fact or quotation.
+- At least one working external hyperlink with meaningful link text.
+- Suitable A4 page layout, page breaks and simple page numbering; check all pages in print preview.
+- Use editing/proofing tools and feedback to improve the document. Record two useful corrections and fix any other problems found.
+- Save and reopen the editable DOCX; export a PDF, open it and check the result.
 
-Create word document, with a cover page, table of contents, and content pages, based on the theme of a favourite interest (game, sport, book, show, etc). 
+These are the project requirements. The qualification assessment criteria below remain the standard for judging demonstrated skills. Provide support without removing criteria; assess the student's work rather than decorative complexity or quantity of prose.
 
-The document should include:
-- title
-- subtitle
-- table of contents
-- headings (h1, h2, h3)
-- paragraphs of text using at least 2 paragraph and font styles
-- lists (bullet and/or numbered)
-- at least 1 styled table
-- styled images
-- at least 1 styled text box
-- at least 1 hyperlink
+### Optional extensions
 
-The document must use suitable styles and customized styles, not manual formatting for size or font changes, and should be well structured, with a clear visual hierarchy.
+Heading 3, creating new styles, section breaks, running headers and Page X of Y numbering are extensions. They are not required for the core project. Students may also compare image-wrapping options or develop further content once their core work is complete.
 
-Normal font size: 12 pt.
-
-minimum page length: 5
-
-**Resource set:** 
-
-- Word formatting and styling guide HTML file, designed to help students develop and practice the skills they need to meet the project requirements.
-- Word form document (`topic-planning-form.docx`), which students will complete to record their chosen subject and provide some information about it. 
-- 2 example Word documents showing a variety of structuring and styling choices.
-
-**Assessment criteria from qualification spec:**
+## Assessment criteria from the qualification specification
 
 Learning Outcomes and Assessment Criteria 
 
@@ -100,65 +84,132 @@ Learning Outcomes and Assessment Criteria
 
 ## Booklet tasks/activities with assessment criteria mapping
 
-The sequence of tasks and activities in the student project booklet, the student evidence required, and the assessment criteria mapping:
+This section defines the Word Processing booklet tasks, required evidence and assessment criteria mapping.
 
-### Section 1: Planning & Information Gathering
-* **Task 1: Topic Selection, Templates & Form Completion (AC 1.1, 1.2, 1.5)**
-  - *Activity:* Select a favourite interest topic, identify the required information types (text, headings, lists, tables, images, links), review available Word templates (explaining when to use templates vs. blank documents), and open and complete the pre-formatted `topic-planning-form.docx` template.
-  - *Student Evidence:* Written response box explaining information needs; template evaluation response box; screenshot of completed `topic-planning-form.docx`.
-  - *Criteria Mapping:* **AC 1.1, AC 1.2, AC 1.5**
+### Introductory practice: First steps
 
-* **Task 2: Sourcing & Combining Multi-Format Assets (AC 1.3, 1.4)**
-  - *Activity:* Research and input key information using keyboard and input tools. Gather facts, descriptions, statistics, at least 2 royalty-free images, and external reference links from at least two different sources.
-  - *Student Evidence:* 2-source asset log table recording source names, URLs, asset types (text/image/stats), and licensing notes; short explanation of how the different information types combine to inform the reader.
-  - *Criteria Mapping:* **AC 1.3, AC 1.4**
+- **Activity:** Type a heading and a short paragraph, edit text, try undo/redo, apply a heading style, then save, close and reopen the practice document from its folder.
+- **Student evidence:** A brief demonstration and understanding check. No separate written reflection is required.
+- **Assessment criteria mapping:** Diagnostic practice, not a separate assessed task. Assessed file retrieval is recorded in Task 8.
 
----
+### Section 1: Planning and gathering information
 
-### Section 2: Document Structure & Styling
-* **Task 3: Heading Styles & Automated Table of Contents (AC 2.2, 3.1)**
-  - *Activity:* Structure the 5+ page document using Word's built-in heading hierarchy (`Title`, `Subtitle`, `Heading 1`, `Heading 2`, `Heading 3`) rather than manual formatting, and insert an automated Table of Contents on Page 2.
-  - *Student Evidence:* Heading structure outline table mapping document sections to heading styles; screenshot of Page 2 showing the generated Table of Contents; written explanation of why styles are preferable to manual formatting for accessibility and navigation.
-  - *Criteria Mapping:* **AC 2.2, AC 3.1**
+#### Task 1: Explore templates and choose a topic
 
-* **Task 4: Character, Paragraph & Text Box Formatting (AC 3.1, 3.2)**
-  - *Activity:* Format body paragraphs with consistent font families, font sizes, line/paragraph spacing, and alignment. Insert at least one bulleted or numbered list and create at least one styled callout text box with border accents and shading.
-  - *Student Evidence:* Typography and paragraph formatting record table; screenshot evidence of a styled text box and formatted list in the document.
-  - *Criteria Mapping:* **AC 3.1, AC 3.2**
+- **Activity:** Inspect the three supplied samples, edit a copy of one and explore available Word templates. Choose a topic, reader and template or blank starting point. Complete learner details and Section 1 of the topic planning form now; complete its later sections alongside Tasks 2–4.
+- **Student evidence:** A short topic/reader/information-needs note; two template names with when each could be useful; a brief reason for the chosen starting point; the saved planning form. Keep the form itself rather than repeating it as a screenshot.
+- **Assessment criteria mapping:** AC 1.1, 1.2, 1.5.
 
-* **Task 5: Creating & Modifying Data Tables (AC 2.1)**
-  - *Activity:* Create and format a structured table (e.g. statistics, comparison, schedules, or key facts about the chosen topic), modifying rows, columns, alignment, header row shading, and cell borders.
-  - *Student Evidence:* Screenshot of the completed styled table in the document; short step-by-step note explaining how rows/columns were added or modified.
-  - *Criteria Mapping:* **AC 2.1**
+#### Task 2: Gather and combine information
 
----
+- **Activity:** Gather material from at least two sources overall. Type a short section in the student's own words and insert two suitable images and a meaningful web link. Record sources and any reuse permissions or credits needed. Complete Section 2 of the planning form as the content is gathered; refer to the booklet source log rather than copying the same details twice.
+- **Student evidence:** A source log; a readable screenshot snippet showing combined text and an image, with the link text if nearby; the actual guide. The teacher may observe or ask for a demonstration of entering/inserting information.
+- **Assessment criteria mapping:** AC 1.3, 1.4.
 
-### Section 3: Layout, Editing & Peer Learning
-* **Task 6: Page Setup, Headers & Footers (AC 3.3)**
-  - *Activity:* Configure page layout for presentation and printing: set standard page margins, insert section/page breaks, enable "Different First Page" for headers, add running headers, and insert page numbering fields (`Page X of Y`) in the footer.
-  - *Student Evidence:* Page setup settings log (margins, orientation, paper size); screenshot of Page 3 showing running header and page numbering footer.
-  - *Criteria Mapping:* **AC 3.3**
+### Section 2: Document structure and formatting
 
-* **Task 7: Peer Review, Editing Tools & Corrections (AC 1.6, 3.4)**
-  - *Activity (Peer Learning):* Swap documents with a peer. Use Word's editing and proofing tools (Spell Check / Editor, Find & Replace, Thesaurus, or Comments) to identify errors and suggest presentation improvements. Implement feedback and record 3 distinct before-and-after improvements.
-  - *Student Evidence:* Peer feedback note; 3-row before-and-after evidence log (with side-by-side screenshots or detailed descriptions of corrections made using editing tools).
-  - *Criteria Mapping:* **AC 1.6, AC 3.4**
+#### Task 3: Headings and automatic contents
 
----
+- **Activity:** Apply Title and Subtitle to the project cover, Heading 1 to main sections and Heading 2 to a subsection. Modify one existing heading style. Insert and update automatic contents on page 2. Complete Section 3 of the planning form using two heading levels; Heading 3 is optional.
+- **Student evidence:** Small screenshot snippets of the contents and a heading with its style selected; one short reason for a style change; the editable guide for checking heading styles and automatic contents.
+- **Assessment criteria mapping:** AC 2.2, 3.1.
 
-### Section 4: File Management & Final Evaluation
-* **Task 8: File Storage, Naming & Formats (AC 1.7)**
-  - *Activity:* Save and store the working `.docx` file in a dedicated local/OneDrive folder following clear naming conventions, and export a copy as `.pdf` for distribution.
-  - *Student Evidence:* File path and storage location description; screenshot of File Explorer / OneDrive showing the organized `.docx` and exported `.pdf` files.
-  - *Criteria Mapping:* **AC 1.7**
+#### Task 4: Make text easy to read
 
-* **Task 9: Final Review & Evaluation (AC 3.1, 3.4)**
-  - *Activity:* Conduct a final check against the project requirements (5+ pages, styles, table, images, text box, TOC, link) and evaluate how the document formatting and structure enhance readability.
-  - *Student Evidence:* 8-point requirement completion checklist; written reflection explaining what formatting choices worked best and what could be improved in future documents.
-  - *Criteria Mapping:* **AC 3.1, AC 3.4**
+- **Activity:** Use Normal style to set a readable body font, size and paragraph spacing. Add a bulleted or numbered list and a clearly styled text box. Complete Section 4 of the planning form as these choices are made; larger body text is allowed where helpful.
+- **Student evidence:** Screenshot snippets of the list and text box; one brief formatting choice and why it helps the reader; the actual guide.
+- **Assessment criteria mapping:** AC 3.1, 3.2.
 
----
+#### Task 5: Create and change a table
 
-### Section 5: Declaration & Assessor Feedback
-* **Student Declaration of Authenticity:** Formal authenticity confirmation checkbox, learner name, ID, date, and signature (`layout-declaration`).
-* **Assessor Feedback & Grading Grid:** Assessment matrix covering LO1, LO2, and LO3, overall Pass/Resubmission decision, assessor signature, and date.
+- **Activity:** Create a small table relevant to the topic, with column headings and at least two rows of information. Add a row or column, enter information and adjust widths or styling to keep it readable.
+- **Student evidence:** A screenshot of the finished table and a short change record, or a dated teacher observation of the modification; the actual table in the guide.
+- **Assessment criteria mapping:** AC 2.1.
+
+### Section 3: Page layout, review and editing
+
+#### Task 6: Check the page layout
+
+- **Activity:** Choose A4 paper, suitable margins/orientation, page breaks and simple page numbers. Check every page in print preview and fix cut-off text, unwanted blank pages or awkward image positions.
+- **Student evidence:** A page-layout or print-preview screenshot with readable page numbering, using a separate snippet if necessary; a short note about what was checked or fixed; the actual document.
+- **Assessment criteria mapping:** AC 3.3.
+
+#### Task 7: Review and improve
+
+- **Activity:** Use Word's proofing/editing tools and feedback from a peer or teacher. Make and record two useful corrections, naming the tools used. Continue correcting other problems as needed. If no peer is available, the teacher provides feedback.
+- **Student evidence:** Reviewer name and one useful suggestion; two short before/after records identifying the tool used; the improved document. Additional corrections may be recorded where useful.
+- **Assessment criteria mapping:** AC 1.6, 3.4.
+
+### Section 4: File management and final evaluation
+
+#### Task 8: Save, reopen and export
+
+- **Activity:** Save the guide using a clear name such as Firstname-Surname-InterestGuide.docx in the student's Word Processing folder. Close it, locate and reopen it from that folder, make a small edit and save again. Export a PDF in the same folder, reopen it and check all pages and the hyperlink.
+- **Student evidence:** Folder location and file names; a dated teacher observation of locating and reopening the saved guide, recorded during the student's demonstration; the saved DOCX and PDF.
+- **Assessment criteria mapping:** AC 1.7.
+
+#### Task 9: Final check and evaluation
+
+- **Activity:** Check the guide against every core requirement and the chosen reader's needs. Correct anything missing, update contents and re-export the PDF after final changes. Submit the guide DOCX/PDF, completed planning form and booklet.
+- **Student evidence:** A completed requirements checklist; a brief reflection on what helps the reader and what could be improved next time; the final files and screenshot evidence in the booklet.
+- **Assessment criteria mapping:** AC 3.1, 3.4.
+
+### Section 5: Assessor record and student declaration
+
+- **Assessor record:** Record each individual criterion, whether it is met, its evidence location and any further action. Include dated observations where relevant, an overall Pass/Resubmission decision, assessor name, signature and date.
+- **Student declaration:** End the booklet with the authenticity statement, confirmation checkbox, learner name, ID, date and signature. Students acknowledge sources and help received.
+
+## Evidence and submission
+
+Use focused, readable screenshot snippets from the project document in Booklet Tasks 2–6. Avoid duplicating long explanations of features already visible. Retain the editable guide to verify styles, automatic contents and other features a screenshot alone cannot establish. Teacher observations can supplement evidence of actions.
+
+Students submit:
+
+1. Their project guide as DOCX.
+2. The final guide as PDF.
+3. Their completed topic planning form.
+4. Their completed assessment booklet, including screenshot evidence.
+
+A printed project guide may be handed in as additional evidence alongside the booklet. The teacher states the submission date and class hand-in location.
+
+## Resource set
+
+Paths below are relative to the Word Processing unit folder unless stated otherwise.
+
+| Resource | Path |
+| :--- | :--- |
+| Student skills guide | `l1-word-processing-student/guides/guide-word-processing-skills.html` |
+| Topic planning form | `l1-word-processing-student/templates/topic-planning-form.docx` |
+| Planning form source | `l1-word-processing-student/templates/topic-planning-form.md` |
+| Interior design template sample | `l1-word-processing-student/examples/example-1-interior-design.docx` |
+| Student report template sample | `l1-word-processing-student/examples/example-2-student-report.docx` |
+| 3D student report template sample | `l1-word-processing-student/examples/example-3-student-report-3D.docx` |
+| Assessment booklet source | `src/booklet-word-processing-software.md` |
+| Assessment booklet (generated output) | `src/booklet-word-processing-software.docx` |
+| Shared Pandoc reference template | `../booklet_template.docx` |
+| Fixed assessment booklet cover image source | `src/booklet_cover.png` |
+
+## Assessment booklet presentation
+
+The assessment booklet cover image is fixed and chosen by the teacher. The booklet Markdown references `src/booklet_cover.png` from its own folder, and Pandoc embeds the image when generating the DOCX. The shared `../booklet_template.docx` supplies its layout styles. Students do not choose or replace it. Their own project document's cover and images are separate requirements.
+
+Retain concise helper text inside the booklet’s response and screenshot boxes, with sufficient writing or image space beneath it.
+
+## Suggested pace and teacher preparation
+
+The suggested sequence below includes practice, support and extension time beyond the unit's 20 GLH.
+
+| Week | Main focus |
+| :--- | :--- |
+| 1 | First steps, template exploration, topic choice and first short content section |
+| 2 | Sources and combining text/images; continue content |
+| 3 | Headings, contents, paragraph styles and lists |
+| 4 | Table, text box and page layout |
+| 5 | Finish content, peer review and corrections |
+| 6 | Retrieval, PDF check and submission |
+| 7 | Targeted support and resubmission |
+| 8–9 | Buffer and extensions |
+
+Adjust this sequence after the introductory Word practice and retrieval check.
+
+Before delivery, add the teacher's ribbon/option screenshots to the guide, check the instructions in the college's installed Word version, confirm students can open the resources and planning form, and state the hand-in location. The guide assumes Windows desktop Word; provide equivalent steps where a different version is used.

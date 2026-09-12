@@ -1,3 +1,0 @@
-{
-  "pandoc.docxOptString": "--reference-doc=\"../../booklet_template.docx\" --lua-filter=\"../../layouts/layouts.lua\""
-}

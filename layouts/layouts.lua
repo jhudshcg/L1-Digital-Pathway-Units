@@ -1,4 +1,4 @@
-﻿--[[
+--[[
   layouts.lua
   Pandoc Lua filter using clean, native Pandoc AST transformations.
   Applies custom-style="TableGrid" to all tables so Word links to the TableGrid style in booklet_template.docx.
@@ -18,23 +18,15 @@ local function make_cell(blocks)
 end
 
 function Meta(meta)
-  doc_meta = meta
-  -- Keep meta intact so Pandoc writes docProps/core.xml (title, etc.)
-  return meta
-end
-
--- Suppress Pandoc's default title block insertion on body if custom front cover is present
-function Pandoc(doc)
-  local new_blocks = {}
-  for _, blk in ipairs(doc.blocks) do
-    -- Pandoc creates title block as a Div with class 'title-block' or Header 1 matching title
-    if blk.t == "Div" and blk.classes:includes("title-block") then
-      -- skip default title block
-    else
-      table.insert(new_blocks, blk)
-    end
+  if pandoc.utils.stringify(meta['cover-layout'] or '') == 'png' then
+    -- DOCX emits title/subtitle outside the AST. Use Subject for the running
+    -- header and render the visible cover solely through layout-cover.
+    meta.subject = meta.title
+    meta.title = nil
+    meta.subtitle = nil
   end
-  return pandoc.Pandoc(new_blocks, doc.meta)
+  doc_meta = meta
+  return meta
 end
 
 -- Estimate empty paragraphs for default 5-line height
@@ -42,10 +34,8 @@ local function height_to_blank_paras(height_str)
   if not height_str then return 5 end
   local num = tonumber(height_str:match("([%d%.]+)"))
   if not num then return 5 end
-  if num >= 7 then return 8 end
-  if num >= 5 then return 6 end
-  if num >= 3 then return 5 end
-  return 3
+  -- EvidenceSpace in the reference template uses 20pt lines. Convert cm to lines.
+  return math.max(1, math.ceil(num * 28.3465 / 20))
 end
 
 -- 1. LAYOUT: Textbox / Response Box / Evidence Box
@@ -54,13 +44,18 @@ local function render_textbox(elem)
   local height_str = elem.attributes['height']
   local content = elem.content
 
-  if #content == 0 then
-    local blank_count = height_to_blank_paras(height_str)
-    content = {}
-    for _ = 1, blank_count do
-      table.insert(content, pandoc.Para({ pandoc.Str("") }))
-    end
+  -- Preserve helper content and reserve space independently of its presence.
+  -- Visual styling is defined by EvidenceHint / EvidenceSpace in the template.
+  local padded = {}
+  if #content > 0 then
+    table.insert(padded, pandoc.Div(content, pandoc.Attr("", {}, {["custom-style"]="EvidenceHint"})))
   end
+  local blank_count = height_to_blank_paras(height_str)
+  for _ = 1, blank_count do
+    table.insert(padded, pandoc.Div({pandoc.Para({pandoc.Str(" ")})},
+      pandoc.Attr("", {}, {["custom-style"]="EvidenceSpace"})))
+  end
+  content = padded
 
   local rows = {}
 
@@ -200,8 +195,43 @@ local function render_metadata_table_div(elem)
   return elem
 end
 
+-- Apply the template's smaller paragraph style only inside the marked table.
+local function render_assessment_criteria(elem)
+  local function style_paragraph(block)
+    return pandoc.Div({pandoc.Para(block.content)},
+      pandoc.Attr('', {}, {['custom-style']='AssessmentCriteria'}))
+  end
+  return elem:walk({Para=style_paragraph, Plain=style_paragraph}).content
+end
+
 -- Main Div Dispatcher
 function Div(elem)
+  if elem.classes:includes('layout-assessment-criteria') then
+    return render_assessment_criteria(elem)
+  end
+
+  local cover_styles = {
+    ['cover-name']='CoverName', ['cover-qualification']='CoverQualification',
+    ['cover-code']='CoverCode', ['cover-title']='CoverUnitTitle',
+    ['cover-artwork']='CoverArtwork'
+  }
+  for class, style in pairs(cover_styles) do
+    if elem.classes:includes(class) then
+      local blocks = {}
+      for _, block in ipairs(elem.content) do
+        if block.t == 'Header' then block = pandoc.Para(block.content) end
+        table.insert(blocks, block)
+      end
+      return pandoc.Div(blocks, pandoc.Attr('', {}, {['custom-style']=style}))
+    end
+  end
+  if elem.classes:includes('layout-cover') then
+    local simple = pandoc.SimpleTable({}, {pandoc.AlignDefault}, {1.0}, {}, {{make_cell(elem.content)}})
+    local tbl = pandoc.utils.from_simple_table(simple)
+    tbl.attributes['custom-style'] = 'CoverFrame'
+    return tbl
+  end
+
   -- Response / Text / Evidence box
   if elem.classes:includes("layout-textbox") or
      elem.classes:includes("layout-response-box") or
@@ -222,6 +252,20 @@ function Div(elem)
      elem.classes:includes("layout-declaration-box") or
      elem.classes:includes("declaration-box") then
     return render_declaration(elem)
+  end
+
+  -- PNG cover variation: one header row and one blank data row.
+  if elem.classes:includes("layout-cover-dates") then
+    for _, item in ipairs(elem.content) do
+      if item.t == "Table" then
+        item.attributes['custom-style'] = 'CoverDates'
+        item.colspecs = {
+          {pandoc.AlignCenter, 0.15}, {pandoc.AlignCenter, 0.18},
+          {pandoc.AlignCenter, 0.18}, {pandoc.AlignCenter, 0.49}
+        }
+        return item
+      end
+    end
   end
 
   -- Metadata table wrapper
@@ -248,16 +292,16 @@ end
 
 -- Table Dispatcher: ensure ALL standard markdown tables receive the TableGrid style
 function Table(tbl)
-  tbl.attributes['custom-style'] = 'TableGrid'
+  if not tbl.attributes['custom-style'] then tbl.attributes['custom-style'] = 'TableGrid' end
   return tbl
 end
 
 -- Header Dispatcher: Shift body headers down by 1 so Markdown ## becomes Word's Heading 1,
 -- ### becomes Heading 2, and #### becomes Heading 3.
--- Level 1 headers map to Word's Title style.
+-- Cover title styling is handled by its cover-title Div.
 function Header(el)
   if el.level == 1 then
-    el.attributes['custom-style'] = 'Title'
+    -- Cover divs map this label to CoverUnitTitle; body headings shift below.
     return el
   elseif el.level > 1 then
     el.level = el.level - 1
