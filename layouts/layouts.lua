@@ -219,8 +219,19 @@ function Div(elem)
     if elem.classes:includes(class) then
       local blocks = {}
       for _, block in ipairs(elem.content) do
-        if block.t == 'Header' then block = pandoc.Para(block.content) end
-        table.insert(blocks, block)
+        if class == 'cover-artwork' and block.t == 'Figure' then
+          -- Pandoc 3 wraps a standalone image in a Figure. Keep its image
+          -- paragraphs inside the cover cell, without a separate caption.
+          for _, image_block in ipairs(block.content) do
+            if image_block.t == 'Plain' then
+              image_block = pandoc.Para(image_block.content)
+            end
+            table.insert(blocks, image_block)
+          end
+        else
+          if block.t == 'Header' then block = pandoc.Para(block.content) end
+          table.insert(blocks, block)
+        end
       end
       return pandoc.Div(blocks, pandoc.Attr('', {}, {['custom-style']=style}))
     end

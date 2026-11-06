@@ -7,3 +7,6 @@
 [submodule "Multimedia software skills/l1-multimedia-software-student"]
 	path = Multimedia software skills/l1-multimedia-software-student
 	url = https://github.com/jhudshcg/l1-multimedia-software-student.git
+[submodule "Imaging Software/l1-imaging-software-student"]
+	path = Imaging Software/l1-imaging-software-student
+	url = https://github.com/jhudshcg/l1-imaging-software-student.git

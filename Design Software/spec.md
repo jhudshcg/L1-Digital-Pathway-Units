@@ -4,7 +4,7 @@ JS based project, using VSCode, with a simple program design and implementation.
 
 GLH: 20
 
-**Theme:** 
+**Theme:**
 
 "Canteen Ordering System" - students will design a simple program to allow users to order food from a canteen menu, with options for customization and payment.
 
@@ -16,7 +16,7 @@ Image buttons and text inputs for user interaction, with grid or flex layout.
 
 Status messages and alerts for user feedback (order totals, info, warnings or errors).
 
-Starter templates provided for all source files. 
+Starter templates provided for all source files.
 
 HTML and JS should be very clean and well organized as well as commented.
 
@@ -49,6 +49,7 @@ They will use git in VSCode to version manage their project. No branches or comm
 **Initial CSS design options:**
 
 selectable (by changing the html class attributes on `<body>`):
+
 - layout options: `layout-grid`, `layout-flex`, `layout-sidebar-left`, `layout-single-column`
 - colour schemes: `colour-light`, `colour-dark`, `colour-contrast`
 - design themes (typography, mood and adornment): `theme-modern`, `theme-retro`, `theme-americana`, `theme-punk`, `theme-emo`

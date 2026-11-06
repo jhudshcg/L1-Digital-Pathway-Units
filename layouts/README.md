@@ -81,6 +81,8 @@ Unit D/505/6398
 :::
 ```
 
+The filter keeps standalone cover images inside the panel, including Pandoc 3 `Figure` blocks, and suppresses their separate figure captions. Image alternative text is retained.
+
 The teacher selects the cover artwork. Word Processing uses `src/booklet_cover.png`; Pandoc embeds it from the Markdown image reference. Keep the image and all cover content on the first page. Adjust the source image dimensions or template spacing if rendering reveals overflow.
 
 `CoverFrame`, `CoverDates`, `CoverName`, `CoverQualification`, `CoverCode`, `CoverUnitTitle` and `CoverArtwork` are template styles selected by the filter. With `cover-layout: png`, the filter moves YAML `title` into document `subject` metadata and removes `title` and `subtitle` to prevent an extra automatic title block. The template's running header reads `DOCPROPERTY Subject`. The filter does not create header or footer content. When reusing the template for another unit, check its cached header text and credit value as well as the updated document fields.

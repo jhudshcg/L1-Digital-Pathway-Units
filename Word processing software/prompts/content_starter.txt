@@ -1,0 +1,36 @@
+I'm a level 1 college student. I'm doing an assignment where I need to make a 5+ page guide for a personal interest, to show some word processing skills. It needs to combine information from different sources and include use some of lists, tables and images. My interest is [indoor bouldering]. My target audience is beginners. 
+
+I want some help with ideas, but I still want to do my own work. Use simple language with shorter answers in your responses.
+
+I need a title page, a contents & intro page and then I'm not sure how to structure the content for the rest of the pages. Can you please help with page and headings suggestions? And also what can be h1 and what can be h2 on each page?
+
+
+
+
+
+I'm a level 2 college student, doing a L2 Diploma in Digital and IT skills.
+
+Use simple language and be concise in your responses.
+
+I want to do my own work, but need help with some things.
+
+My current project is ...
+
+How do I …
+
+
+
+I'm a T-Level college student, making a website for my final project.
+
+The website needs to have user accounts, personalization and accessibility features.
+
+I'll be using NodeJS, Express and Bootstrap as the frameworks.
+
+Use simple language and be concise in your responses.
+
+I need to do my own work, but need help with some things.
+
+Can you give me some code snippets or suggestions for:
+* implementing assessibility feature.
+* user signup
+* a simple, minimal folder structure for the prototype website

@@ -12,7 +12,7 @@ Short intros, demos, explanations and understanding checks, followed by practica
 
 ## Resource materials
 
-All learning material and activities and projects must be well scaffolded and engaging, with extremely clear and concise instructions for work sequence and requirements. 
+All learning material and activities and projects must be well scaffolded and engaging, with extremely clear and concise instructions for work sequence and requirements.
 
 Activities, challenges or tasks should require some thinking and problem solving. They should not directly give the answer away, while remaining suitable for the target audience.
 
@@ -35,20 +35,22 @@ Resources should be visually engaging, with use of colour, visual hierarchy, ico
 The main visible title (`h1`) of each unit guide must be the unit name. Place the project or activity description directly below it as a visually distinct subtitle. Keep introductory encouragement and instructions separate from the subtitle. The HTML browser title (`title`) must begin with the unit name and may include the subtitle.
 
 For the Word Processing guide, use exactly:
+
 - **Title:** Word Processing Software
 - **Subtitle:** Make a guide about your interest
 
 ### Project booklets
 
 Each unit project will have a student project booklet in its resource set, in docx format. The project booklet will include:
+
 - Title page with unit title code, space for cover image, space for student name, issue date, hand in date and teacher name.
 - Project title, unit code and credit and unit aim.
 - Assessment criteria.
 - Project brief and requirements.
-- Sequence of tasks and activities linked to specific assessment criteria, which take students through the project in a clear and structured way. 
+- Sequence of tasks and activities linked to specific assessment criteria, which take students through the project in a clear and structured way.
 - Each task section will include clearly marked areas (spaces, boxes, lined sections, tables, etc.) for students to record their work and evidence their learning outcomes.
 
-The project booklets will use a consistent style, but have activities and tasks tailored to the specific unit and project. 
+The project booklets will use a consistent style, but have activities and tasks tailored to the specific unit and project.
 
 Project booklet header will contain the unit title and code to the left and the unit credit to the right. The footer will contain page # of #. Header and footer content, fields and formatting are supplied by the canonical `booklet_template.docx` passed to Pandoc; do not generate them in the Markdown or Lua filter.
 
@@ -127,6 +129,7 @@ Student declaration of authenticity, with checkbox, name, ID, date and signature
 - **Template-Driven Styling:** All visual styling (borders, padding, background shading, table gridlines, and fonts) must be managed in `booklet_template.docx` rather than hardcoded XML in filters. Pandoc AST structures inherit directly from the reference doc.
 - **YAML Frontmatter & Word Running Headers:** Set `title: "<Unit Name> (<Unit Code>)"` in the YAML frontmatter. Pandoc writes this metadata to Word's `docProps/core.xml` property, which dynamically populates the Word running header field on Page 2+. For `cover-layout: png`, the shared `layouts/layouts.lua` filter moves the title into subject metadata and suppresses the automatic title/subtitle block so that the cover is rendered only inside its panel. The canonical `booklet_template.docx` header reads that subject field. Do not add a separate automatic title above the panel.
 - **Table Formatting for Assessment Criteria:** Always use Pandoc Markdown grid table syntax (`+---+---+`) rather than pipe tables (`|`) when cells contain multiple distinct paragraphs (such as each assessment criterion on its own line). Pipe tables treat `<br>` as line breaks within a single paragraph, whereas grid tables produce true separate Word paragraphs with correct spacing.
+
 - **Strict Heading Hierarchy & Markdown Heading Mapping (via Lua Header Shift):**
   - Markdown files must remain 100% valid Markdown (single `#` for document title on cover page; all body sections start at `##`).
   - The Lua filter (`layouts/layouts.lua`) automatically shifts body headers down by 1 level so they map cleanly to Word styles:
@@ -160,6 +163,7 @@ Each sequenced item in this section of the unit spec file should be concise, but
 If booklet tasks/activities change, they should be changed in the spec.md section first, then the booklet.md file should be updated to match the agreed plan.
 
 When designing and planning the booklet tasks, consider the following:
+
 - Each assessment criteria should be evidenced by at least one task or activity in the booklet.
 - The link from the task to the assessment criteria should be logical and clear.
 - Large differences in assessment criteria coverage should be avoided, e.g. one assessment criteria should not have 5 tasks linked to it and another only 1 task.
