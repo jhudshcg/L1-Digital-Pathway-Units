@@ -193,3 +193,7 @@ These remain available for existing resources. They are not the required booklet
 ```
 
 The banner uses two columns, 55% and 45%. The metadata form uses 35% for labels and 65% for details. Both use the template's `TableGrid` style. Ordinary Markdown tables receive `TableGrid` unless another custom style is already assigned.
+
+## Body paragraphs in tables
+
+The reference template includes explicit `BodyText` and `FirstParagraph` paragraph styles based on `Normal`, at 14pt. Pandoc uses these for grid-table cells with multiple paragraphs and for introductory paragraphs. Keeping these styles in the template prevents applications from substituting smaller table text. `AssessmentCriteria` retains its separate 12pt style.

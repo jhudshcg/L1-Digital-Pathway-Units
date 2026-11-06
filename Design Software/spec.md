@@ -1,231 +1,311 @@
-# Design Software R/505/6389 - Canteen Ordering System
+# Design Software R/505/6389 — Canteen Ordering System
 
-JS based project, using VSCode, with a simple program design and implementation.
+JavaScript-based project using VS Code, with introductory program design, HTML and CSS.
 
-GLH: 20
+Level 1 · 3 credits · GLH: 20
 
-**Theme:**
+## Theme
 
-"Canteen Ordering System" - students will design a simple program to allow users to order food from a canteen menu, with options for customization and payment.
+“Canteen Ordering System” — students design and personalise a simple app that lets users choose food from a menu, add items to a tray, see the total and check a £5.50 student voucher limit.
 
-**Project structure:**
+The project introduces programming and web development to support possible progression to Level 2. Students can produce a successful individual design and evidence the criteria while using supplied working code for programming challenges they have not completed. Orders and payments are simulated; food information is researched for a classroom project.
 
-1 HTML file, 1 CSS file, 1* JS file.
+## Project structure
 
-Image buttons and text inputs for user interaction, with grid or flex layout.
+```text
+project/
+├── index.html
+├── style.css
+├── app.js
+├── util.js
+├── fonts/                 # supplied local theme fonts and licences
+└── images/
+    ├── menu-item-images...
+    └── image-unavailable.svg
+```
 
-Status messages and alerts for user feedback (order totals, info, warnings or errors).
+Students copy all starter files, including images, into project/. Keep HTML and JavaScript clean, organised and commented. Load app.js before util.js.
 
-Starter templates provided for all source files.
+### HTML and interface
 
-HTML and JS should be very clean and well organized as well as commented.
+index.html contains the page title, canteen name, introduction and footer; category selector (all/main/snack/drink); menu cards with image, name, description, price, category, healthy-choice indicator, recorded allergens and Add to tray button; tray entries with individual remove buttons; item count, subtotal, discount when enabled and final total; £5.50 voucher checkbox; clear and simulated order buttons; combined feedback; and a labelled programming practice/check area.
 
-CSS should be well structured and commented, with clear sections for different aspects of the design. The css should be designed so that students can select different classes for elements to change the layout, look and feel of the program, without needing to edit the css file. But there should be scope for making minor edits to change colours, fonts images and spacing.
+Students edit the canteen name, introductory text, footer and body classes. Use matching comments/search markers in the guide. Use semantic HTML, labelled controls, visible focus and readable feedback. Warnings must not depend on colour alone.
 
-The orderable items should be data driven from JS (inside app.js). The data format is:
+### CSS
+
+style.css controls layout, colours, typography, spacing and decoration, in clearly commented sections. Students first select presets through HTML classes, then edit CSS directly. Both routes are required learning activities.
+
+Provide a short MY DESIGN section at the end of the stylesheet for colour, padding/gaps, background images, font family and font size. Show the selector/property/value structure and exact location to edit. Students make at least one purposeful direct CSS change, compare before/after, check readability and explain their choice. All five types of edit have supported practice opportunities; they are not five separate assessment hurdles.
+
+Include live CSS playgrounds in the style guide. Students edit a small rule and see the result immediately, with a reset button, labelled preview and optional hints. Set a visual goal, ask for a prediction, then ask students to apply and adapt a choice to their own app. Do not supply the finished challenge rule. Use a constrained preview so malformed CSS cannot alter the guide itself. Explain that playground edits are temporary and do not save into project files.
+
+### JavaScript
+
+app.js contains configurable confirmation text, menu data, practice switches and short student functions. util.js contains rendering, events, filtering, adding/removing/clearing, money formatting, supplied working logic, calls to student functions, error messages and challenge checks. Students normally edit app.js, not util.js; acknowledge the supplied support code.
+
+Menu data must use this consistent structure:
 
 ```javascript
 var orderItems = [
   {
-    name: "Item Name",
-    price: 0.00,
-    image: "image.jpg",
-    type: "main" | "drink" | "snack",
-    description: "Item description",
-    healthpromo: true | false,
-    alergy_warning: ['nuts', 'gluten', 'dairy', 'soy', 'eggs', 'fish', 'shellfish', 'sesame', 'sulphites']
+    name: "Example menu item",
+    price: 2.50,
+    image: "images/example-item.jpg",
+    type: "main",
+    description: "A short description of the item.",
+    healthpromo: true,
+    alergy_warning: ["gluten", "dairy"]
   }
 ];
 ```
 
-* In the interest of reducing risk of overwhelm and keeping the JS accessible, the JS should be split into 2 files, with a util.js for utility functions, including element creation, attaching event listeners, and other common functions, and an app.js for the main program logic, confirurable UI text and data for the order options. Students will edit the app.js file to implement their own design choices and functionality.
+Text is quoted. price is a non-negative number in pounds, without quotes or £. type is exactly "main", "snack" or "drink". healthpromo is true/false without quotes. image is a local path including images/ and the extension. alergy_warning is a list of consistent lower-case labels, or [] when none are recorded. Retain the existing key spelling alergy_warning throughout. An empty list is not a guarantee that food is allergen-free.
 
-Students will research items, costs and allergy information for their menu, and will be required to evidence this research in their project booklet.
+Guide students through one complete record and its visible menu card before repeating for the remaining items. Retain at least ten items: four mains, three snacks/desserts, three drinks and at least three healthy choices. Students research descriptions, prices, images, health/allergen information and sources, and record evidence in the booklet.
 
-Students will customize the design of their program, including layout, colours, fonts, images and text. They will evidence their design choices in their project booklet. They may also edit the HTML file to change things like title or footer text.
+### Working starter and programming practice
 
-They will use git in VSCode to version manage their project. No branches or command line (apart from git config to set up user name and email) will be required, but students will be expected to commit regularly and write meaningful commit messages, via the VSCode GUI.
-
-**Initial CSS design options:**
-
-selectable (by changing the html class attributes on `<body>`):
-
-- layout options: `layout-grid`, `layout-flex`, `layout-sidebar-left`, `layout-single-column`
-- colour schemes: `colour-light`, `colour-dark`, `colour-contrast`
-- design themes (typography, mood and adornment): `theme-modern`, `theme-retro`, `theme-americana`, `theme-punk`, `theme-emo`
-- spacing options: `spacing-compact`, `spacing-standard`, `spacing-spacious`
-
-Images are stored locally within an `images/` directory in the project rather than hotlinked externally.
-
-The CSS will make use of Google Fonts, and will include a few different font options for headings and body text, which students can select by changing the class attributes in the HTML file. There should be simple guidance on using Google Fonts to add additional fonts or change existing choices, if students wish to do so.
-
-**Project requirements:**
-
-- Research and evidence a menu of at least 10 items, with prices, images, health and allergy information. Document choices and the information sources in the project booklet.
-- Choose and customize the program layout, look and feel, including colours, fonts, images and text. Document your design with a mood board and a wireframe, copied into the project booklet (can use provector.app for this).
-- Implement some of the program logic for: 
-    - finding the total cost
-    - checking in within budget (if £5.50 student voucher is selected)
-    - warning if an allergy is present in the order
-    - optionally, applying a health promotion discount if a healthy option is selected.
-
-**Resource set:** 
-
-- HTML docs for key steps and skills required, with clear instructions, examples and learning activities. These are more for detailed guidance, cheat sheets andadditional activities and in depth learning, separate from the project booklet doc (which is more directly focused on evidencing the assessment criteria and project requirements). No more than 3-4 additional HTML guide docs. 2-3 pages length each, max.
-- Template HTML, CSS and JS files for students to use as a starting point for their project. Templates will be well commented and include different options for code that can be used for each key aspect of the project.
-- 2 demo/example completed projects, with clear code comments. Each example should show a different set of design choices. The examples should not have completed code challenges, so should mostly demonstrate design and layout choices, with some very basic program logic implemented to showcase the design - without giving away the coding challenge solutions. The examples should be well commented to explain the design choices and how they were implemented in the code.
-
-**Coding challenge level**
-
-The level will be basic, beginner, with a mix of fill-in-the-blank and use of snippet bank, from which students select a best match and copy, paste and modify to fit the specific use.
-
-e.g.
+The starter works before students attempt coding challenges. Provide:
 
 ```javascript
-// fill in the blank
-if (orderAllergies.includes(____)) {
-  alert('Warning: Your order contains nuts!');
-}
-...
-
-if (orderTotal ____ 5.50) {
-  alert('Your order exceeds the £5.50 student voucher limit.');
-}
-
-// snippet bank
-// totalling numbers in an array
-// student will need to copy, paste and modify the code to total the order item prices (not weight) in the order array.
-var total = 0.0;
-for (var i = 0; i < items.length; i++) { // 'items' may be called something else in the program code, so students would need to modify this.
-  total += items[i].weight; // will need to modify this
-}
-
-// at least 2 healthy items in the menu, with a health promotion discount applied if selected. (students need to copy, paste and modify the code to check for healthy items in the order and apply the discount if present).
-var numMatchingItems = 0;
-for (var i = 0; i < items.length; i++) {
-  if (items[i].someproperty) { // will need to modify this to check for healthy items in the order
-    numMatchingItems++;
-  }
-}
-if (numMatchingItems > 1) {
-  orderTotal *= 0.9; // apply 10% discount
-}
-
+var challengeModes = {
+  subtotal: false,
+  budget: false,
+  allergy: false,
+  promotion: false
+};
+var useHealthyPromotion = false;
 ```
 
-Overall, students should complete 3 - 4 fill in the blanks and 2 - 3 snippet bank exercises, with a total of 5 - 7 coding challenges to complete in the project.
+false uses supplied working logic; true tries the corresponding student function. useHealthyPromotion separately enables the optional promotion. Practise one function at a time and label active functions in the interface. Turning a switch off preserves the attempt and restores supplied behaviour. This cannot fix a syntax error: missing quotes, commas or brackets can prevent app.js loading.
 
-Challenges needs to be well scaffolded, but do not give away the solutions in the questions. Students need to do some thinking and problem solving.
+Identify invalid menu fields by item/field. Show recovery instructions if the menu cannot load. If a student function throws or returns an invalid type, clearly say that supplied logic is temporarily being used. A valid but incorrect answer must remain visible for investigation, not be silently corrected. Fixed checks call the student function directly even when its switch is off; they must not pass because the app fell back to supplied logic.
 
-** Additional design links **
+Repeated selections add separate tray entries; removal removes one occurrence. Clearing resets entries, totals and order warnings. Format money to two decimal places. Apply promotion before voucher comparison. Keep voucher and allergen warnings visible together, including after confirmation. Use a local missing-image fallback without repeated requests. Core operation must work without external fonts or images.
 
-Students will produce a mood board and wireframe for their design, which will be included in the project booklet. They can use provector.app to create these, and copy them into the project booklet.
+### Git and storage
 
-**Assessment criteria from qualification spec:**
+Use VS Code Source Control for regular meaningful commits. No branches or command-line Git are required apart from initial local name/email configuration. Specify the folder to open, how to save, review/stage changes, commit, find previous work and undo a recent edit. Distinguish saving, committing and backup. Follow college storage and submission arrangements.
 
-Learning Outcomes and Assessment Criteria 
+## Initial CSS design options
+
+Choose one class from each selected group on body; replace an existing class instead of adding conflicting alternatives.
+
+| Group | Classes |
+|---|---|
+| Layout | layout-grid, layout-flex, layout-sidebar-left, layout-single-column |
+| Colour | colour-light, colour-dark, colour-contrast |
+| Theme | theme-modern, theme-retro, theme-americana, theme-punk, theme-emo |
+| Spacing | spacing-compact, spacing-standard, spacing-spacious |
+| Heading font | heading-clean, heading-bold, heading-serif |
+| Body font | body-clear, body-rounded, body-mono |
+| Accent | accent-blue, accent-purple, accent-green, accent-orange |
+| Card shape | cards-square, cards-soft, cards-round |
+
+```html
+<body class="layout-grid colour-light theme-modern spacing-standard
+             heading-clean body-clear accent-blue cards-soft">
+```
+
+Introduce existing groups first; offer extra font/accent/shape choices after an initial success. Show where to edit, what to replace, expected visual change and save/refresh/restore steps. Provide visual layout comparisons. Custom choices override relevant theme defaults; high contrast overrides decorative colours and backgrounds. Check desktop and narrow layouts.
+
+Images stay in images/, not hotlinked. Use system-font alternatives for the core route. Google Fonts remains an optional supported extension showing the font link and matching font-family, with a local fallback. Direct CSS activities cover colour, spacing, image backgrounds, font family and font size, using live previews and a small personal design section in the app stylesheet.
+
+## Project requirements
+
+- Research at least ten menu items: four mains, three snacks/desserts and three drinks, including at least three healthy choices. Record descriptions, prices, categories, health/allergen information, images and sources.
+- Identify audience and use; plan a mood board and labelled wireframe.
+- Prepare local images and populate the app with researched information.
+- Personalise layout, colours, typography, spacing, images and text. Include purposeful direct CSS editing as well as preset selection.
+- Make and explain a design improvement; preserve individual choices rather than prescribing one finished appearance.
+- Take part in supported JavaScript activities, recording an attempt and learning.
+- Test the actual project, correct problems and retest.
+- Store/retrieve files, make meaningful Git checkpoints, and submit individual evidence with sources, supplied code and support acknowledged.
+
+Programming introduces totals, comparisons, list checks and an optional discount. Completing every coding challenge is not required to evidence the criteria. Students can retain supplied functions while demonstrating their own design creation, editing, information handling and checking. An unfinished extension is not a failed project; record specific learning from partial attempts.
+
+## Resource set
+
+### Four HTML guides
+
+Retain guide-1-research-and-design.html, guide-2-customising-styles.html, guide-3-coding-challenges.html and git-and-testing-guide.html. Guide 1 contains all essential getting-started instructions, including software/location prerequisites, obtaining the repository, copying all starter files, opening the working app and initial Git setup/checkpoint. Students must not depend on README instructions. Keep README minimal and link to Guide 1 and the project hub.
+
+Guides teach skills; the booklet collects evidence. Use Goal → Change → Run → Check, one action per step, exact files/search markers, annotated code, labelled diagrams, before/after previews and concise recovery routes. Make CSS previews, HTML text edits, JS message/comparison practice and a running-total stepper interactive. Each edit-related interaction shows the altered code beside its visible effect or result, plus a concise transfer block naming the student file, search marker, values to change, structure to preserve and any selector/path adaptations; demo class controls also show the current HTML body tag. Keep unrelated worked-example values and avoid revealing target challenge solutions. Controls must work by keyboard and have text feedback. Essential instructions remain visible; deeper explanations/hints expand on request.
+
+Keep the main print route about 2–3 A4 pages per guide. Opened extension/help sections may be printed separately. Avoid dense prose and dense screenshots of text. Main h1 and browser title begin with Design Software; put the activity subtitle below h1.
+
+### Starter files and examples
+
+Provide complete working HTML/CSS/two-JS/local-image starter files. Keep editing sections short. Early success: open, change text, save, refresh, see the change.
+
+Retain the existing Americana Diner and Punk Eats examples, appearing essentially the same, with only necessary compatibility/support changes. Preserve their menus, artwork, typography and decorative details. Bundle the original theme fonts locally with licences. Provide a browser start page and simple in-demo look controls with Reset original design so learners can access and explore both examples without editing files. Retain two contrasting visual examples with comments explaining design choices. Examples work using supplied support logic; do not include completed student challenge functions in editable app.js. Label examples clearly.
+
+Audit guides, starter comments and assets for accidental answers. Worked examples teach concepts with different contexts; they must not provide the complete target expression with names merely swapped. Hints should support reasoning and diagnosis. Students predict, choose, adapt and explain, rather than only copy and paste.
+
+### Assessment booklet
+
+Use src/booklet-design-software.md and generate the matching DOCX beside it with the shared template/filter. Link to guides rather than duplicating tutorials. Keep response spaces empty of answers. Older booklet files are historical, not the current handout.
+
+## Coding challenge level
+
+Beginner activities progress from a visible text edit to short logic edits. Use value edits, operator/word choices, marked expressions and adapted snippets. Students do not write event handlers, rendering code or whole functions independently. Replace the fixed quota of blanks/snippets with the supported sequence below and optional further practice.
+
+Each activity specifies a goal, different-context worked example, prediction, exact editing location, transfer task, fixed checks, progressively stronger hints and recovery. Explain syntax when first used. Use valid starter placeholders, such as 0 or "CHOOSE", that allow the file to load.
+
+### A — Text and values
+
+Edit only the words inside orderMessage quotes; save, refresh, add an item and confirm. Then edit one researched price and check its card. Label text/number/boolean examples:
+
+```javascript
+name: "Fruit pot"   // text
+price: 1.40         // number
+healthpromo: true   // true/false
+```
+
+Check new message, correct price and successful loading. Show paired quotes and the difference between true and "true". Do not teach all record syntax at once.
+
+### B — Running total
+
+Use an interactive parcel-weight trace: start 0; add 2 → 2; add 3 → 5; add 1 → 6. Ask for the next total before revealing each step. Teach a simple addition statement separately; do not print a completed price-summing loop in the guide.
+
+```javascript
+function studentSubtotal(tray) {
+  var total = 0;
+  for (var i = 0; i < tray.length; i++) {
+    total += 0; // Replace only this expression.
+  }
+  return total;
+}
+```
+
+Explain the loop visits each item, i selects its position, and += adds to a running value. Supply the loop; students construct the expression from their understanding of current item and property. Offer separate hints for locating an item and selecting a numeric field, not the final joined expression.
+
+Contract: tray array in; numeric subtotal in pounds out. Checks: empty → 0; [1.20] → 1.20; [2.40,1.10,0.50] → 4.00. Predict before checking; use own menu afterwards.
+
+### C — Voucher comparison
+
+Show a £3 example number line with below/equal/above. Provide a small operator reference for >, <, >= and == using unrelated values; do not identify the correct target operator in the question/comments.
+
+```javascript
+function studentOverBudget(totalAmount) {
+  var voucherLimit = 5.50;
+  return totalAmount == voucherLimit; // Choose the comparison.
+}
+```
+
+The initial comparison is deliberately unfinished. Contract: return true only when the final payable amount exceeds £5.50. Checks: 5 → false; 5.50 → false; 6 → true. Students predict the boundary before editing. The app warns only when the voucher is selected; supplied code passes the amount after promotion.
+
+### D — Allergen list
+
+Use a pictured colour list and a different-context example:
+
+```javascript
+var colours = ["blue", "green"];
+colours.includes("green"); // true
+colours.includes("red");   // false
+```
+
+```javascript
+function studentHasNuts(allergens) {
+  return allergens.includes("CHOOSE");
+}
+```
+
+Students identify the required label from the menu data and adapt the check; explain exact spelling/case. Contract: whether the list contains nuts. Checks: [] → false; ["dairy"] → false; ["nuts","gluten"] → true. Supplied support keeps other allergens visible. Ask students why an empty recorded list does not prove food is safe for a person with an allergy.
+
+### E — Healthy discount (extension)
+
+Split counting and percentages into separate stages. At least two healthy tray entries trigger 10% off the whole subtotal; repeated selections count separately.
+
+E1: show three item cards with true/false flags and count qualifying entries by hand. Supply the loop and condition; student completes the increment:
+
+```javascript
+var healthyCount = 0;
+for (var i = 0; i < tray.length; i++) {
+  if (tray[i].healthpromo == true) {
+    healthyCount += 0; // Choose the increment.
+  }
+}
+```
+
+E2: ten-part bar, starting £10. Distinguish subtotal, discount and final total. Work a different percentage (20% of £10); allow a calculator. Supply the >= 2 condition and return structure. Students choose the fraction in the marked expression, not write the whole function.
+
+```javascript
+function studentDiscount(tray, subtotal) {
+  // Supplied counting structure and student edits.
+  // Return discount amount, not the final order total.
+}
+```
+
+Contract: below two qualifying entries → 0; otherwise 10% of subtotal. Supplied code rounds discount to pennies, subtracts once, then checks voucher. Checks: £10 with 0/1/2 qualifying entries → discount £0/£0/£1 and final £10/£10/£9; £4.70 with two → £0.47 discount and £4.23 final. Explain promotion enable switch separately from student-function switch.
+
+### Feedback
+
+Show input, expected, actual and Matches/Try again. Checks call the student function directly, do not alter the tray, and do not make assessment decisions. Valid but incorrect work should remain investigable. Record useful mistakes, predictions and partial learning; do not supply finished answers in guide or booklet.
+
+## Additional design links
+
+Create a mood board (colour, type, imagery, mood) and labelled wireframe (heading, menu, controls, tray). Provide small visual examples and a familiar Word-shapes or paper route. ProVector remains optional. A new drawing application must not block design work.
+
+## Assessment criteria from qualification spec
+
+Learning Outcomes and Assessment Criteria
 
 1. Be able to obtain, insert and combine information for designs.
 
-    1.1. Identify what designs are needed.  
+    1.1. Identify what designs are needed.
 
-    1.2. Obtain, input and prepare designs to meet  requirements.  
+    1.2. Obtain, input and prepare designs to meet requirements.
 
-    1.3. Identify the main copyright and other  constraints which apply to the use of designs.  
+    1.3. Identify the main copyright and other constraints which apply to the use of designs.
 
-    1.4. Combine information of two different types or  from two different sources for designs.  
+    1.4. Combine information of two different types or from two different sources for designs.
 
-    1.5. Identify how the designs will be used.  
+    1.5. Identify how the designs will be used.
 
-    1.6. Identify which file format to use for saving and  exchanging designs. 
+    1.6. Identify which file format to use for saving and exchanging designs.
 
-    1.7. Store and retrieve files appropriately, in line  with local guidelines and conventions where  available. 
+    1.7. Store and retrieve files appropriately, in line with local guidelines and conventions where  available.
 
-2. Be able to use design software tools to create, manipulate and edit designs. 
+2. Be able to use design software tools to create, manipulate and edit designs.
 
-    2.1. Use suitable tools and techniques to create  designs.  
+    2.1. Use suitable tools and techniques to create designs.
 
-    2.2. Use appropriate tools and techniques to  manipulate and edit designs.  
+    2.2. Use appropriate tools and techniques to manipulate and edit designs.
 
-    2.3. Check designs meet requirements, using IT  tools and making corrections as necessary. 
-
+    2.3. Check designs meet requirements, using IT tools and making corrections as necessary.
 
 ## Booklet tasks/activities with assessment criteria mapping
 
-The sequence of tasks and activities in the student project booklet, the student evidence required, and the assessment criteria mapping:
+Retain task numbers; evidence can be collected when ready rather than following booklet order rigidly.
 
 ### Section 1: Planning & Understanding Design Requirements
-* **Task 1: Identifying Design Needs (AC 1.1)**
-  - *Activity:* Define the primary target audience (students, staff, visitors) and list at least 8 essential UI features and visual elements required for the canteen ordering system.
-  - *Student Evidence:* Target audience written response box; 8-item numbered list of required features and interface elements.
-  - *Criteria Mapping:* **AC 1.1**
 
-* **Task 2: How the Design Will Be Used (AC 1.5)**
-  - *Activity:* Identify the physical and digital contexts of use (counter kiosks, tablets, smartphones, desktop browsers) and explain how layout and color choices improve speed and usability during peak lunchtime periods.
-  - *Student Evidence:* Device & context written explanation box; user experience & visual layout explanation box.
-  - *Criteria Mapping:* **AC 1.5**
-
----
+- **Task 1: Identifying Design Needs — AC 1.1.** Explore the working app, identify audience and eight needed interface/visual features using category prompts. Evidence: audience, eight-item list and reasons for two choices.
+- **Task 2: How the Design Will Be Used — AC 1.5.** Choose device/context and explain two supportive design choices. Evidence: context and concise choice/reason responses.
 
 ### Section 2: Obtaining, Sourcing & Preparing Information
-* **Task 3: Menu Research & Data Preparation (AC 1.2, 1.4)**
-  - *Activity:* Research and structure 10 menu items (at least 4 mains, 3 snacks/desserts, 3 drinks), including at least 3 healthy choices, prices, categories, and allergen information.
-  - *Student Evidence:* 10-row structured table recording Item Name, Category, Price (£), Healthy Choice (Yes/No), and Allergen warnings.
-  - *Criteria Mapping:* **AC 1.2, AC 1.4**
 
-* **Task 4: Copyright Constraints & Image Sourcing (AC 1.3)**
-  - *Activity:* Source royalty-free image assets for all 10 menu items from permitted stock libraries (e.g., Unsplash, Pexels) and explain copyright, licensing, and intellectual property constraints.
-  - *Student Evidence:* 10-row asset log table recording local filenames (`images/...`), source URLs, and specific licenses; written explanation box covering copyright law and permission requirements.
-  - *Criteria Mapping:* **AC 1.3**
-
-* **Task 5: Combining Information from Multiple Sources (AC 1.4)**
-  - *Activity:* Explain how multiple distinct information types (text names/descriptions, numerical prices, graphic images, health/allergen badges) from different sources are combined into unified menu cards.
-  - *Student Evidence:* Structured response box identifying and explaining the 4 combined data streams in the canteen card component.
-  - *Criteria Mapping:* **AC 1.4**
-
-* **Task 6: Identifying File Formats (AC 1.6)**
-  - *Activity:* Identify and justify the file formats used in the web app design project (`.html`, `.css`, `.js`, `.jpg`/`.png`/`.webp`), explaining their specific role and suitability for saving and exchanging digital designs.
-  - *Student Evidence:* 4-row table detailing the role and technical suitability of each file format.
-  - *Criteria Mapping:* **AC 1.6**
-
----
+- **Task 3: Menu Research & Data Preparation — AC 1.2.** Research ten items (4 mains/3 snacks/3 drinks, ≥3 healthy); prepare local assets. Evidence: names, categories, descriptions, prices, health/allergen data and source references, split across readable records/pages.
+- **Task 4: Copyright Constraints & Image Sourcing — AC 1.3.** Check image reuse conditions and explain copyright plus another relevant constraint. Evidence: filenames, creators where stated, source and permission/credit requirements; short explanation. Library name alone is not permission.
+- **Task 5: Combining Information — AC 1.4.** Combine researched text, numbers and images. Evidence: focused card screenshot, information types/sources explanation and actual files.
+- **Task 6: File Formats — AC 1.6.** Explain HTML/CSS/JS/chosen image roles and suitability, and what must stay together when sharing. Evidence: four-row purpose/reason table and short sharing response.
 
 ### Section 3: Creating & Manipulating Designs
-* **Task 7: Concept Brainstorming & Wireframing (AC 1.1, 1.2, 2.1)**
-  - *Activity:* Plan the visual theme, typography, interactivity, and assets using a 5-point concept map, then sketch or construct a UI layout wireframe blueprint using ProVector (`provector.app`) or design software.
-  - *Student Evidence:* Completed 5-box concept cross map (`layout-5-textbox-cross`); screenshot / diagram box of the finished wireframe blueprint.
-  - *Criteria Mapping:* **AC 1.1, AC 1.2, AC 2.1**
 
-* **Task 8: Applying Look & Feel Customisations (AC 2.1, 2.2)**
-  - *Activity:* Select and apply CSS theme, layout, colour, and spacing classes on `<body>` in `index.html` to manipulate the visual look and feel, loading researched food items into the interface.
-  - *Student Evidence:* 4-row customization record table documenting selected classes and design rationale; full-page screenshot of the customized user interface with food cards displayed.
-  - *Criteria Mapping:* **AC 2.1, AC 2.2**
-
-* **Task 9: Implementing Interactive Logic (AC 2.1, 2.2)**
-  - *Activity:* Complete beginner JavaScript coding challenges in `app.js` (calculating tray subtotals, checking £5.50 meal voucher budget limits, flagging allergen warnings, applying 10% healthy choice discounts, and showing order confirmations).
-  - *Student Evidence:* 5-row logic implementation table recording code snippets/operators used; screenshot of completed JavaScript logic in `app.js`.
-  - *Criteria Mapping:* **AC 2.1, AC 2.2**
-
----
+- **Task 7: Mood Board & Wireframe — AC 1.1, 2.1.** Plan visual style and labelled layout using a supported tool or paper. Evidence: separate spaces for both artefacts and an explained choice. A concept map is optional preparation.
+- **Task 8: Applying & Improving Look and Feel — AC 1.2, 2.1, 2.2.** Populate menu, apply presets, make purposeful direct CSS edits (colour/spacing/background/font/size), and improve design. Evidence: class/choice record, selector/property/value and reason for at least one CSS edit, focused before/after or observation, actual files. This is main creation/editing evidence independent of coding-challenge completion.
+- **Task 9: Programming Learning Record — supplementary.** Attempt a supported JS activity and record prediction, result, learning/change and support. Evidence: concise record with optional code/screenshot/demonstration. Relevant individual work can supplement 2.1/2.2. Do not require all activities or discount extension. Acknowledge supplied functions; no prefilled solutions.
 
 ### Section 4: File Management, Testing & Evaluation
-* **Task 10: File Storage & Git Version Control (AC 1.7)**
-  - *Activity:* Organize project files into proper folder conventions (`images/`, root scripts/styles) and use VS Code Source Control to make regular, meaningful Git commits tracking project progress.
-  - *Student Evidence:* File organisation explanation box; 3-item log of meaningful commit messages; screenshot of VS Code Git commit history / Source Control panel.
-  - *Criteria Mapping:* **AC 1.7**
 
-* **Task 11: Testing & Making Corrections (AC 2.3)**
-  - *Activity:* Execute a 6-point test plan testing category filtering, subtotal calculations, voucher limits, allergen banners, healthy discounts, and clearing the tray, noting any bug fixes made.
-  - *Student Evidence:* 6-row test plan table recording Test Action, Expected Result, Actual Result, Pass/Fail status, and Corrections Made.
-  - *Criteria Mapping:* **AC 2.3**
+- **Task 10: Storage & Git — AC 1.7.** Organise, locate/reopen and checkpoint files. Evidence: folder/file record, dated retrieval observation, three meaningful commit messages and Source Control/history screenshot. Git support does not replace learner retrieval evidence.
+- **Task 11: Testing & Corrections — AC 2.3.** Design/data checks: menu accuracy/requirements, local images, readability/layout and narrow window. Operation: filtering, add/remove/clear, totals, voucher boundary, allergens/confirmation; promotion only if enabled. Evidence: expected/actual, useful corrections and retests. Fixed function checks do not replace own-project testing and corrections.
+- **Task 12: Review & Evaluation — AC 2.3.** Compare actual project with brief/audience, fix remaining problems, identify strength/next step. Evidence: final checklist, short reflection and complete folder/booklet. Supplied programming logic is allowed.
 
-* **Task 12: Review & Evaluation (AC 2.3)**
-  - *Activity:* Evaluate the final canteen ordering system against the initial brief and target audience requirements, and identify potential future enhancements.
-  - *Student Evidence:* Written evaluation box reflecting on target audience fit; written response box proposing 1–2 future technical/design improvements.
-  - *Criteria Mapping:* **AC 2.3**
+### Section 5: Assessor Feedback & Declaration
 
----
+List all ten criteria individually with evidence location, action, decision, signature and date. Finish with learner authenticity checkbox, name, ID, date and signature; acknowledge sources, starter code and help.
 
-### Section 5: Declaration & Assessor Feedback
-* **Student Declaration of Authenticity:** Formal authenticity confirmation checkbox, learner name, ID, date, and signature (`layout-declaration`).
-* **Assessor Feedback & Grading Grid:** Assessment matrix mapping LO1 and LO2, overall Pass/Resubmission decision, assessor signature, and date.
+Aim to complete assessed work within weeks 6–7; remaining time supports extensions and additional practice. Confirm college software/storage/hand-in arrangements, teacher cover artwork and asset permissions; test on a college machine and inspect rendered booklet before delivery.
